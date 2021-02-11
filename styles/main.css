@@ -5,7 +5,7 @@
 h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 100%;
-    margin-bottom: 0.33em;
+    margin: 0;
 }
 
 h2 {
@@ -163,4 +163,39 @@ html {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+}
+
+
+.blog-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.blog-grid {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: auto auto;
+    max-width: var(--content-max-width);
+
+}
+
+#blog-number {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+    color: gold;
+    text-transform: lowercase;
+    font-size: 7vw;
+    position: fixed;
+}
+
+#blog-number-container {
+    width: 8vw; 
+    padding-right: 2vw;
 }
