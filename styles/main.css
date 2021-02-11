@@ -27,6 +27,7 @@ h3 {
 p{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    font-size: 1em;
 }
 
 body {
@@ -40,12 +41,9 @@ body {
 
 #hero-subtitle {
     font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
-    font-weight: 100;
+    font-weight: 600;
     fill: gold;
-    box-shadow: 6px 4px gold;
-    background-color: white;
-    border-radius: 2.5vw;
+    text-transform: lowercase;
 }
 
 #hero-subtitle-fill {
@@ -89,11 +87,12 @@ html {
     display: flex;
     justify-content: center;
     background: black;
-    
+    padding: 20px;
 }
 
 .menu-grid {
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: var(--content-max-width);
     padding-top: 5px;
@@ -105,7 +104,6 @@ html {
       border-radius: 10px;
       box-shadow: 6px 4px gold;
       padding: 10px;
-      margin: 10px;
       background-color: white;
     
 }
@@ -118,6 +116,7 @@ html {
     backdrop-filter: blur(3px);
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 .about-me-grid {
@@ -129,7 +128,7 @@ html {
     padding-bottom: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 650px) {
     .about-me-grid {
         grid-template-columns: 100%;
 
@@ -138,6 +137,10 @@ html {
     .menu-grid {
         grid-template-columns: 100%;
 
+    }
+
+    p {
+        font-size: 1.25em;
     }
 
 }
@@ -152,8 +155,4 @@ html {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
-}
-
-#portrait-container {
-    width:100%;
 }
