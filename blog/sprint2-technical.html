@@ -18,16 +18,16 @@
     <div class="blog-wrapper">
         <div class="blog-grid">
             <nav id="blog-number-container">
-                <div style="position: fixed;">
+                <div id="blog-number-fixer">
                     <h1 id="blog-number">01.</h1>
                     <div class="link-grid">
                         <a href="#">
-                            <img class="link-icon" src="../images/left-arrow.png" alt="Prev. blog post">
+                            <img class="link-icon" style="display: none;" src="../images/left-arrow.png" alt="Prev. blog post">
                         </a>
                         <a href="../index.html">
                             <img class="link-icon" src="../images/home-icon.png" alt="Home page">
                         </a>
-                        <a href="#">
+                        <a href="sprint3-technical.html">
                             <img class="link-icon" src="../images/right-arrow.png" alt="Next blog post">
                         </a>
                     </div>
@@ -37,7 +37,7 @@
                 <h1>Best practices using classes & ids</h1>
                 <hr>
                 <p>
-                    In CSS, the class and id selectors can be used to style specific HTML elements.
+                    In CSS, the .class and #id selectors can be used to style specific HTML elements.
                     In this post, we’ll take a quick look at how these selectors are used,
                     and describe the best practices for when to use classes instead of id’s, and vice-versa.
 
@@ -46,7 +46,7 @@
                 <h3>.class selector</h3>
                 <p>
                     The class selector is used in CSS for styling <i>multiple</i> HTML elements. 
-                    A HTML element can also inherit CSS attributes from multiple classes! 
+                    An HTML element can also inherit CSS attributes from multiple classes! 
                 </p><p>
                     If you want to apply your style to any HTML element, use a period symbol followed by the class
                     name.
@@ -123,7 +123,7 @@
 
                 <p>
                     Sweet, both the h1 element and the word "purple" have had their colour applied from the .purple-text class.
-                    But even sweeter: additional styles have been applied specically to their element type!
+                    But even sweeter: additional CSS properties have been applied specifically for their element type!
                 </p>
 
                 <h3>#id selector</h3>
@@ -194,20 +194,21 @@
                     That means the #gold-text id has taken priority and overridden the .purple-text class property.                   
                 </p>
                 <p>
-                    The last thing worth pointing out: the span.purple-text class is still applied. 
-                    (Remember this changes the font sopecifically for &lt;span&gt; elements)
-                    That's because it dosen't conflict with the #gold-text id - 
+                    The last thing worth pointing out: the span.purple-text class is still applied 
+                    (this changes the font specifically for &lt;span&gt; elements).
+                    That's because it doesn't conflict with the #gold-text id - 
                     by that I mean they are both altering different CSS properties, so there's nothing to override. 
                     
                 </p>
-                <hr>
+                <br><hr><br>
                 <p>
                     I hope that I've been able to share a bit of insight into the best practices for using the .class and #id selectors. 
                     And, when one might be more useful than the other. 
                 </p>
                 <p>
                     Catch you next time! 
-                    <br>
+                </p>
+                <p class="signiture">
                     -Louis
                 </p>
 

@@ -113,7 +113,7 @@ html {
 .menu-grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     max-width: var(--content-max-width);
     padding-top: 5px;
     padding-bottom: 5px;
@@ -123,13 +123,13 @@ html {
 #menu-card-text {
     padding-right: 5px;
     margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 .menu-card {
       border-radius: 10px;
       box-shadow: 6px 4px gold;
-      padding: 10px;
+      padding: 12px;
       background-color: white;
       color: black;
     
@@ -156,32 +156,15 @@ html {
     padding-bottom: 5px;
 }
 
-@media  (orientation: portrait) 
-    and (max-width: 650px) {
-    .about-me-grid {
-        grid-template-columns: 100%;
-
-    }
-
-    .menu-grid {
-        grid-template-columns: 100%;
-
-    }
-
-    p {
-        font-size: 1.25em;
-    }
-
-}
 
 
 #portrait-louis {
     border-radius: 50%;
     object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-    padding-top: 20px;
+    width: 92.5%;
+    margin-top: 40px;
 }
+
 
 
 .blog-wrapper {
@@ -191,14 +174,14 @@ html {
 
 .blog-content {
     background-color: white;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px 40px 40px;
     border-radius: 20px;
     margin: 20px;
 }
 
 .blog-grid {
     display: grid;
-    margin-top: 20px;
+    margin: 20px 0px;
     grid-template-columns: auto auto;
     max-width: var(--content-max-width);
 
@@ -216,6 +199,10 @@ html {
 #blog-number-container {
     width: 8vw; 
     padding: 20px 2vw 0px 0px;
+}
+
+#blog-number-fixer {
+    position: fixed;
 }
 
 pre {
@@ -274,3 +261,61 @@ font-size: 1vw;
     padding: 5px;
 }
 
+.signiture {
+    font-family: 'Kaushan Script', cursive;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+
+@media  (orientation: portrait), 
+     (max-width: 650px) {
+    .about-me-grid {
+        grid-template-columns: 100%;
+
+    }
+
+    .menu-grid {
+        grid-template-columns: 100%;
+
+    }
+
+    .blog-grid {
+        grid-template-columns: 100%;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    #blog-number-container {
+        width: 100%; 
+
+    }
+
+    #blog-number-fixer {
+        position: static;
+        display: flex;
+        padding-left: 20px;
+    }
+
+    #blog-number {
+        font-size: 60px;
+    }
+
+    .link-grid {
+        padding-top:5px;
+        width: 155px
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    #portrait-louis {
+        width: 92.5%;
+        margin: 0px;
+
+    }
+
+
+}
