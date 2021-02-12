@@ -3,9 +3,7 @@
   }
 
 h1 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 100%;
-    margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -20,6 +18,11 @@ h3 {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
     font-weight: 700;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 p{
@@ -174,7 +177,7 @@ html {
 
 .blog-content {
     background-color: white;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
     border-radius: 20px;
     margin: 20px;
 }
@@ -192,11 +195,22 @@ html {
     font-weight: 600;
     color: gold;
     text-transform: lowercase;
-    font-size: 7vw;
+    font-size: 6.5vw;
     position: fixed;
 }
 
 #blog-number-container {
     width: 8vw; 
     padding-right: 2vw;
+}
+
+pre {
+    white-space: pre-wrap;
+    background-color: ghostwhite;
+
+}
+
+
+.emphasis-text-example {
+    color: purple;
 }
