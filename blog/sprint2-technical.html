@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
 
 
 </head>
@@ -17,9 +17,22 @@
 <body>
     <div class="blog-wrapper">
         <div class="blog-grid">
-            <div id="blog-number-container">
-                <h1 id="blog-number">01.</h1>
-            </div>
+            <nav id="blog-number-container">
+                <div style="position: fixed;">
+                    <h1 id="blog-number">01.</h1>
+                    <div class="link-grid">
+                        <a href="#">
+                            <img class="link-icon" src="../images/left-arrow.png" alt="Prev. blog post">
+                        </a>
+                        <a href="../index.html">
+                            <img class="link-icon" src="../images/home-icon.png" alt="Home page">
+                        </a>
+                        <a href="#">
+                            <img class="link-icon" src="../images/right-arrow.png" alt="Next blog post">
+                        </a>
+                    </div>
+                </div>
+            </nav>
             <div class="blog-content">
                 <h2>Best practices using classes & ids</h2>
                 <hr>
@@ -63,12 +76,13 @@
 
                 <h4>Result:</h4>
                 <div style="background-color: ghostwhite; margin: 1em 0px; padding: 1px 0px 1px 32px;">
-                <h1 class="emphasis-text-example">This is a purple title</h1>
-                <p>Wow, that is a <span class="emphasis-text-example">purple</span> word!</p>
+                    <h1 class="emphasis-text-example">This is a purple title</h1>
+                    <p>Wow, that is a <span class="emphasis-text-example">purple</span> word!</p>
                 </div>
 
                 <h3>ID Selector</h3>
                 <p>Insert text here.</p>
+
 
             </div>
         </div>

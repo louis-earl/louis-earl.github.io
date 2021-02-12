@@ -196,12 +196,12 @@ html {
     color: gold;
     text-transform: lowercase;
     font-size: 6.5vw;
-    position: fixed;
+    margin: 0;
 }
 
 #blog-number-container {
     width: 8vw; 
-    padding-right: 2vw;
+    padding: 20px 2vw 0px 0px;
 }
 
 pre {
@@ -214,3 +214,29 @@ pre {
 .emphasis-text-example {
     color: purple;
 }
+
+.blog-link {
+color: white;
+font-size: 1vw;
+}
+
+.link-grid {
+    display: grid;
+    margin-top: 10px;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    width: 8.5vw;
+    max-width: var(--content-max-width);
+}
+
+.link-icon {
+    width: 100%;
+    padding: 5px;
+}
+
+.link-icon:hover {
+    border-radius: 10px;
+    background-color: gold;
+    padding: 5px;
+}
+
