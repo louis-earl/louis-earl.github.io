@@ -269,6 +269,11 @@ font-size: 1vw;
 
 @media  (orientation: portrait), 
      (max-width: 650px) {
+
+    :root {
+        --content-max-width: 1200px;
+          }
+
     .about-me-grid {
         grid-template-columns: 100%;
 
