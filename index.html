@@ -6,8 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <meta charset="utf-8" />
 
@@ -28,14 +27,41 @@
     </div>
   </div>
 
-
   <div class="grid-wrapper">
+    <div>
+      <h1>Core Blog</h1>
+      <div class="menu-grid">
+
+        <div class="menu-card" onclick="location.href='blog/c1.html';" style="cursor: pointer;">
+          <h2>C1. identity, values and strengths</h2>
+          <hr>
+          <p id="menu-card-text">
+            An in-depth examination and reflection of myself. What's at the core of who I am? Articulated into context of my upcomming learning journey.
+          </p>
+        </div>
+
+
+        <div class="menu-card" onclick="location.href='blog/c2.html';" style="cursor: pointer;">
+          <h2>C2. my EDA learning plan</h2>
+          <hr>
+          <p id="menu-card-text">
+            The learning plan describes how I will operate within the context of EDA. I've set my learning targets based on the course learning outcomes.
+          </p>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid-wrapper" style="padding-bottom: 40px;">
     <div>
       <h1>Technical Blog</h1>
       <div class="menu-grid">
 
-        <div class="menu-card" onclick="location.href='blog/sprint2-technical.html';" style="cursor: pointer;">
-          <h2>01. best practices for using classes & ids</h2>
+        <div class="menu-card" onclick="location.href='blog/t1.html';" style="cursor: pointer;">
+          <h2>T1. best practices for using classes & ids</h2>
           <hr>
           <p id="menu-card-text">
             We’ll look at how the .class and #id selectors are used to style HTML elements.
@@ -43,46 +69,10 @@
           </p>
         </div>
 
-
-        <div class="menu-card">
-          <h2>02. blog post</h2>
-          <hr>
-          <p id="menu-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-
       </div>
     </div>
   </div>
 
-  <div class="grid-wrapper" style="padding-bottom: 40px;">
-    <div>
-      <h1>Core Blog</h1>
-      <div class="menu-grid">
-
-        <div class="menu-card">
-          <h2>what i ate for breakfast</h2>
-          <hr>
-          <p id="menu-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-
-
-        <div class="menu-card">
-          <h2>i went to the moon!! *NOT CLICKBAIT*</h2>
-          <hr>
-          <p id="menu-card-text">Just kidding, imagine that. Don't forget to like and subscribe.</p>
-        </div>
-
-        <div class="menu-card">
-          <h2>HELP i lost my keys and can't find them</h2>
-          <hr>
-          <p id="menu-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="about-me-wrapper">
     <div class="about-me-grid">
@@ -102,7 +92,7 @@
           learning anything related to programming is exciting, and a step in the right direction for me!
         </p>
       </div>
-        <img id="portrait-louis" src="images/portrait-louis.jpg" alt="Portrait photo of Louis">
+      <img id="portrait-louis" src="images/portrait-louis.jpg" alt="Portrait photo of Louis">
     </div>
   </div>
 </body>
