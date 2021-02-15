@@ -209,12 +209,15 @@ pre {
     white-space: pre-wrap;
     background-color: ghostwhite;
     margin-top: 0;
+    border-left: 3px solid purple;
+
 }
 
 .quote {
     background-color: ghostwhite;
     margin-bottom: 1em; 
     padding: 1px 0px 1px 32px;
+    border-left: 3px solid purple;
 }
 
 .purple-text-example {
