@@ -6,8 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/main.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     <meta charset="utf-8" />
 
@@ -28,54 +27,144 @@
                             <img class="link-icon" src="../images/home-icon.png" alt="Home page">
                         </a>
                         <a href="#">
-                            <img class="link-icon" style="display: none;" src="../images/right-arrow.png"
-                                alt="Next blog post">
+                            <img class="link-icon" style="display: none;" src="../images/right-arrow.png" alt="Next blog post">
                         </a>
                     </div>
                 </div>
             </nav>
             <div class="blog-content">
-                <h1>Nothing to see here!</h1>
+                <h1>JavaScript Fundamentals</h1>
                 <hr>
+                <h3>An analogy to describe the differences between HTML and CSS</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                    Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
-                    nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+                    Say you were building a house. HTML would be all things structural - the foundations, wooden floor joists, wall studs, roof rafters, windows, etc. This is the framework, the skeleton of the house.
+
                 </p>
                 <p>
-                    Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
-                    convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis
-                    vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
-                    Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
-                    velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Then we add the CSS to our house. This is the part where everything we do is cosmetic. What colour are we painting the walls? Does the living room have carpet or wooden floorboards? What material are the bench tops made of? What size tiles are we using in the bathroom? Is the tap ware between the Kitchen and bathroom sharing the same style? We could even go into the meticulous details of picking furniture and decor.
+                </p>
+
+                <h3>Explain control flow and loops using an example process from everyday life</h3>
+
+                <p>
+                    Control flow is the order of which computer instructions are executed, this can include evaluating statements and calling functions.
                 </p>
                 <p>
-                    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum
-                    ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus
-                    consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna
-                    luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae
-                    pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.
+                    For example, driving to work:
+                </p>
+                <ul>
+                    <li>Get in car</li>
+                    <li>Start car</li>
+                    <li>Begin driving</li>
+                    <li>While not at work:
+                        <ul>
+                            <li>Move forward</li>
+                            <li>If at intersection:
+                                <ul>
+                                    <li>Stop driving</li>
+                                    <li><code>doIntersection()</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Stop driving</li>
+                    <li>Turn off car</li>
+                    <li>Get out of car</li>
+                </ul>
+
+                <h3>Describe what the DOM is and an example of how you might interact with it</h3>
+
+                <p>
+                    The Document Object Model, in the context of web development, is the interface used when accessing and manipulating HTML documents. It defines the logical structure of the document, so that programmers can navigate the structure, add, modify and remove elements and content.
                 </p>
                 <p>
-                    Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit
-                    amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue.
-                    Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi
-                    in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras
-                    metus. Sed aliquet risus a tortor.
+                    Developers can interact with the DOM using JavaScript, this allows them to modify and/or add functionality to HTML elements.
                 </p>
+
+                <h3>Explain the difference between accessing data from arrays and objects.</h3>
                 <p>
-                    Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet,
-                    augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo
-                    ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget,
-                    justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum
-                    non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae,
-                    ligula.
+                    Objects are used to represent a’ thing’ in code. For example:
+                    A high school <b>student</b> object could store associated data such as:
+                </p>
+                <ul>
+                    <li>Name</li>
+                    <li>Age</li>
+                    <li>Email address</li>
+                    <li>Subjects enrolled in</li>
+                </ul>
+
+                <p>
+                    Arrays should be used to store multiple things of the same type. For example, within our student class, the subjects enrolled in should store multiple subjects:
+                </p>
+                <ul>
+                    <li>English</li>
+                    <li>Mathematics</li>
+                    <li>ICT</li>
+                    <li>Physics</li>
+                    <li>Media Studies</li>
+                </ul>
+
+                <p>
+                    We’ll use the following student object for the next examples (I won’t go into the detail of how to actually make the class):
+                </p>
+
+                <pre>
+                    <code>
+    // Pretend this is an existing student object
+    student:
+        name = “Louis”;
+        age = 23;
+        email address = louis@test.com
+        // This is an array!
+        subjects = [“English”, 
+            “Mathematics”, 
+            “ICT”, 
+            “Physics”, 
+            “Media Studies”]
+                    </code>
+                </pre>
 
 
 
+                <p>
+                    To access their age. We use dot notation like so:
+                </p>
+
+                <div class="quote">
+                    <code>
+                        var name = student.name
+                    </code>
+                </div>
+
+                <p>So name is now equal to the string, “Louis”.</p>
+
+                <p>
+                    To access the list of all their subjects we would use dot notation to get the array:
+                </p>
+                <div class="quote">
+                    <code>
+                        var allSubjects = student.subjects;
+                    </code>
+                </div>
+
+                <p>
+                    To access the second subject from the subject array, we use bracket notation. Note that arrays start counting at zero, so the first item in the array is at index[0].
+                </p>
+
+                <div class="quote">
+                    <code>
+                        var secondSubject = student.subjects[1];
+                    </code>
+                </div>
+                <p>
+                    So now secondSubject is equal to the string, “Mathematics”.
+                </p>
+
+
+
+                <h3>Explain what functions are and why they are useful</h3>
+                <p>
+                    A function is a block of code designed to perform a single action. They are useful because functions are reusable. If you have to perform the same action multiple times, you can simply call that function, rather than having to type out the exact same code multiple times.
                 </p>
 
 
