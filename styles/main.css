@@ -1,5 +1,6 @@
 :root {
     --content-max-width: 850px;
+    --size-multiplier: 1;
   }
 
 
@@ -8,11 +9,13 @@
 h1 {
     font-weight: 600;
     margin-top: 0.4em;
+    font-size: calc(2em * var(--size-multiplier));
+
 }
 
 /* Index card headers */
 h2 {
-    font-size: 1.18em;
+    font-size: calc(1.18em * var(--size-multiplier));
     margin-top: 0.2em;
     margin-bottom: 0.2em;
     font-weight: 700;
@@ -20,7 +23,7 @@ h2 {
 
 /* Blog section headers */
 h3 {
-    font-size: 1.35em;
+    font-size: calc(1.35em * var(--size-multiplier));
     margin-top: 1.6em;
     margin-bottom: 0.2em;
     font-weight: 700;
@@ -34,14 +37,16 @@ h4 {
 
 p{
     font-weight: 400;
-    font-size: 1em;
+    font-size: calc(1em * var(--size-multiplier));
 }
 
-/*
-br {
-    line-height: 150%;
- }
-*/
+code {
+    font-size: calc(1em * var(--size-multiplier));
+}
+
+li {
+    font-size: calc(1em * var(--size-multiplier));
+}
 
 
 hr {
@@ -128,7 +133,7 @@ html {
 }
 
 .menu-card {
-      border-radius: 10px;
+      border-radius: calc(10px * var(--size-multiplier));
       box-shadow: 6px 4px gold;
       padding: 12px;
       background-color: white;
@@ -164,6 +169,8 @@ html {
     object-fit: cover;
     width: 92.5%;
     margin-top: 40px;
+    margin-bottom: 40px;
+
 }
 
 
@@ -203,6 +210,7 @@ html {
 
 #blog-number-fixer {
     position: fixed;
+    padding-left: 10px;
 }
 
 pre {
@@ -280,7 +288,14 @@ font-size: 1vw;
 
     :root {
         --content-max-width: 1200px;
-          }
+        --size-multiplier: 1.5;
+
+    }
+
+    .hero-image {
+        height: 66vh;
+    }
+
 
     .about-me-grid {
         grid-template-columns: 100%;
@@ -312,21 +327,19 @@ font-size: 1vw;
     }
 
     #blog-number {
-        font-size: 60px;
+        font-size: calc(60px * var(--size-multiplier));
     }
 
     .link-grid {
-        padding-top:5px;
-        width: 155px
-    }
-
-    p {
-        font-size: 1.25em;
+        padding-top:15px;
+        padding-left: 15px;
+        width: calc(155px * var(--size-multiplier));
     }
 
     #portrait-louis {
-        width: 92.5%;
-        margin: 0px;
+        width: 66.66%;
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
