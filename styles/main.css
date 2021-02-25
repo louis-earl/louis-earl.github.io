@@ -206,8 +206,8 @@ html {
 }
 
 #blog-number-container {
-    width: 100%; 
-    padding-top: 20px;
+    width: 8vw; 
+    padding: 20px 2vw 0px 0px;
 }
 
 #blog-number-fixer {
@@ -319,6 +319,8 @@ font-size: 1vw;
 
     #blog-number-container {
         width: 100%; 
+        padding: 20px 0px 0px 0px;
+
 
     }
 
