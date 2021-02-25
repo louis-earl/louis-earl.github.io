@@ -120,11 +120,13 @@ html {
 .menu-grid {
     display: grid;
     grid-gap: 20px;
-
-
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: var(--content-max-width);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-@media (orientation: portrait), (max-width: 650px) {
+@media (orientation: landscape) {
     .menu-grid {
         grid-template-rows: minmax(150px, 1fr);
         overflow-x: scroll;
@@ -132,27 +134,22 @@ html {
         max-width: calc(var(--content-max-width) + 100px);
         scroll-padding-left: 50px;
         scroll-padding-right: 50px;
-        padding-top: 5px;
-        padding-bottom: 5px;
         mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent 100%);
         -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
     }
-}
-
-#core-menu-grid {
-    grid-template-columns: 40px repeat(4, calc(45% - 50px)) 105px;
-}
-
-#tech-menu-grid {
-    grid-template-columns: 40px repeat(3, calc(45% - 50px)) 105px;
+    #core-menu-grid {
+        grid-template-columns: 40px repeat(4, calc(45% - 50px)) 105px;
+    }
+    #tech-menu-grid {
+        grid-template-columns: 40px repeat(3, calc(45% - 50px)) 105px;
+    }
+    .shift-left {
+        margin-left: 50px;
+    }
 }
 
 .menu-grid:before, .menu-grid:after {
     content: '';
-}
-
-.shift-left {
-    margin-left: 50px;
 }
 
 #menu-card-text {
@@ -316,7 +313,14 @@ span.purple-text-example-2 {
         grid-template-columns: 100%;
     }
     .menu-grid {
-        grid-template-columns: 100%;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    #core-menu-grid {
+        grid-template-columns: 0% repeat(4, 100%) 0%;
+    }
+    #tech-menu-grid {
+        grid-template-columns: 0% repeat(3, 100%) 0%;
     }
     .blog-grid {
         grid-template-columns: 100%;
