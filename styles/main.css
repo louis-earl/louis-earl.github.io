@@ -145,11 +145,11 @@ html {
 }
 
 #core-menu-grid {
-    grid-template-columns: 40px repeat(4, calc(33% - 50px)) 40px;
+    grid-template-columns: 30px repeat(4, calc(33% - 50px)) 50px;
 }
 
 #tech-menu-grid {
-    grid-template-columns: 40px repeat(3, calc(33% - 50px)) 40px;
+    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 40px;
 }
 
 
