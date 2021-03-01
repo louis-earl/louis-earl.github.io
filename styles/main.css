@@ -109,6 +109,13 @@ html {
     position: relative;
 }
 
+.heading-wrapper {
+    max-width: var(--content-max-width);
+    justify-content: left;
+    width: 100%;
+
+}
+
 .grid-wrapper {
     display: flex;
     justify-content: center;
@@ -126,27 +133,25 @@ html {
     padding-bottom: 5px;
 }
 
-@media (orientation: landscape) {
-    .menu-grid {
-        grid-template-rows: minmax(150px, 1fr);
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        max-width: calc(var(--content-max-width) + 100px);
-        scroll-padding-left: 50px;
-        scroll-padding-right: 50px;
-        mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent 100%);
-        -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
-    }
-    #core-menu-grid {
-        grid-template-columns: 40px repeat(4, calc(33% - 50px)) 40px;
-    }
-    #tech-menu-grid {
-        grid-template-columns: 40px repeat(3, calc(33% - 50px)) 40px;
-    }
-    .shift-left {
-        margin-left: 50px;
-    }
+.menu-grid {
+    grid-template-rows: minmax(150px, 1fr);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    max-width: calc(var(--content-max-width) + 100px);
+    scroll-padding-left: 50px;
+    scroll-padding-right: 50px;
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent 100%);
+    -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
 }
+
+#core-menu-grid {
+    grid-template-columns: 40px repeat(4, calc(33% - 50px)) 40px;
+}
+
+#tech-menu-grid {
+    grid-template-columns: 40px repeat(3, calc(33% - 50px)) 40px;
+}
+
 
 .menu-grid:before, .menu-grid:after {
     content: '';
@@ -303,7 +308,6 @@ span.purple-text-example-2 {
 
 @media (orientation: portrait), (max-width: 650px) {
     :root {
-        --content-max-width: 1200px;
         --size-multiplier: 1.5;
     }
     .hero-image {
@@ -317,10 +321,10 @@ span.purple-text-example-2 {
         -webkit-mask-image: none;
     }
     #core-menu-grid {
-        grid-template-columns: 0% repeat(4, 100%) 0%;
+        grid-template-columns: 40px repeat(4, var(--content-max-width)) calc(20% - 40px);
     }
     #tech-menu-grid {
-        grid-template-columns: 0% repeat(3, 100%) 0%;
+        grid-template-columns: 40px repeat(2, var(--content-max-width)) calc(20% - 40px);
     }
     .blog-grid {
         grid-template-columns: 100%;
