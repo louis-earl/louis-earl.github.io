@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>T3. Problem Solving Techniques - Louis Earl</title>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8" />
+
+
+</head>
+
+<body>
+    <div class="blog-wrapper">
+        <div class="blog-grid">
+            <nav id="blog-number-container">
+                <div id="blog-number-fixer">
+                    <h1 id="blog-number">T3.</h1>
+                    <div class="link-grid">
+                        <a href="t2.html">
+                            <img class="link-icon" src="../images/left-arrow.png" alt="Prev. blog post">
+                        </a>
+                        <a href="../index.html">
+                            <img class="link-icon" src="../images/home-icon.png" alt="Home page">
+                        </a>
+                        <a href="#">
+                            <img class="link-icon" style="display: none;" src="../images/right-arrow.png" alt="Next blog post">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="blog-content">
+                <h1>Problem Solving Techniques</h1>
+                <hr>
+                <h3>The time I got blocked on a simple problem</h3>
+
+                <p>
+                    This week while completing our JavaScript exercises, I found myself stuck using the JavaScript build-in methods - especially the map and filter methods on an array. While I could easily complete the problem in a for loop, this was not the intent of the exercise.
+                </p>
+                <p>
+                    I firstly tried Google, then console.logging and reading the error messages - but this hadn’t helped. I felt frustrated that I wasn’t able to solve the problem. I came to the conclusion that I hadn’t researched the map and filter methods of JavaScript enough, and I was overconfident of how well my C# knowledge would transfer to JavaScript. I went back and put the time into learning the map and filter methods, then was able to solve the problem.
+                </p>
+                <p>
+                    I learnt that I shouldn’t get too ahead of myself when I don’t know something. Sometimes it pays to go back and put the time into learning something, instead of assuming it won’t be too hard to use trial and error.
+                </p>
+
+                <h3>The time I solved a problem in an elegant way</h3>
+
+                <p>
+                    While coding for this weeks minesweeper challenge, I encountered a problem with my code. The game would not end when all the win conditions had been met.
+                </p>
+                <p>
+                    Initially, I thought it was a logic problem within my if statement that checks the win conditions for every game cell on the board. Because my code was correct in the eyes of JavaScript, no fatal errors were being thrown - so I used console.log() instead to print out the state of each win condition that failed.
+                </p>
+                <p>
+                    I found that the win conditions weren’t being checked at all, but not for the reason I had thought. It turns out I had forgot to tell the non-explosive cells that they were not explosive. (Each cell has a boolean isMine, instead of being set to false, they were undefined).
+                </p>
+                <p>
+                    I felt a little silly that such a small oversight was causing the game to break. But I was also proud of myself for being able to find the issue so easily, especially in a place I would never have looked without console.logging.
+                </p>
+
+                <h3>My relation with problem solving techniques</h3>
+
+                <h4>Pseudocode</h4>
+                <p>
+                    Sometimes I find pseudocode really helpful, especially for complex problems. I think by writing out the steps line by line, you add structure to the answer. It also helps break a big problem into smaller ones by articulating what needs to be done.
+                </p>
+
+                <h4>Trying something</h4>
+                <p>
+                    This is usually my first action towards solving a problem! Just jump right into it and code. Most the time it works, but if not, then its worth spending the extra time with other problem solving techniques.
+                </p>
+
+                <h4>Rubber ducky method</h4>
+                <p>
+                    I’m curious to try this method. So far at EDA, it hasn’t crossed my mind as a logical way to solve the problem. I will try to remember for next time!
+                </p>
+
+                <h4>Reading error messages</h4>
+                <p>
+                    This is great for solving most of my issues. The error messages point to the line of code that failed with a basic message of what went wrong. Also, a call stack you can follow to see what previous lines of code called the code that failed.
+                </p>
+
+                <h4>Console.logging</h4>
+                <p>
+                    Sometimes your code won’t be working properly, but also not causing any dramatic runtime errors. Thats when console.log(“Message”); is super handy! When the code runs, it will print out any information you specify to the console. With a bit of investigating, you can work out where you went wrong. Usually as easy as getting a conditional’s logic the wrong way around, or forgetting to call a function at all.
+                </p>
+
+                <h4>Googling</h4>
+                <p>
+                    I find 99% of the time, somebody else has already had the same problem as you. Google can point you towards some valuable resources, if you’re lucky it might be completed code ripe for copy and pasting.
+                </p>
+
+                <h4>Asking your peers for help</h4>
+                <p>
+                    This usually isn’t my first action for problem solving, I’d be messaging 50 times a day if it was. Asking peers for help can be a great source of help if all else fails - it sometimes just helps to get a different perspective on things. It also may equally help my peers who are stuck on the same problem!
+                </p>
+
+                <h4>Asking coaches for help</h4>
+                <p>
+                    Likewise with asking peers for help, this would be the next option if even that fails.
+                </p>
+
+                <h4>Improving your process with reflection</h4>
+                <p>
+                    Reflecting is a deliberate, but necessary stop sign. You take the time to look at how effectively something went, and what you could’ve done differently to improve. For example, even now while writing this blog, I realised I had neglected to use the rubber ducky technique - so next time I get stuck on a problem, I can make a better effort to try it out!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
