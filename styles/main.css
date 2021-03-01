@@ -138,10 +138,10 @@ html {
         -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
     }
     #core-menu-grid {
-        grid-template-columns: 40px repeat(4, calc(33% - 60px)) 105px;
+        grid-template-columns: 40px repeat(4, calc(33% - 50px)) 40px;
     }
     #tech-menu-grid {
-        grid-template-columns: 40px repeat(3, calc(33% - 60px)) 105px;
+        grid-template-columns: 40px repeat(3, calc(33% - 50px)) 40px;
     }
     .shift-left {
         margin-left: 50px;
@@ -182,7 +182,7 @@ html {
 .about-me-grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 66.6% 33.4%;
+    grid-template-columns: auto 33%;
     max-width: var(--content-max-width);
     padding-top: 5px;
     padding-bottom: 5px;
@@ -191,7 +191,7 @@ html {
 #portrait-louis {
     border-radius: 50%;
     object-fit: cover;
-    width: 92.5%;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
 }
