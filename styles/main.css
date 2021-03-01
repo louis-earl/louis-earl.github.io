@@ -138,10 +138,10 @@ html {
         -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
     }
     #core-menu-grid {
-        grid-template-columns: 40px repeat(4, calc(38% - 50px)) 105px;
+        grid-template-columns: 40px repeat(4, calc(33% - 60px)) 105px;
     }
     #tech-menu-grid {
-        grid-template-columns: 40px repeat(3, calc(38% - 50px)) 105px;
+        grid-template-columns: 40px repeat(3, calc(33% - 60px)) 105px;
     }
     .shift-left {
         margin-left: 50px;
