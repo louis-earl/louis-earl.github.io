@@ -132,7 +132,6 @@ html {
 .menu-grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     padding-top: 5px;
     padding-bottom: 5px;
     grid-template-rows: minmax(150px, 1fr);
@@ -326,7 +325,7 @@ span.purple-text-example-2 {
         grid-template-columns: 40px repeat(4, var(--content-max-width)) calc(20% - 40px);
     }
     #tech-menu-grid {
-        grid-template-columns: 40px repeat(2, var(--content-max-width)) calc(20% - 40px);
+        grid-template-columns: 40px repeat(3, var(--content-max-width)) calc(20% - 40px);
     }
     .blog-grid {
         grid-template-columns: 100%;
