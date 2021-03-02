@@ -167,7 +167,7 @@ html {
     border-radius: calc(10px * var(--size-multiplier));
     scroll-snap-align: start;
     box-shadow: 6px 2px 0px 2px gold, 2px 3px 0px 2px gold, 6px 3px 0px 2px gold;
-    padding: 12px;
+    padding: calc(12px * var(--size-multiplier));
     background-color: white;
     color: black;
 }
@@ -309,7 +309,7 @@ span.purple-text-example-2 {
 
 @media (orientation: portrait), (max-width: 650px) {
     :root {
-        --size-multiplier: 1.5;
+        --size-multiplier: 1.6;
     }
     .hero-image {
         height: 66vh;
@@ -322,10 +322,10 @@ span.purple-text-example-2 {
         -webkit-mask-image: none;
     }
     #core-menu-grid {
-        grid-template-columns: 40px repeat(4, var(--content-max-width)) calc(20% - 40px);
+        grid-template-columns: 40px repeat(4, calc(100% - 130px)) 60px;
     }
     #tech-menu-grid {
-        grid-template-columns: 40px repeat(3, var(--content-max-width)) calc(20% - 40px);
+        grid-template-columns: 40px repeat(3, calc(100% - 130px)) 60px;
     }
     .blog-grid {
         grid-template-columns: 100%;
