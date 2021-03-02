@@ -1,7 +1,12 @@
+
+
 :root {
     --content-max-width: 850px;
     --size-multiplier: 1;
+    
 }
+
+
 
 /* Index section headers, blog title headers */
 
@@ -128,12 +133,8 @@ html {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    max-width: var(--content-max-width);
     padding-top: 5px;
     padding-bottom: 5px;
-}
-
-.menu-grid {
     grid-template-rows: minmax(150px, 1fr);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -166,7 +167,7 @@ html {
 .menu-card {
     border-radius: calc(10px * var(--size-multiplier));
     scroll-snap-align: start;
-    box-shadow: 6px 4px gold;
+    box-shadow: 6px 2px 0px 2px gold, 2px 3px 0px 2px gold, 6px 3px 0px 2px gold;
     padding: 12px;
     background-color: white;
     color: black;
@@ -175,6 +176,7 @@ html {
 .menu-card:hover {
     background-color: rgb(255, 235, 128);
 }
+
 
 .about-me-wrapper {
     backdrop-filter: blur(3px);
@@ -355,3 +357,4 @@ span.purple-text-example-2 {
         margin-right: auto;
     }
 }
+
