@@ -336,7 +336,7 @@ span.purple-text-example-2 {
         -webkit-mask-image: none;
     }
     #core-menu-grid {
-        grid-template-columns: 40px repeat(4, calc(100% - 130px)) 60px;
+        grid-template-columns: 40px repeat(5, calc(100% - 130px)) 60px;
     }
     #tech-menu-grid {
         grid-template-columns: 40px repeat(3, calc(100% - 130px)) 60px;
