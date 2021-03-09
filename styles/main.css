@@ -145,13 +145,19 @@ html {
 }
 
 #core-menu-grid {
-    grid-template-columns: 30px repeat(4, calc(33% - 50px)) 50px;
+    grid-template-columns: 30px repeat(5, calc(33% - 50px)) 50px;
 }
 
 #tech-menu-grid {
-    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 40px;
+    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 50px;
 }
 
+#projects-menu-grid {
+    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 0px;
+    grid-gap: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
 
 .menu-grid:before, .menu-grid:after {
     content: '';
@@ -170,6 +176,14 @@ html {
     padding: calc(12px * var(--size-multiplier));
     background-color: white;
     color: black;
+}
+
+.project-card {
+    border-radius: calc(10px * var(--size-multiplier));
+    scroll-snap-align: start;
+    box-shadow: 0px 0px 0px 7px white;
+    padding: 0px;
+    width: 100%;
 }
 
 .menu-card:hover {
