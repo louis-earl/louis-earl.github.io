@@ -159,6 +159,8 @@ html {
     content: '';
     width: calc(var(--gutter) / 2);
     scroll-snap-align: none;
+    overflow: hidden;
+
 }
 
 #menu-card-text {
