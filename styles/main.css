@@ -331,6 +331,10 @@ span.purple-text-example-2 {
     .hero-wrapper {
         height: 66vh;
     }
+    .about-me-wrapper {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
     .about-me-grid {
         grid-template-columns: 100%;
     }
