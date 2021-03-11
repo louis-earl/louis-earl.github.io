@@ -156,7 +156,7 @@ html {
 
 .menu-grid:before {
     content: '';
-    width: var(--gutter);
+    width: 0px;
 }
 
 .menu-grid:after {
