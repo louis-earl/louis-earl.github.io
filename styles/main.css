@@ -40,6 +40,7 @@ h4 {
 p {
     font-weight: 400;
     font-size: calc(1em * var(--size-multiplier));
+    margin: calc(1em * var(--size-multiplier)) 0em;
 }
 
 code {
@@ -162,13 +163,6 @@ html {
     width: calc(var(--gutter) / 2);
 }
 
-#projects-menu-grid {
-    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 0px;
-    grid-gap: 30px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-
 #menu-card-text {
     padding-right: 5px;
     margin-top: 6px;
@@ -177,6 +171,7 @@ html {
 
 .menu-card {
     border-radius: 12px;
+    width: calc(100% - 6px - 16px - 16px);
     scroll-snap-align: start;
     box-shadow: 6px 2px 0px 2px gold, 2px 3px 0px 2px gold, 6px 3px 0px 2px gold;
     padding: calc(16px * var(--size-multiplier));
@@ -185,11 +180,12 @@ html {
 }
 
 .project-card {
-    border-radius: calc(10px * var(--size-multiplier));
+    border-radius: 12px;
+    width: calc(100% - 6px);
     scroll-snap-align: start;
-    box-shadow: 0px 0px 0px 7px white;
-    padding: 0px;
-    width: 100%;
+    box-shadow: 6px 2px 0px 2px gold, 2px 3px 0px 2px gold, 6px 3px 0px 2px gold;
+    background-color: white;
+    color: black;
 }
 
 .menu-card:hover {
@@ -205,9 +201,10 @@ html {
 
 .about-me-grid {
     display: grid;
-    grid-gap: 24px;
+    grid-gap: var(--gutter);
     grid-template-columns: auto 33%;
     max-width: var(--content-max-width);
+    margin-bottom: calc(24px * var(--size-multiplier));
 }
 
 #portrait-louis {
@@ -327,7 +324,7 @@ span.purple-text-example-2 {
     :root {
         --size-multiplier: 1.5;
         --content-max-width: 100%;
-        --gutter: 60px;
+        --gutter: 80px;
     }
     .hero-wrapper {
         height: 66vh;
@@ -340,6 +337,15 @@ span.purple-text-example-2 {
     }
     .menu-card {
         border-radius: 24px;
+        box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
+        width: calc(100% - 6px - 24px - 24px);        
+    }
+    .project-card {
+        border-radius: 24px;
+        box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
+        width: calc(100% - 12px);
+
+
     }
     .blog-grid {
         grid-template-columns: 100%;
