@@ -154,14 +154,11 @@ html {
     -webkit-mask-image: linear-gradient( to right, transparent, black 3%, black 97%, transparent 100%);
 }
 
-.menu-grid:before {
-    content: '';
-    width: 0px;
-}
 
-.menu-grid:after {
+.menu-grid:before, .menu-grid:after {
     content: '';
     width: calc(var(--gutter) / 2);
+    scroll-snap-align: none;
 }
 
 #menu-card-text {
@@ -178,6 +175,10 @@ html {
     padding: calc(16px * var(--size-multiplier));
     background-color: white;
     color: black;
+}
+
+#project-menu {
+    grid-auto-columns: calc(33.333% - var(--gutter) * 2);
 }
 
 .project-card {
@@ -346,6 +347,12 @@ span.purple-text-example-2 {
         box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
         width: calc(100% - 6px - 24px - 24px);        
     }
+
+    #project-menu {
+        grid-auto-columns: calc(50% - var(--gutter) * 2);
+
+    }
+
     .project-card {
         border-radius: 36px;
         box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
