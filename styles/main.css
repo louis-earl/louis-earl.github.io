@@ -383,7 +383,7 @@ span.purple-text-example-2 {
         --gutter: 80px;
     }
     html {
-        background-attachment: initial;
+        background-attachment: scroll;
     }
     .about-me-wrapper {
         backdrop-filter: blur(6px);
