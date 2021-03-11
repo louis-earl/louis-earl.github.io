@@ -101,7 +101,7 @@ html {
     max-width: var(--content-max-width);
 }
 
-.hero-image {
+.hero-wrapper {
     height: 88vh;
     min-height: 300px;
     background-position: center;
@@ -116,23 +116,6 @@ html {
     background: black;
     color: white;
 }
-
-/*
-.menu-grid {
-    display: grid;
-    grid-gap: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    grid-template-rows: minmax(150px, 1fr);
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    scroll-padding-left: 50px;
-    scroll-padding-right: 50px;
-    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent 100%);
-    -webkit-mask-image: linear-gradient( to right, transparent, black 2%, black 98%, transparent 100%);
-}
-*/
 
 .app {
     padding: var(--gutter) 0px;
@@ -179,28 +162,12 @@ html {
     width: calc(var(--gutter) / 2);
 }
 
-/*
-#core-menu-grid {
-    grid-template-columns: 30px repeat(5, calc(33% - 50px)) 50px;
-}
-
-#tech-menu-grid {
-    grid-template-columns: 30px repeat(3, calc(33% - 50px)) 50px;
-}
-*/
-
 #projects-menu-grid {
     grid-template-columns: 30px repeat(3, calc(33% - 50px)) 0px;
     grid-gap: 30px;
     padding-top: 10px;
     padding-bottom: 30px;
 }
-
-/*
-.menu-grid:before, .menu-grid:after {
-    content: '';
-}
-*/
 
 #menu-card-text {
     padding-right: 5px;
@@ -212,7 +179,7 @@ html {
     border-radius: 12px;
     scroll-snap-align: start;
     box-shadow: 6px 2px 0px 2px gold, 2px 3px 0px 2px gold, 6px 3px 0px 2px gold;
-    padding: calc(12px * var(--size-multiplier));
+    padding: calc(16px * var(--size-multiplier));
     background-color: white;
     color: black;
 }
@@ -360,8 +327,9 @@ span.purple-text-example-2 {
     :root {
         --size-multiplier: 1.5;
         --content-max-width: 100%;
+        --gutter: 60px;
     }
-    .hero-image {
+    .hero-wrapper {
         height: 66vh;
     }
     .about-me-grid {
@@ -373,19 +341,6 @@ span.purple-text-example-2 {
     .menu-card {
         border-radius: 24px;
     }
-    /*
-    .menu-grid {
-        mask-image: none;
-        -webkit-mask-image: none;
-    }
-    
-    #core-menu-grid {
-        grid-template-columns: 40px repeat(5, calc(100% - 130px)) 60px;
-    }
-    #tech-menu-grid {
-        grid-template-columns: 40px repeat(3, calc(100% - 130px)) 60px;
-    }
-    */
     .blog-grid {
         grid-template-columns: 100%;
     }
