@@ -77,7 +77,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-y: hidden
+    overflow-y: hidden;
+    transform: translate3d(0,0,0);
     }
 
 #hero-title {
