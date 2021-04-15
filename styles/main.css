@@ -190,6 +190,13 @@ html {
     color: black;
     margin-left: var(--gutter);
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+
+img.project-card:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }
 
 .menu-card:hover {
@@ -325,8 +332,8 @@ span.purple-text-example-2 {
     font-size: 1.5em;
 }
 
-/* SHORT SCREEN */
-@media (orientation: portrait), (max-width: 650px) {
+/* TABLETS (between 480px and 1024px) */
+@media screen and (max-width: 1024px) {
     :root {
         --content-max-width: 100%;
     }
@@ -334,12 +341,9 @@ span.purple-text-example-2 {
         height: 66vh;
     }
     .menu-grid {
-        grid-auto-columns: calc(100% - var(--gutter) * 2);
+        grid-auto-columns: calc(50% - var(--gutter) * 2);
         mask-image: none;
         -webkit-mask-image: none;
-    }
-    .about-me-grid {
-        grid-template-columns: 100%;
     }
     #project-menu {
         grid-auto-columns: calc(50% - var(--gutter) * 2);
@@ -349,7 +353,7 @@ span.purple-text-example-2 {
     }
     .blog-content {
         padding: 40px;
-        margin: 40px;
+        margin: 40px 80px;
     }
     #blog-number-container {
         width: 100%;
@@ -358,14 +362,14 @@ span.purple-text-example-2 {
     #blog-number-fixer {
         position: static;
         display: flex;
-        padding-left: 20px;
+        padding-left: 80px;
     }
     #blog-number {
         font-size: calc(60px * var(--size-multiplier));
     }
     .link-grid {
-        padding-top: 15px;
-        padding-left: 15px;
+        padding-top: 5px;
+        padding-left: 5px;
         width: calc(155px * var(--size-multiplier));
     }
     #portrait-louis {
@@ -375,13 +379,8 @@ span.purple-text-example-2 {
     }
 }
 
-
-/* TOUCH DEVICES */
-@media (hover: none) {
-    :root {
-        --size-multiplier: 1.75;
-        --gutter: 80px;
-    }
+/* MOBILE DEVICES (less than 480px) */
+@media screen and (max-width: 480px) {
     html {
         background-attachment: scroll;
     }
@@ -389,19 +388,20 @@ span.purple-text-example-2 {
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
     }
-    
-    
-    
-    .menu-card {
-        border-radius: 36px;
-        box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
-        width: calc(100% - 6px - 24px - 24px);
+    .about-me-grid {
+        grid-template-columns: 100%;
     }
-    
-    .project-card {
-        border-radius: 36px;
-        box-shadow: 12px 4px 0px 4px gold, 4px 6px 0px 4px gold, 12px 6px 0px 4px gold;
-        width: calc(100% - 12px);
+    .menu-grid {
+        grid-auto-columns: calc(100% - var(--gutter) * 2);
     }
-    
+    #project-menu {
+        grid-auto-columns: calc(100% - var(--gutter) * 2);
+    }
+    .blog-content {
+        padding: 20px;
+        margin: 20px;
+    }
+    #blog-number-fixer {
+        padding-left: 20px;
+    }
 }
