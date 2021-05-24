@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div className="contact section section--dark">
+    <div className="contact section">
         <h3>Don't Be a Stranger</h3>
 
         <p>

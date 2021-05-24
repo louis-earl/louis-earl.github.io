@@ -1,6 +1,7 @@
 body {
   color: #FFFFFF;
   background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
+  background-size: cover;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
@@ -9,6 +10,7 @@ body {
 h1 {
   font-family: 'Kaushan Script', cursive;
   font-size: 96px;
+  font-weight: 400;
   color: #FFD700;
   margin: 0;
 }
@@ -28,25 +30,35 @@ h3 {
 
 
 .hero {
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 80vh;
 }
 
-.section {
-  padding: 60px 20px;
+.section__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.section--dark {
+.section__wrapper--dark {
   background-color: #000000;
 }
 
-.section--blur {
+.section__wrapper--blur {
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);}
 
+.section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 800px;
 }
+
 
 .projects {
 
@@ -78,6 +90,11 @@ h3 {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 20px;
+}
+
+.about__image {
+  width: 100%;
+  border-radius: 50%;
 }
 
 .contact {

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="section section--blur">
+    <div className="section">
       <h3>About Me</h3>
       <div className="about__grid">
         <div className="about__content">
@@ -18,8 +18,12 @@ function About() {
           </p>
         </div>
 
-        <div className="about__image">
-        </div>
+          <img 
+          className="about__image" 
+          src="./images/portrait-louis.jpg" 
+          alt="A portrait photo of Louis Earl" 
+          />
+
       </div>
 
     </div>

@@ -3,7 +3,7 @@ import ProjectsGrid from './ProjectsGrid'
 
 function Projects({ }) {
   return (
-    <div className="section section--dark">
+    <div className="section">
       <div className="projects">
         <h3>Major Projects</h3>
         <ProjectsGrid cardType="major"/>

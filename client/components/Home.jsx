@@ -4,13 +4,19 @@ import Contact from './Contact'
 import Hero from './Hero'
 import Projects from './Projects'
 
-function Home () {
+function Home() {
   return (
     <div>
       <Hero />
-      <Projects />
-      <About />
-      <Contact />
+      <div className="section__wrapper section__wrapper--dark">
+        <Projects />
+      </div>
+      <div className="section__wrapper section__wrapper--blur">
+        <About />
+      </div>
+      <div className="section__wrapper section__wrapper--dark">
+        <Contact />
+      </div>
     </div>
   )
 }
