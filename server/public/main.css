@@ -1,7 +1,71 @@
 body {
-  color: #fff;
-  background-color: rgb(30, 20, 50);
-  background-image: url('./images/stars.jpg');
+  color: #FFFFFF;
+  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+}
+
+/* The main title */
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 96px;
+  color: #FFD700;
+  margin: 0;
+}
+
+/* The main subtitle */
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Section headers */
+h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 80vh;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section--dark {
+  background-color: #000000;
+}
+
+.section--blur {
+
+}
+
+.projects {
+
+}
+
+.projects__grid {
+  display: grid;
+}
+
+.major-project__card {
+  background-color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+
+.about {
+
+}
+
+.contact {
+
 }
