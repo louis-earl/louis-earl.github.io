@@ -1,6 +1,7 @@
 import React from 'react'
 import About from './About'
 import Contact from './Contact'
+import Footer from './FootNote'
 import Hero from './Hero'
 import Projects from './Projects'
 
@@ -17,6 +18,7 @@ function Home() {
       <div className="section__wrapper section__wrapper--dark">
         <Contact />
       </div>
+      <Footer />
     </div>
   )
 }

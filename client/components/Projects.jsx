@@ -1,17 +1,18 @@
 import React from 'react'
-import ProjectsGrid from './ProjectsGrid'
+import ProjectsGridInterest from './ProjectsGridInterest'
+import ProjectsGridMajor from './ProjectsGridMajor'
 
 function Projects({ }) {
   return (
     <div className="section">
       <div className="projects">
         <h3>Major Projects</h3>
-        <ProjectsGrid cardType="major"/>
+        <ProjectsGridMajor cardType="major"/>
       </div>
 
       <div className="projects">
         <h3>Interest Projects</h3>
-        <ProjectsGrid cardType="interest"/>
+        <ProjectsGridInterest cardType="interest"/>
       </div>
     </div>
   )

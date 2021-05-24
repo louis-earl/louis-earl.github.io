@@ -155,15 +155,87 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ContactMethod__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactMethod */ "./client/components/ContactMethod.jsx");
+
 
 
 function Contact() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contact section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Don't Be a Stranger"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Github"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Linkedin"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Don't Be a Stranger"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "contact__methods"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
+    image: "email",
+    label: "louis.earl.14@gmail.com"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
+    image: "linkedin",
+    label: "Linkedin"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
+    image: "github",
+    label: "GitHub"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
+    image: "phone",
+    label: "Available on Request"
+  })));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
+
+/***/ }),
+
+/***/ "./client/components/ContactMethod.jsx":
+/*!*********************************************!*\
+  !*** ./client/components/ContactMethod.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function ContactMethod(_ref) {
+  var image = _ref.image,
+      label = _ref.label;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "contact__method"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "contact__method--icon",
+    src: "./images/" + image + ".png",
+    alt: "Icon for " + image
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, label));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactMethod);
+
+/***/ }),
+
+/***/ "./client/components/FootNote.jsx":
+/*!****************************************!*\
+  !*** ./client/components/FootNote.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function FootNote() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "foot-note"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "foot-note__text"
+  }, "(this site made with love by Louis Earl)"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FootNote);
 
 /***/ }),
 
@@ -205,8 +277,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./About */ "./client/components/About.jsx");
 /* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Contact */ "./client/components/Contact.jsx");
-/* harmony import */ var _Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Hero */ "./client/components/Hero.jsx");
-/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Projects */ "./client/components/Projects.jsx");
+/* harmony import */ var _FootNote__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FootNote */ "./client/components/FootNote.jsx");
+/* harmony import */ var _Hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Hero */ "./client/components/Hero.jsx");
+/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Projects */ "./client/components/Projects.jsx");
+
 
 
 
@@ -214,16 +288,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hero__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hero__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "section__wrapper section__wrapper--dark"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Projects__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Projects__WEBPACK_IMPORTED_MODULE_5__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "section__wrapper section__wrapper--blur"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_About__WEBPACK_IMPORTED_MODULE_1__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "section__wrapper section__wrapper--dark"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Contact__WEBPACK_IMPORTED_MODULE_2__.default, null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Contact__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_FootNote__WEBPACK_IMPORTED_MODULE_3__.default, null));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+
+/***/ }),
+
+/***/ "./client/components/ProjectCard.jsx":
+/*!*******************************************!*\
+  !*** ./client/components/ProjectCard.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function ProjectCard(_ref) {
+  var projectType = _ref.projectType,
+      image = _ref.image,
+      title = _ref.title,
+      year = _ref.year,
+      tech = _ref.tech;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "project-card project-card--" + projectType
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "project-card__poster",
+    src: "./images/" + image + ".jpg",
+    alt: "Poster for " + projectType + " project, " + title
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, year));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectCard);
 
 /***/ }),
 
@@ -239,8 +346,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ProjectsGrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectsGrid */ "./client/components/ProjectsGrid.jsx");
+/* harmony import */ var _ProjectsGridInterest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectsGridInterest */ "./client/components/ProjectsGridInterest.jsx");
+/* harmony import */ var _ProjectsGridMajor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectsGridMajor */ "./client/components/ProjectsGridMajor.jsx");
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
 
 
 
@@ -252,11 +361,11 @@ function Projects(_ref) {
     className: "section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Major Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectsGrid__WEBPACK_IMPORTED_MODULE_1__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Major Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectsGridMajor__WEBPACK_IMPORTED_MODULE_2__.default, {
     cardType: "major"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Interest Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectsGrid__WEBPACK_IMPORTED_MODULE_1__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Interest Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectsGridInterest__WEBPACK_IMPORTED_MODULE_1__.default, {
     cardType: "interest"
   })));
 }
@@ -265,10 +374,10 @@ function Projects(_ref) {
 
 /***/ }),
 
-/***/ "./client/components/ProjectsGrid.jsx":
-/*!********************************************!*\
-  !*** ./client/components/ProjectsGrid.jsx ***!
-  \********************************************/
+/***/ "./client/components/ProjectsGridInterest.jsx":
+/*!****************************************************!*\
+  !*** ./client/components/ProjectsGridInterest.jsx ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -277,22 +386,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ProjectCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectCard */ "./client/components/ProjectCard.jsx");
 
 
-function ProjectsGrid(_ref) {
-  var cardType = _ref.cardType;
+
+function ProjectsGridInterest() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects__grid"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "project__card project__card--" + cardType
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Project Name")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "project__card project__card--" + cardType
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Project Name")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "project__card project__card--" + cardType
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Project Name")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "interest",
+    image: "research",
+    title: "Research Project",
+    year: "2021"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "interest",
+    image: "research",
+    title: "Research Project",
+    year: "2020"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "interest",
+    image: "research",
+    title: "Research Project",
+    year: "2019"
+  }));
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectsGrid);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectsGridInterest);
+
+/***/ }),
+
+/***/ "./client/components/ProjectsGridMajor.jsx":
+/*!*************************************************!*\
+  !*** ./client/components/ProjectsGridMajor.jsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ProjectCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectCard */ "./client/components/ProjectCard.jsx");
+
+
+
+function ProjectsGridMajor() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "projects__grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "major",
+    image: "poster-mafia",
+    title: "Midnight Mysteries",
+    year: "2021"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "major",
+    image: "poster-oww",
+    title: "One Way Wellington",
+    year: "2019"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
+    projectType: "major",
+    image: "poster-racer",
+    title: "Super Racer Go!",
+    year: "2018"
+  }));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectsGridMajor);
 
 /***/ }),
 

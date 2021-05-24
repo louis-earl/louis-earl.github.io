@@ -7,6 +7,7 @@ body {
 }
 
 /* The main title */
+
 h1 {
   font-family: 'Kaushan Script', cursive;
   font-size: 96px;
@@ -16,6 +17,7 @@ h1 {
 }
 
 /* The main subtitle */
+
 h2 {
   font-size: 24px;
   text-transform: uppercase;
@@ -23,11 +25,19 @@ h2 {
 }
 
 /* Section headers */
+
 h3 {
   font-size: 24px;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
+h4 {
+  margin: 8px 0 0 0;
+}
+
+p {
+  margin: 0;
+}
 
 .hero {
   height: 80vh;
@@ -36,6 +46,12 @@ h3 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+}
+
+.section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 840px;
 }
 
 .section__wrapper {
@@ -50,19 +66,11 @@ h3 {
 }
 
 .section__wrapper--blur {
-  backdrop-filter: blur(6px); 
-  -webkit-backdrop-filter: blur(6px);}
-
-.section {
-  padding: 60px 20px;
-  width: 100%;
-  max-width: 800px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-
-.projects {
-
-}
+.projects {}
 
 .projects__grid {
   display: grid;
@@ -71,19 +79,24 @@ h3 {
   gap: 0px 20px;
 }
 
-.project__card {
+.project-card {
   background-color: #29292C;
-  border-radius: 16px;
+  border-radius: 12px;
   width: 100%;
 }
 
-.project__card--major {
-  height: 300px;
+.project-card__poster {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
 }
 
-.project__card--interest {
+/* .project-card--major {
+  height: 300px;
+} */
+
+/* .project-card--interest {
   height: 150px;
-}
+} */
 
 .about__grid {
   display: grid;
@@ -97,6 +110,38 @@ h3 {
   border-radius: 50%;
 }
 
-.contact {
+.contact {}
 
+.contact__methods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.contact__method {
+  display: flex;
+  align-items: center;
+}
+
+.contact__method--icon {
+  width: 32px;
+  height: 32px;
+  padding-right: 4px;
+}
+
+.foot-note {
+  background-color: black;
+  padding-bottom: 8px;
+}
+
+.foot-note__text {
+  text-align: center;
+  background: url("./images/stars.jpg") center;
+  background-size: 66%;
+  margin: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #d374ff57;
 }
