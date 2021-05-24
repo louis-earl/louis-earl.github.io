@@ -54,16 +54,30 @@ h3 {
 
 .projects__grid {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
 }
 
-.major-project__card {
-  background-color: #FFFFFF;
-  width: 100px;
-  height: 100px;
+.project__card {
+  background-color: #29292C;
+  border-radius: 16px;
+  width: 100%;
 }
 
-.about {
+.project__card--major {
+  height: 300px;
+}
 
+.project__card--interest {
+  height: 150px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
 }
 
 .contact {

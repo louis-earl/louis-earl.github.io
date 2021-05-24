@@ -6,12 +6,12 @@ function Projects({ }) {
     <div className="section section--dark">
       <div className="projects">
         <h3>Major Projects</h3>
-        <ProjectsGrid />
+        <ProjectsGrid cardType="major"/>
       </div>
 
       <div className="projects">
         <h3>Interest Projects</h3>
-        <ProjectsGrid />
+        <ProjectsGrid cardType="interest"/>
       </div>
     </div>
   )
