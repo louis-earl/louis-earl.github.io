@@ -24,6 +24,10 @@ h2 {
   margin: 0;
 }
 
+h1, h2 {
+  text-shadow: 0px 0px 8px #00000080, 0px 0px 4px #00000040, 0px 0px 2px #00000040;
+}
+
 /* Section headers */
 
 h3 {

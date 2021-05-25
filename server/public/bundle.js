@@ -144,10 +144,10 @@ function App() {
     component: _Home__WEBPACK_IMPORTED_MODULE_1__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_3__.Route, {
     exact: true,
-    path: "/404",
+    path: "/oops",
     component: _NotFound__WEBPACK_IMPORTED_MODULE_2__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_3__.Redirect, {
-    to: "/404"
+    to: "/oops"
   }));
 }
 
@@ -481,10 +481,10 @@ function ProjectsGridInterest() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects__grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    image: "research",
-    title: "Research Project",
-    year: "2020",
-    tech: ["C#", "Unity Engine"],
+    image: "project-portfolio",
+    title: "Portfolio Website",
+    year: "2021",
+    tech: ["JavaScript", "React"],
     route: "r1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
     image: "research",

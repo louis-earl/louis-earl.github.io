@@ -10,8 +10,8 @@ function App() {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route exact path="/404" component={NotFound} />
-      <Redirect to="/404" />
+      <Route exact path="/oops" component={NotFound} />
+      <Redirect to="/oops" />
     </Switch>
   )
 }

@@ -7,10 +7,10 @@ function ProjectsGridInterest() {
     <div className="projects__grid">
 
       <ProjectCard
-        image="research"
-        title="Research Project"
-        year="2020"
-        tech={["C#", "Unity Engine"]}
+        image="project-portfolio"
+        title="Portfolio Website"
+        year="2021"
+        tech={["JavaScript", "React"]}
         route="r1"
       />
 
