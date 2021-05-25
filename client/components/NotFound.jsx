@@ -1,12 +1,9 @@
 import React from 'react'
+import Modal from './Modal'
 
 function NotFound() {
-  console.log("Not found component")
   return (
-    <div className="project">
-        <h2>404 - Not Found!</h2>
-        <p>That's a shame.</p>
-    </div>
+    <Modal title={"404 - Page not found"} message={"Dang, that's a shame."}/>
   )
 }
 

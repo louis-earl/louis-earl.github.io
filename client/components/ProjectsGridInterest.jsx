@@ -11,7 +11,7 @@ function ProjectsGridInterest() {
         title="Portfolio Website"
         year="2021"
         tech={["JavaScript", "React"]}
-        route="r1"
+        route="portfolio"
       />
 
       <ProjectCard
@@ -19,7 +19,7 @@ function ProjectsGridInterest() {
         title="Research Project"
         year="2021"
         tech={["C#", "Unity Engine"]}
-        route="r2"
+        route="research"
       />
 
       <ProjectCard
@@ -27,7 +27,7 @@ function ProjectsGridInterest() {
         title="Research Project"
         year="2019"
         tech={["C#", "Unity Engine"]}
-        route="r3"
+        route="research"
       />
 
     </div>

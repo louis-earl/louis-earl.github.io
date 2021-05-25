@@ -179,6 +179,27 @@ a .contact__method:hover {
   color: #d374ff57;
 }
 
+.modal {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #29292C;
+  text-align: center;
+  box-shadow: -4px 2px 6px #00000060;
+}
+
+.modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal__button {
+  margin: 24px auto 8px auto;
+}
+
+
 @media screen and (max-width: 780px) {
   .projects__grid {
     grid-auto-columns: calc(50% - 40px);
