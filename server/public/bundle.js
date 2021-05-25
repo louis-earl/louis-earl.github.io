@@ -100,7 +100,7 @@ function About() {
     className: "about__grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "about__content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hello! I\u2019m Louis (pronounced Louie, but I\u2019ll answer either way!). I\u2019m currently living in Wellington and have called this place home for the last three years."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "I\u2019m attending Dev Academy because I have a love for programming! I started out trying to study software engineering in Christchurch, but very quickly decided this wasn\u2019t for me (I found the maths horrific). I then moved to Welly in 2017 and started my (now completed) Bachelor of Creative Media Production at Massey. During my study, I specialised in video game production and I absolutely loved it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "At EDA, I\u2019m hoping to widen my career options with some more employable skillsets - learning anything related to programming is exciting, and a step in the right direction for me!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hello! I\u2019m Louis (pronounced Louie, he/him pronouns). I\u2019m currently living in Wellington and have called this place home for the last three years."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "I\u2019m attending Dev Academy because I have a love for programming! I started out trying to study software engineering in Christchurch, but very quickly decided this wasn\u2019t for me (I found the maths horrific). I then moved to Welly in 2017 and started my (now completed) Bachelor of Creative Media Production at Massey. During my study, I specialised in video game production and I absolutely loved it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "At EDA, I\u2019m hoping to widen my career options with some more employable skill-sets - learning anything related to programming is exciting, and a step in the right direction for me!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "about__image",
     src: "./images/portrait-louis.jpg",
     alt: "A portrait photo of Louis Earl"
@@ -313,6 +313,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _TechLabel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TechLabel */ "./client/components/TechLabel.jsx");
+
 
 
 function ProjectCard(_ref) {
@@ -327,7 +329,16 @@ function ProjectCard(_ref) {
     className: "project-card__poster",
     src: "./images/" + image + ".jpg",
     alt: "Poster for " + projectType + " project, " + title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, year));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "project-card__info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, year), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "tech-list"
+  }, tech && tech.map(function (e, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TechLabel__WEBPACK_IMPORTED_MODULE_1__.default, {
+      key: i,
+      label: e
+    });
+  }))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectCard);
@@ -397,17 +408,20 @@ function ProjectsGridInterest() {
     projectType: "interest",
     image: "research",
     title: "Research Project",
-    year: "2021"
+    year: "2020",
+    tech: ["C#", "Unity Engine"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
     projectType: "interest",
     image: "research",
     title: "Research Project",
-    year: "2020"
+    year: "2021",
+    tech: ["C#", "Unity Engine"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
     projectType: "interest",
     image: "research",
     title: "Research Project",
-    year: "2019"
+    year: "2019",
+    tech: ["C#", "Unity Engine"]
   }));
 }
 
@@ -438,21 +452,56 @@ function ProjectsGridMajor() {
     projectType: "major",
     image: "poster-mafia",
     title: "Midnight Mysteries",
-    year: "2021"
+    year: "2021",
+    tech: ["JavaScript", "React", "Redux", "Web Sockets"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
     projectType: "major",
     image: "poster-oww",
     title: "One Way Wellington",
-    year: "2019"
+    year: "2019",
+    tech: ["C#", "Unity Engine"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
     projectType: "major",
     image: "poster-racer",
     title: "Super Racer Go!",
-    year: "2018"
+    year: "2018",
+    tech: ["Unreal Engine"]
   }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectsGridMajor);
+
+/***/ }),
+
+/***/ "./client/components/TechLabel.jsx":
+/*!*****************************************!*\
+  !*** ./client/components/TechLabel.jsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _util_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/color */ "./client/util/color.js");
+
+
+
+function TechLabel(_ref) {
+  var label = _ref.label;
+  var color = (0,_util_color__WEBPACK_IMPORTED_MODULE_1__.getColor)(label);
+  console.log("color", color);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "tech-label",
+    style: {
+      backgroundColor: color
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, label));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TechLabel);
 
 /***/ }),
 
@@ -475,6 +524,33 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('app'));
 });
+
+/***/ }),
+
+/***/ "./client/util/color.js":
+/*!******************************!*\
+  !*** ./client/util/color.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getColor": () => /* binding */ getColor
+/* harmony export */ });
+var techList = {
+  "JavaScript": "#eb3434",
+  "React": "#eb8f34",
+  "Redux": "#f5c711",
+  "Web Sockets": "#08e300",
+  "C#": "#00e38f",
+  "Unity Engine": "#3465eb",
+  "Unreal Engine": "#8c34eb",
+  "Other": "#eb34ab"
+};
+function getColor(techName) {
+  return techList[techName];
+}
 
 /***/ }),
 

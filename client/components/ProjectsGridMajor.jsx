@@ -11,6 +11,7 @@ function ProjectsGridMajor() {
         image="poster-mafia"
         title="Midnight Mysteries"
         year="2021"
+        tech={["JavaScript", "React", "Redux", "Web Sockets"]}
       />
 
       <ProjectCard
@@ -18,6 +19,7 @@ function ProjectsGridMajor() {
         image="poster-oww"
         title="One Way Wellington"
         year="2019"
+        tech={["C#", "Unity Engine"]}
       />
 
       <ProjectCard
@@ -25,6 +27,7 @@ function ProjectsGridMajor() {
         image="poster-racer"
         title="Super Racer Go!"
         year="2018"
+        tech={["Unreal Engine"]}
       />
 
     </div>
