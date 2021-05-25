@@ -7,10 +7,10 @@ function About() {
       <div className="about__grid">
         <div className="about__content">
 
-          <p>
+          <p className="paragraph-break">
             Hello! I’m Louis (pronounced Louie, he/him pronouns). I’m currently living in Wellington and have called this place home for the last three years.
           </p>
-          <p>
+          <p className="paragraph-break">
             I’m attending Dev Academy because I have a love for programming! I started out trying to study software engineering in Christchurch, but very quickly decided this wasn’t for me (I found the maths horrific). I then moved to Welly in 2017 and started my (now completed) Bachelor of Creative Media Production at Massey. During my study, I specialised in video game production and I absolutely loved it.
           </p>
           <p>

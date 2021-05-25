@@ -28,7 +28,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
 
 h4 {
@@ -37,6 +37,10 @@ h4 {
 
 p {
   margin: 0;
+}
+
+p.paragraph-break {
+  margin-bottom: 12px;
 }
 
 a {
@@ -54,7 +58,7 @@ a {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 40px 20px 60px 20px;
   width: 100%;
   max-width: 840px;
 }
@@ -103,6 +107,7 @@ a {
 .tech-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 8px 0 4px 0;
 }
 
 .tech-label {
@@ -123,10 +128,6 @@ a {
 .about__image {
   width: 100%;
   border-radius: 50%;
-}
-
-.about__content p {
-  margin-bottom: 12px;
 }
 
 .contact {}
