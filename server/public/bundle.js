@@ -123,23 +123,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ "./client/components/Home.jsx");
+/* harmony import */ var _MidnightMysteries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MidnightMysteries */ "./client/components/MidnightMysteries.jsx");
 // Packages
 
  // Components 
 
 
 
+
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_3__.Route, {
     exact: true,
     path: "/",
     component: _Home__WEBPACK_IMPORTED_MODULE_1__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_3__.Route, {
+    exact: true,
+    path: "/midnight-mysteries",
+    component: _MidnightMysteries__WEBPACK_IMPORTED_MODULE_2__.default
   }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./client/components/ConditionalWrapper.jsx":
+/*!**************************************************!*\
+  !*** ./client/components/ConditionalWrapper.jsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+function ConditionalWrapper(_ref) {
+  var condition = _ref.condition,
+      wrapper = _ref.wrapper,
+      children = _ref.children;
+  return condition ? wrapper(children) : children;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConditionalWrapper);
 
 /***/ }),
 
@@ -163,16 +191,19 @@ function Contact() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contact section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Don't Be a Stranger"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "contact__methods"
+    className: "contact__grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
     image: "email",
-    label: "louis.earl.14@gmail.com"
+    label: "louis.earl.14@gmail.com",
+    link: "mailto: louis.earl.14@gmail.com"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
     image: "linkedin",
-    label: "Linkedin"
+    label: "Linkedin",
+    link: "https://www.linkedin.com/in/louis-earl/"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
     image: "github",
-    label: "GitHub"
+    label: "GitHub",
+    link: "https://github.com/louis-earl"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ContactMethod__WEBPACK_IMPORTED_MODULE_1__.default, {
     image: "phone",
     label: "Available on Request"
@@ -195,18 +226,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ConditionalWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConditionalWrapper */ "./client/components/ConditionalWrapper.jsx");
+
 
 
 function ContactMethod(_ref) {
   var image = _ref.image,
-      label = _ref.label;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      label = _ref.label,
+      link = _ref.link;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ConditionalWrapper__WEBPACK_IMPORTED_MODULE_1__.default, {
+    condition: link,
+    wrapper: function wrapper(children) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        href: link
+      }, children);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contact__method"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "contact__method--icon",
     src: "./images/" + image + ".png",
     alt: "Icon for " + image
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, label));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, label)));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactMethod);
@@ -301,6 +342,30 @@ function Home() {
 
 /***/ }),
 
+/***/ "./client/components/MidnightMysteries.jsx":
+/*!*************************************************!*\
+  !*** ./client/components/MidnightMysteries.jsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function MidnightMysteries() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "project"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Midnight Mysteries"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Multiplayer Game"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MidnightMysteries);
+
+/***/ }),
+
 /***/ "./client/components/ProjectCard.jsx":
 /*!*******************************************!*\
   !*** ./client/components/ProjectCard.jsx ***!
@@ -313,22 +378,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _TechLabel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TechLabel */ "./client/components/TechLabel.jsx");
 
 
 
+
 function ProjectCard(_ref) {
-  var projectType = _ref.projectType,
-      image = _ref.image,
+  var image = _ref.image,
       title = _ref.title,
       year = _ref.year,
-      tech = _ref.tech;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "project-card project-card--" + projectType
+      tech = _ref.tech,
+      route = _ref.route;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: route
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "project-card"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "project-card__poster",
     src: "./images/" + image + ".jpg",
-    alt: "Poster for " + projectType + " project, " + title
+    alt: "Poster for " + title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "project-card__info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, year), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -338,7 +407,7 @@ function ProjectCard(_ref) {
       key: i,
       label: e
     });
-  }))));
+  })))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectCard);
@@ -405,23 +474,23 @@ function ProjectsGridInterest() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects__grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "interest",
     image: "research",
     title: "Research Project",
     year: "2020",
-    tech: ["C#", "Unity Engine"]
+    tech: ["C#", "Unity Engine"],
+    route: "r1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "interest",
     image: "research",
     title: "Research Project",
     year: "2021",
-    tech: ["C#", "Unity Engine"]
+    tech: ["C#", "Unity Engine"],
+    route: "r2"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "interest",
     image: "research",
     title: "Research Project",
     year: "2019",
-    tech: ["C#", "Unity Engine"]
+    tech: ["C#", "Unity Engine"],
+    route: "r3"
   }));
 }
 
@@ -449,23 +518,23 @@ function ProjectsGridMajor() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "projects__grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "major",
     image: "poster-mafia",
     title: "Midnight Mysteries",
     year: "2021",
-    tech: ["JavaScript", "React", "Redux", "Web Sockets"]
+    tech: ["JavaScript", "React", "Redux", "Web Sockets"],
+    route: "midnight-mysteries"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "major",
     image: "poster-oww",
     title: "One Way Wellington",
     year: "2019",
-    tech: ["C#", "Unity Engine"]
+    tech: ["C#", "Unity Engine"],
+    route: "one-way-wellington"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__.default, {
-    projectType: "major",
     image: "poster-racer",
     title: "Super Racer Go!",
     year: "2018",
-    tech: ["Unreal Engine"]
+    tech: ["Unreal Engine"],
+    route: "super-racer-go"
   }));
 }
 
@@ -492,7 +561,6 @@ __webpack_require__.r(__webpack_exports__);
 function TechLabel(_ref) {
   var label = _ref.label;
   var color = (0,_util_color__WEBPACK_IMPORTED_MODULE_1__.getColor)(label);
-  console.log("color", color);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "tech-label",
     style: {
@@ -522,7 +590,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('app'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('app'));
 });
 
 /***/ }),
