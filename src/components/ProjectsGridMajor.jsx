@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 function ProjectsGridMajor() {
   return (
 
-    <div className="projects__grid">
+    <div className="projects__grid scrollbar-hidden">
 
       <ProjectCard
         image="poster-mafia"

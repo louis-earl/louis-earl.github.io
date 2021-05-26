@@ -1,14 +1,23 @@
-const techList = {
-    "JavaScript": "#eb3434", 
-    "React": "#eb8f34", 
-    "Redux": "#f5c711",
-    "Web Sockets": "#08e300",
-    "C#": "#00e38f", 
-    "Unity Engine": "#3465eb", 
-    "Unreal Engine": "#8c34eb",
-    "Other": "#eb34ab"
-}
+const techList = [
+    "JavaScript",
+    "React",
+    "Redux",
+    "Web Sockets",
+    "Canvas",
+    "C#",
+    "Unity Engine",
+    "Unreal Engine",
+]
 
 export function getColor(techName) {
-    return techList[techName]
+
+    const i = techList.indexOf(techName)
+    if (i == -1) {
+        console.warn("Tech (" + techName + ") not specified in techList. " + techList)
+        return "#FFFFFF"
+    }
+
+    const hue = ((360 / techList.length) * i) + 330
+
+    return ("hsl(" + hue + ", 95%, 55%)")
 }
