@@ -23,8 +23,9 @@ var z = 0;
 var star_color_ratio = 0;
 var star_x_save, star_y_save;
 var star_ratio = 256;
-var star_speed = 1;
+var star_speed = 0.4;
 var star_speed_save = 0;
+var starLength = 8;
 var star = new Array(n);
 var color;
 var opacity = 0.1;
@@ -67,67 +68,77 @@ function init(starfield) {
     // adsense.style.display='block';
 }
 
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max)
+}
+
+
 function anim() {
+
+    const offsetY = clamp(window.scrollY / 3, 0, 60)
+    starLength = clamp(offsetY / 3, 8, 100)
+
     mouse_x = cursor_x - x;
-    mouse_y = cursor_y - y;
+    mouse_y = cursor_y - y - offsetY
     context.clearRect(0, 0, w, h);
     // context.fillRect(0, 0, w, h);
 
-    for (var i = 0; i < n; i++) {
-        test = true;
-        star_x_save = star[i][3];
-        star_y_save = star[i][4];
-        star[i][0] += mouse_x >> 4;
+        for (var i = 0; i < n; i++) {
+            test = true;
+            star_x_save = star[i][3];
+            star_y_save = star[i][4];
+            star[i][0] += mouse_x >> 4;
 
-        if (star[i][0] > x << 1) {
-            star[i][0] -= w << 1; test = false;
+            if (star[i][0] > x << 1) {
+                star[i][0] -= w << 1; test = false;
+            }
+
+            if (star[i][0] < -x << 1) {
+                star[i][0] += w << 1; test = false;
+            }
+
+            star[i][1] += mouse_y >> 4;
+
+            if (star[i][1] > y << 1) {
+                star[i][1] -= h << 1; test = false;
+            }
+
+            if (star[i][1] < -y << 1) {
+                star[i][1] += h << 1; test = false;
+            }
+
+            star[i][2] -= star_speed;
+
+            if (star[i][2] > z) {
+                star[i][2] -= z; test = false;
+            }
+
+            if (star[i][2] < 0) {
+                star[i][2] += z; test = false;
+            }
+
+            star[i][3] = x + (star[i][0] / star[i][2]) * star_ratio;
+            star[i][4] = y + (star[i][1] / star[i][2]) * star_ratio;
+
+            const endpointX = star[i][3] - (starLength * (star[i][3] - star_x_save))
+            const endpointY = star[i][4] - (starLength * (star[i][4] - star_y_save))
+
+            // If star in bounds of canvas
+            if (star_x_save > 0 && star_x_save < w && star_y_save > 0 && star_y_save < h && test) {
+
+                context.lineWidth = (1 - star_color_ratio * star[i][2]) * 2;
+                context.beginPath();
+
+                // old position 
+                context.moveTo(star_x_save, star_y_save);
+
+                // new position
+                context.lineTo(endpointX, endpointY);
+                context.stroke();
+                context.closePath();
+            }
         }
-
-        if (star[i][0] < -x << 1) {
-            star[i][0] += w << 1; test = false;
-        }
-
-        star[i][1] += mouse_y >> 4;
-
-        if (star[i][1] > y << 1) {
-            star[i][1] -= h << 1; test = false;
-        }
-
-        if (star[i][1] < -y << 1) {
-            star[i][1] += h << 1; test = false;
-        }
-
-        star[i][2] -= star_speed;
-
-        if (star[i][2] > z) {
-            star[i][2] -= z; test = false;
-        }
-
-        if (star[i][2] < 0) {
-            star[i][2] += z; test = false;
-        }
-
-        star[i][3] = x + (star[i][0] / star[i][2]) * star_ratio;
-        star[i][4] = y + (star[i][1] / star[i][2]) * star_ratio;
-
-        const endpointX = (10 * (star[i][3] - star_x_save)) + star[i][3]
-        const endpointY = (10 * (star[i][4] - star_y_save)) + star[i][4]
-
-        // If star in bounds of canvas
-        if (star_x_save > 0 && star_x_save < w && star_y_save > 0 && star_y_save < h && test) {
-
-            context.lineWidth = (1 - star_color_ratio * star[i][2]) * 2;
-            context.beginPath();
-
-            // old position 
-            context.moveTo(star_x_save, star_y_save);
-
-            // new position
-            context.lineTo(endpointX, endpointY);
-            context.stroke();
-            context.closePath();
-        }
-    }
+    
     timeout = setTimeout(() => anim(), fps);
 }
 

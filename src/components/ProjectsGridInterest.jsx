@@ -14,22 +14,6 @@ function ProjectsGridInterest() {
         route="portfolio"
       />
 
-      <ProjectCard
-        image="research"
-        title="Research Project"
-        year="2021"
-        tech={["C#", "Unity Engine"]}
-        route="research"
-      />
-
-      <ProjectCard
-        image="research"
-        title="Research Project"
-        year="2019"
-        tech={["C#", "Unity Engine"]}
-        route="research"
-      />
-
     </div>
   )
 }
