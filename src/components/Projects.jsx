@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectsGridInterest from './ProjectsGridInterest'
 import ProjectsGridMajor from './ProjectsGridMajor'
 
-function Projects({ }) {
+function Projects() {
   return (
     <div className="section">
       <div className="projects">

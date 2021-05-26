@@ -21,7 +21,7 @@ function About() {
           <img 
           className="about__image" 
           src="./images/portrait-louis.jpg" 
-          alt="A portrait photo of Louis Earl" 
+          alt="A portrait of Louis Earl" 
           />
 
       </div>
