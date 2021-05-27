@@ -26,7 +26,7 @@ h1 {
 /* The main subtitle */
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   text-transform: uppercase;
   margin: 0 20px;
 }
@@ -38,8 +38,8 @@ h1, h2 {
 /* Section headers */
 
 h3 {
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 28px;
+  margin: 0 0 20px 0;
 }
 
 h4, p {
@@ -86,7 +86,7 @@ a {
 }
 
 .section {
-  margin: 40px 20px 60px 20px;
+  margin: 80px 20px 98px 20px;
   width: 100%;
   max-width: 840px;
 }
@@ -115,6 +115,10 @@ a {
   overflow-x: scroll;
   grid-template-rows: 1fr;
   gap: 0px 20px;
+}
+
+.projects__grid--major {
+  margin-bottom: 60px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -177,10 +181,17 @@ a {
 .about__fixed-bg {
   background-attachment: fixed;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  height: 100%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
   z-index: -3;
 }
@@ -249,7 +260,7 @@ a .contact__method:hover {
 
 @media screen and (max-width: 780px) {
   .projects__grid {
-    grid-auto-columns: calc(50% - 40px);
+    grid-auto-columns: calc(50% - 80px);
     margin: 0 -20px;
   }
   .projects__grid:after {
