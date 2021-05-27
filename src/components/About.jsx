@@ -17,7 +17,7 @@ function About() {
             In development, I enjoy being creative as a way to build and design a visual experience. But also, I find myself endorsing the very same creative part of my brain when programming. I’m always excited to dig into the complex problem solving with the curiosity to learn how and why things work.
           </p>
           <p className="paragraph-break">
-            For the past 4 years, I have been using code creatively for video game projects. In my final year at the College of Creative Arts, I worked on a year-long major project: “One Way Wellington”, a video game about building a spaceship and transporting creative talent from across the galaxy to the coolest little capital.
+            For the past 4 years, I have been using code creatively for video game projects. In my final year at the College of Creative Arts, I worked on a year-long major project, One Way Wellington, a video game about building a spaceship and transporting creative talent from across the galaxy to the coolest little capital.
           </p>
           <p>
             This year I have extended my tool-belt into web development. I have recently completed study at Enspiral Dev Academy, where I worked in a team to build a web-based multiplayer Mafia game.

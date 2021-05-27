@@ -61,9 +61,9 @@ function anim() {
     
     checkScreenSize()
 
-    const offsetY = clamp(window.scrollY / 3, 0, 60)
-    starLength = clamp(offsetY / 5, 5, 12)
-    star_speed = clamp(offsetY / 15, 1, 6)
+    const offsetY = clamp(window.scrollY / 3, 0, 70)
+    starLength = clamp(offsetY / 6, 3, 12)
+    star_speed = clamp(offsetY / 12, 1, 8)
 
     mouse_x = cursor_x - x
     mouse_y = cursor_y - y - offsetY
