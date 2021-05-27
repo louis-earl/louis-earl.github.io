@@ -1,13 +1,3 @@
-function $i(id) { return document.getElementById(id) }
-function $r(parent, child) { (document.getElementById(parent)).removeChild(document.getElementById(child)) }
-function $t(name) { return document.getElementsByTagName(name) }
-function $c(code) { return String.fromCharCode(code) }
-function $h(value) { return ('0' + Math.max(0, Math.min(255, Math.round(value))).toString(16)).slice(-2) }
-function _i(id, value) { $t('div')[id].innerHTML += value }
-// function _h(value) { return !hires?value:Math.round(value/2) }
-
-var starfield;
-var flag = true
 var test = true
 var n = 1000   // number of stars
 var w = 0      // current screen width
@@ -19,24 +9,19 @@ var star_color_ratio = 0
 var star_x_save, star_y_save
 var star_ratio = 256
 var star_speed = 1
-var star_speed_save = 0
 var starLength = 8
 var star = new Array(n)
-var color
-var opacity = 0.1
 
 var cursor_x = 0
 var cursor_y = 0
 var mouse_x = 0
 var mouse_y = 0
 
+var starfield;
 var context
 
-var key
-var ctrl
-
-var timeout
 var fps = 20
+var timeout
 
 function getScreenSize() {
     var currentWidth = document.documentElement.clientWidth
@@ -64,7 +49,6 @@ function init() {
     starfield.width = w
     starfield.height = h
     context = starfield.getContext('2d')
-    //context.lineCap='round'
     context.fillStyle = 'rgb(0,0,0)'
     context.strokeStyle = 'rgb(255,255,255)'
 }
@@ -72,7 +56,6 @@ function init() {
 function clamp(num, min, max) {
     return Math.min(Math.max(num, min), max)
 }
-
 
 function anim() {
     
@@ -85,7 +68,6 @@ function anim() {
     mouse_x = cursor_x - x
     mouse_y = cursor_y - y - offsetY
     context.clearRect(0, 0, w, h)
-    // context.fillRect(0, 0, w, h)
 
         for (var i = 0; i < n; i++) {
             test = true
@@ -152,55 +134,6 @@ function anim() {
     timeout = setTimeout(() => anim(), fps)
 }
 
-// function move(evt) {
-//     cursor_x = evt.pageX - canvas_x
-//     cursor_y = evt.pageY - canvas_y
-// }
-
-function key_manager(evt) {
-    key = evt.which || evt.keyCode
-    //ctrl=evt.ctrlKey
-    switch (key) {
-        case 27:
-            flag = flag ? false : true
-            if (flag) {
-                timeout = setTimeout(() => anim(), fps)
-            }
-            else {
-                clearTimeout(timeout)
-            }
-            break
-        case 32:
-            star_speed_save = (star_speed != 0) ? star_speed : star_speed_save
-            star_speed = (star_speed != 0) ? 0 : star_speed_save
-            break
-        case 13:
-            context.fillStyle = 'rgba(0,0,0,' + opacity + ')'
-            break
-    }
-    //top.status='key='+((key<100)?'0':'')+((key<10)?'0':'')+key
-}
-
-function release() {
-    switch (key) {
-        case 13:
-            context.fillStyle = 'rgb(0,0,0)'
-            break
-    }
-}
-
-// function mouse_wheel(evt) {
-//     var delta = 0
-//     if (evt.wheelDelta) {
-//         delta = evt.wheelDelta / 120
-//     }
-//     else if (evt.detail) {
-//         delta = -evt.detail / 3
-//     }
-//     star_speed += (delta >= 0) ? -0.2 : 0.2
-//     if (evt.preventDefault) evt.preventDefault()
-// }
-
 export function start(canvasRef) {
     starfield = canvasRef
     const [newWidth, newHeight] = getScreenSize()
@@ -219,8 +152,3 @@ function resize(newWidth, newHeight) {
     cursor_y = y
     init()
 }
-
-// document.onmousemove = move
-document.onkeypress = key_manager
-document.onkeyup = release
-// document.onmousewheel = mouse_wheel if (window.addEventListener) window.addEventListener('DOMMouseScroll', mouse_wheel, false)
