@@ -118,7 +118,7 @@ a {
 }
 
 .projects__grid--major {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
