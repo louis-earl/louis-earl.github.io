@@ -7,19 +7,24 @@ import Projects from './Projects'
 
 function Home() {
   return (
-    <div>
+    <>
       <Hero />
+
       <div className="section__wrapper section__wrapper--dark">
         <Projects />
       </div>
-      <div className="section__wrapper section__wrapper--blur">
-        <About />
+
+      <div className="about__fixed-bg">
+        <div className="section__wrapper section__wrapper--blur">
+          <About />
+        </div>
       </div>
+
       <div className="section__wrapper section__wrapper--dark">
         <Contact />
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

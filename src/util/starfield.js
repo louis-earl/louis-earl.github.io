@@ -23,7 +23,7 @@ var z = 0;
 var star_color_ratio = 0;
 var star_x_save, star_y_save;
 var star_ratio = 256;
-var star_speed = 0.4;
+var star_speed = 1;
 var star_speed_save = 0;
 var starLength = 8;
 var star = new Array(n);
@@ -41,7 +41,7 @@ var key;
 var ctrl;
 
 var timeout;
-var fps = 0;
+var fps = 20;
 
 function init(starfield) {
     var a = 0;
@@ -76,7 +76,8 @@ function clamp(num, min, max) {
 function anim() {
 
     const offsetY = clamp(window.scrollY / 3, 0, 60)
-    starLength = clamp(offsetY / 3, 8, 100)
+    starLength = clamp(offsetY / 5, 5, 12)
+    star_speed = clamp(offsetY / 15, 1, 6)
 
     mouse_x = cursor_x - x;
     mouse_y = cursor_y - y - offsetY

@@ -1,16 +1,23 @@
+@font-face {
+  font-family: 'Kiss Me or Not';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/kiss-me-or-not.woff') format('woff');
+}
+
 body {
   color: #FFFFFF;
-  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  background-color: #1E1432;
 }
 
 /* The main title */
 
 h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 96px;
+  font-family: 'Kiss Me or Not', cursive;
+  font-size: 120px;
   font-weight: 400;
   color: #FFD700;
   margin: 0;
@@ -68,7 +75,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
+  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
 }
 
 .section {
@@ -156,6 +164,17 @@ a {
 .about__image {
   width: 100%;
   border-radius: 50%;
+}
+
+.about__fixed-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%; 
+  width: 100%;
+  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
+  z-index: -3;
 }
 
 .contact__grid {
