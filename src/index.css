@@ -28,7 +28,7 @@ h1 {
 h2 {
   font-size: 24px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 20px;
 }
 
 h1, h2 {
@@ -98,8 +98,8 @@ a {
 }
 
 .section__wrapper--blur {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .projects__grid {
