@@ -1,4 +1,4 @@
-var test = true
+var drawStar = true
 var n = 1000   // number of stars
 var w = 0      // current screen width
 var h = 0      // current screen height
@@ -11,11 +11,6 @@ var star_ratio = 256
 var star_speed = 1
 var starLength = 8
 var star = new Array(n)
-
-var cursor_x = 0
-var cursor_y = 0
-var mouse_x = 0
-var mouse_y = 0
 
 var starfield;
 var context
@@ -38,13 +33,16 @@ function checkScreenSize() {
 
 function init() {
     var a = 0
+    console.log("x:",x, "y:", y)
+    console.log("w:", w, "h:", h)
+    console.log(w * 2 - x * 2)
     for (var i = 0; i < n; i++) {
         star[i] = new Array(5)
-        star[i][0] = Math.random() * w * 2 - x * 2
-        star[i][1] = Math.random() * h * 2 - y * 2
-        star[i][2] = Math.round(Math.random() * z)
-        star[i][3] = 0
-        star[i][4] = 0
+        star[i][0] = Math.random() * w * 2 - x * 2  // Origin x [0, ~1000]
+        star[i][1] = Math.random() * h * 2 - y * 2  // Origin y [0, ~1000]
+        star[i][2] = Math.round(Math.random() * z)  // Star current z position [0, ~1000]
+        star[i][3] = 0                              // star current x position 
+        star[i][4] = 0                              // star current y position 
     }
     starfield.width = w
     starfield.height = h
@@ -61,71 +59,73 @@ function anim() {
     
     checkScreenSize()
 
-    const offsetY = clamp(window.scrollY / 3, 0, 70)
-    starLength = clamp(offsetY / 6, 3, 12)
-    star_speed = clamp(offsetY / 12, 1, 8)
+    const offsetY = clamp(window.scrollY / 3, 0, 90)
+    starLength = clamp(offsetY / 30, 1, 3)
+    star_speed = clamp(offsetY / 12, 1, 8) // 1,8
 
-    mouse_x = cursor_x - x
-    mouse_y = cursor_y - y - offsetY
     context.clearRect(0, 0, w, h)
 
+
+
         for (var i = 0; i < n; i++) {
-            test = true
+            drawStar = true
             star_x_save = star[i][3]
             star_y_save = star[i][4]
-            star[i][0] += mouse_x >> 4
 
-            if (star[i][0] > x << 1) {
-                star[i][0] -= w << 1 
-                test = false
-            }
+            // we change origin y each frame if there's an offset 
+            // angles the star up 
+            star[i][1] += -offsetY >> 4
 
-            if (star[i][0] < -x << 1) {
-                star[i][0] += w << 1 
-                test = false
-            }
-
-            star[i][1] += mouse_y >> 4
-
-            if (star[i][1] > y << 1) {
-                star[i][1] -= h << 1 
-                test = false
-            }
-
+            // When origin y exceeds the max y size
+            // Set origin to min y    
             if (star[i][1] < -y << 1) {
                 star[i][1] += h << 1 
-                test = false
+                drawStar = false
             }
 
+            // moves star z direction (towards 0, front of screen)
             star[i][2] -= star_speed
 
+            // Star is too far back, move star forward 
+            // Error handling 
             if (star[i][2] > z) {
                 star[i][2] -= z 
-                test = false
+                drawStar = false
+                console.log("ERROR HANDLE Z - moved forward??")
             }
 
+            // Move star to back of screen
             if (star[i][2] < 0) {
                 star[i][2] += z 
-                test = false
+                drawStar = false
             }
 
             star[i][3] = x + (star[i][0] / star[i][2]) * star_ratio
             star[i][4] = y + (star[i][1] / star[i][2]) * star_ratio
 
-            const endpointX = star[i][3] - (starLength * (star[i][3] - star_x_save))
-            const endpointY = star[i][4] - (starLength * (star[i][4] - star_y_save))
+            if (star[i][3] > w + 100 || star[i][3] < -100 || star[i][4] > h + 100 || star[i][4] < -100) {
+                drawStar = false
+            }
+
+            if (star_x_save == 0 || star_y_save == 0) {
+                drawStar = false
+            }
+
+            star_x_save = star_x_save - (starLength * (star[i][3] - star_x_save))
+            star_y_save = star_y_save - (starLength * (star[i][4] - star_y_save))
 
             // If star in bounds of canvas
-            if (star_x_save > 0 && star_x_save < w && star_y_save > 0 && star_y_save < h && test) {
+            if (drawStar) {
 
-                context.lineWidth = (1 - star_color_ratio * star[i][2]) * 2
+                context.lineWidth = (1 - star_color_ratio * star[i][2]) * 3
+                context.lineCap = "round"
                 context.beginPath()
 
                 // old position 
                 context.moveTo(star_x_save, star_y_save)
 
                 // new position
-                context.lineTo(endpointX, endpointY)
+                context.lineTo(star[i][3], star[i][4])
                 context.stroke()
                 context.closePath()
             }
@@ -148,7 +148,5 @@ function resize(newWidth, newHeight) {
     y = Math.round(h / 2)
     z = (w + h) / 2
     star_color_ratio = 1 / z
-    cursor_x = x
-    cursor_y = y
     init()
 }
