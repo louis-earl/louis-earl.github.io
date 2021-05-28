@@ -35,9 +35,6 @@ function checkScreenSize() {
 
 function init() {
     var a = 0
-    console.log("x:",x, "y:", y)
-    console.log("w:", w, "h:", h)
-    console.log(w * 2 - x * 2)
     for (var i = 0; i < n; i++) {
         star[i] = new Array(5)
         star[i][0] = Math.random() * w * 2 - x * 2  // Origin x [0, ~1000]
@@ -110,7 +107,6 @@ function anim() {
             if (star[i][2] > z) {
                 star[i][2] -= z 
                 drawStar = false
-                console.log("ERROR HANDLE Z - moved forward??")
             }
 
             // Move star to back of screen
@@ -157,6 +153,14 @@ export function start(canvasRef) {
     starfield = canvasRef
     const [newWidth, newHeight] = getScreenSize()
     resize(newWidth, newHeight)
+    anim()
+}
+
+export function stop() {
+    clearTimeout(timeout)
+}
+
+export function resume() {
     anim()
 }
 

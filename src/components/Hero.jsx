@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Canvas from './Canvas'
+import Starfield from './Starfield'
 
 function Hero() {
 
@@ -40,7 +40,7 @@ function Hero() {
 
   return (
     <div id="hero" className="hero">
-      <Canvas />
+      <Starfield />
       <h1 id="hero-title">Louis Earl</h1>
       <h2 id="hero-subtitle">Software&nbsp;Developer&nbsp;for Web&nbsp;&&nbsp;Video&nbsp;Games</h2>
     </div>

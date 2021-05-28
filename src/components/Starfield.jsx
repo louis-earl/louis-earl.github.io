@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 
-import { start } from '../util/starfield'
+import { start, stop } from '../util/starfield'
 
-function Canvas() {
+function Starfield() {
 
   const canvasRef = useRef(null)
 
   useEffect(() => {
     start(canvasRef.current)
+    return () => {stop()}
   }, [])
 
   return (
@@ -23,4 +24,4 @@ function Canvas() {
   )
 }
 
-export default Canvas
+export default Starfield
