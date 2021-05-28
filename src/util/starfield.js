@@ -12,6 +12,8 @@ var star_speed = 1
 var starLength = 8
 var star = new Array(n)
 
+// var img
+
 var starfield;
 var context
 
@@ -49,6 +51,11 @@ function init() {
     context = starfield.getContext('2d')
     context.fillStyle = 'rgb(0,0,0)'
     context.strokeStyle = 'rgb(255,255,255)'
+
+    // img = new Image()
+    // img.src = "./images/stars.jpg"
+
+    
 }
 
 function clamp(num, min, max) {
@@ -65,7 +72,19 @@ function anim() {
 
     context.clearRect(0, 0, w, h)
 
+    // var imgW, imgH
+    // var ratio = w / h
 
+    // if (ratio > 1) {
+    //     imgW = w
+    //     imgH = h * ratio
+    // }
+    // else {
+    //     imgH = h
+    //     imgW = w / ratio
+    // }
+    //
+    // context.drawImage(img, 0, 0, imgW, imgH)
 
         for (var i = 0; i < n; i++) {
             drawStar = true
