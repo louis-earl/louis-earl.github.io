@@ -105,8 +105,9 @@ a {
 }
 
 .section__wrapper--blur {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px) brightness(2);;
+  -webkit-backdrop-filter: blur(8px) brightness(2);;
+
 }
 
 .projects__grid {

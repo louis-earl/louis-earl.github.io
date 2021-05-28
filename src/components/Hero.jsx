@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Canvas from './Canvas'
 
 function Hero() {
 
-  window.onscroll = function () { scrollFunction() }
-  window.onresize = function () { scrollFunction() }
+  useEffect(() => {
+  window.onscroll = () => scrollFunction() 
+  window.onresize = () => scrollFunction()
+
+  return () => {
+    window.onscroll = null
+    window.onresize = null
+  }
+  },[])
+
 
   function scrollFunction() {
     const scrollY = window.scrollY
