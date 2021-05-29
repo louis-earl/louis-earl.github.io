@@ -27,10 +27,10 @@
 }
 
 .oww-content__wrapper {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
 }
@@ -43,9 +43,11 @@
 }
 
 .oww-frame {
-    width: 200vw;
+    width: auto;
+    height: 20vh;
 }
 
 .oww-ship {
-    width: 100%;
+    width: auto;
+    height: 40vh;
 }
