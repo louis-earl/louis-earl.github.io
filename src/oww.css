@@ -2,12 +2,12 @@
     --scenePerspective: 1;
     --scenePerspectiveOriginX: 50;
     --scenePerspectiveOriginY: 50;
-    --itemZ: 2;
     /* Gap between each card */
-    --cameraSpeed: 150;
+    --itemZ: 2;
     /* Where 1 is the fastest  */
-    --cameraZ: 0;
+    --cameraSpeed: 150;
     /* Initial camera position */
+    --cameraZ: 0;
     --viewportHeight: 0;
 }
 
@@ -83,8 +83,10 @@
 }
 
 .oww-logo {
-    width: 100%;
-    height: auto
+    max-width: 100%;
+    max-height: 50%;
+    height: auto;
+    width: auto;
 }
 
 .oww-card {
