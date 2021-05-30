@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 
-function OWWContent() {
+function Scroll3D({ content }) {
 
 
-  const itemZ = 2
+  const itemZ = 3
   const cameraSpeed = 150
+  const zOffset = -200
 
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function OWWContent() {
   }
 
   function setSceneHeight() {
-    const numberOfItems = 4
+    const numberOfItems = 3
 
     const scenePerspective = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--scenePerspective"))
 
@@ -39,25 +40,12 @@ function OWWContent() {
     <div className="scene3D-container">
       <div className="scene3D">
 
-        <div
-          style={{ transform: "translate3D(0, 0, " + (itemZ * cameraSpeed * -1) + "px)" }}
-        >
-          <img className="oww-logo" src="./images/oww-logo.png" />
-        </div>
-
-        <div className="oww-card"
-          style={{ transform: "translate3D(0, 0, " + (itemZ * cameraSpeed * -2) + "px)" }}
-        >
-          <h3>To infinity, and beyond!</h3>
-          <p>This is some text</p>
-        </div>
-
-        <div className="oww-card"
-          style={{ transform: "translate3D(0, 0, " + (itemZ * cameraSpeed * -3) + "px)" }}
-        >
-          <h3>Hey, I've seen this before!</h3>
-          <p>This is some more text, woohoo!</p>
-        </div>
+        {content && content.map((e, i) => {
+          return (
+            <div style={{transform: "translate3D(0, 0, " + ((itemZ * cameraSpeed * i) + zOffset) + "px)"}}>
+              {e}
+            </div>)
+        })}
 
       </div>
     </div>
@@ -65,4 +53,4 @@ function OWWContent() {
   )
 }
 
-export default OWWContent
+export default Scroll3D

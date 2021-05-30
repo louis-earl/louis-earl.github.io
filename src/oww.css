@@ -1,9 +1,9 @@
 :root {
-    --scenePerspective: 1;
+    --scenePerspective: 0.75;
     --scenePerspectiveOriginX: 50;
-    --scenePerspectiveOriginY: 50;
+    --scenePerspectiveOriginY: 40;
     /* Gap between each card */
-    --itemZ: 2;
+    --itemZ: 3;
     /* Where 1 is the fastest  */
     --cameraSpeed: 150;
     /* Initial camera position */
@@ -63,7 +63,7 @@
     height: 100vh;
     width: 100%;
     transform-style: preserve-3d;
-    transform: translateZ(calc(var(--cameraZ) * 1px));
+    transform: translateZ(calc(var(--cameraZ) * -1px));
     will-change: transform;
 }
 
@@ -73,16 +73,11 @@
     position: absolute;
     display: block;
     width: 100%;
-    top: 40%;
-}
-
-@media only screen and (min-width: 600px) {
-    .viewport .scene3D-container .scene3D-container>div {
-        width: 40%;
-    }
+    top: 50%;
 }
 
 .oww-logo {
+    margin-top: -25%;
     max-width: 100%;
     max-height: 50%;
     height: auto;
@@ -93,4 +88,6 @@
     background-color: #FFFFFF;
     border-radius: 8px;
     padding: 20px;
+    width: 50%;
+    margin: 0 calc(25% - 20px)
 }

@@ -4,7 +4,7 @@ function FootNote() {
   return (
     <div className="foot-note">
       <p className="foot-note__text">
-        (this site made with love by Louis Earl)
+        (This site made with | by Louis Earl)
       </p>
     </div>
   )

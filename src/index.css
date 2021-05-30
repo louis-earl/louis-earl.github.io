@@ -230,7 +230,7 @@ a .contact__method:hover {
   padding-bottom: 8px;
 }
 
-.foot-note__text {
+/* .foot-note__text {
   text-align: center;
   background: url("./images/stars.jpg") center;
   background-size: 66%;
@@ -238,6 +238,14 @@ a .contact__method:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: #d374ff57;
+} */
+
+.foot-note__text {
+  text-align: center;
+  margin: auto;
+  font-family: 'Kiss Me or Not', cursive;
+  font-size: 20px;
+  color: #4e0072;
 }
 
 .modal {
