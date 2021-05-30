@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Scroll3D({ content }) {
 
 
-  const itemZ = 3
-  const cameraSpeed = 150
-  const zOffset = -200
+  const [itemZ, setItemZ] = useState(0)
+  const [cameraSpeed, setCameraSpeed] = useState(0)
 
+  const canRender = itemZ && cameraSpeed
 
   useEffect(() => {
     setSceneHeight()
 
     window.onscroll = () => moveCamera()
-    window.onresize = () => moveCamera()
+    window.onresize = () => {
+      moveCamera()
+      setSceneHeight()
+    }
 
     return () => {
       window.onscroll = null
@@ -25,31 +28,49 @@ function Scroll3D({ content }) {
   }
 
   function setSceneHeight() {
-    const numberOfItems = 3
+    const numberOfItems = content.length - 1
 
     const scenePerspective = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--scenePerspective"))
 
-    const height = window.innerHeight + scenePerspective * cameraSpeed + itemZ * cameraSpeed * numberOfItems
+    const c = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--cameraSpeed"))
+    setCameraSpeed(c)
+
+    const z = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--itemZ"))
+    setItemZ(z)
+
+    const height = window.innerHeight + scenePerspective * cameraSpeed + z * c * numberOfItems
 
     document.documentElement.style.setProperty("--viewportHeight", height)
+    console.log(window.screen.height)
+
+    // screen ratio because the oww corridor doesn't scale nicely 
+    const ratio = window.screen.width / window.screen.height
+    const originY = (-1.9748 * Math.pow(ratio, 2)) + (ratio * 0.4244) + 46.0504
+    document.documentElement.style.setProperty("--scenePerspectiveOriginY", originY)
   }
 
 
   return (
+    <>
+      { canRender &&
+        <div className="scene3D__container">
+          <div className="scene3D">
 
-    <div className="scene3D-container">
-      <div className="scene3D">
+            {content && content.map((e, i) => {
+              return (
+                <div
+                  key={i}
+                  style={
+                    { transform: "translate3D(0, 0, " + ((itemZ * cameraSpeed * i) + (i == 0 ? -200 : 0)) + "px)" }
+                  }>
+                  {e}
+                </div>)
+            })}
 
-        {content && content.map((e, i) => {
-          return (
-            <div style={{transform: "translate3D(0, 0, " + ((itemZ * cameraSpeed * i) + zOffset) + "px)"}}>
-              {e}
-            </div>)
-        })}
-
-      </div>
-    </div>
-
+          </div>
+        </div>
+      }
+    </>
   )
 }
 

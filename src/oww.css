@@ -1,21 +1,47 @@
 :root {
-    --scenePerspective: 0.75;
+    --scenePerspective: 0.3;
     --scenePerspectiveOriginX: 50;
     --scenePerspectiveOriginY: 40;
     /* Gap between each card */
-    --itemZ: 3;
+    --itemZ: 1;
     /* Where 1 is the fastest  */
-    --cameraSpeed: 150;
+    --cameraSpeed: 300;
     /* Initial camera position */
     --cameraZ: 0;
     --viewportHeight: 0;
 }
+
+/* :root {
+    --scenePerspective: 0.01;
+    --scenePerspectiveOriginX: 50;
+    --scenePerspectiveOriginY: 40;
+    --itemZ: 0.02;
+    --cameraSpeed: 5600;
+    --cameraZ: 0;
+    --viewportHeight: 0;
+} */
 
 .oww {
     color: #000000;
 }
 
 .corridor__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background: url(./images/oww-corridor.svg) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* .corridor__wrapper {
     position: fixed;
     overflow: hidden;
     height: 100%;
@@ -32,7 +58,7 @@
     margin: auto;
     width: 100%;
     z-index: -1;
-}
+} */
 
 /* We want to be able to use the scrollbar to navigate z-axis */
 
@@ -42,7 +68,7 @@
 
 /* Sets the scene perspective and perspective origin */
 
-.viewport .scene3D-container {
+.viewport .scene3D__container {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +83,7 @@
 
 /* Sets position of scene on the z-axis */
 
-.viewport .scene3D-container .scene3D {
+.viewport .scene3D__container .scene3D {
     position: absolute;
     top: 0;
     height: 100vh;
@@ -69,7 +95,7 @@
 
 /* Position all card elements in the scene */
 
-.viewport .scene3D-container .scene3D > div {
+.viewport .scene3D__container .scene3D>div {
     position: absolute;
     display: block;
     width: 100%;
@@ -78,16 +104,75 @@
 
 .oww-logo {
     margin-top: -25%;
-    max-width: 100%;
-    max-height: 50%;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.oww-card__outer {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 0px #CCCCCC;
+    border-radius: 8px;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.oww-card__outer--ship {
+    margin-top: -5%;
 }
 
 .oww-card {
-    background-color: #FFFFFF;
     border-radius: 8px;
+    border: 4px solid #EEEEEE;
+    box-shadow: inset 0px 4px 0px #DDDDDD;
+}
+
+.oww-card--text {
     padding: 20px;
-    width: 50%;
-    margin: 0 calc(25% - 20px)
+}
+
+h3.oww-card__title {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+.oww-ship {
+    width: 100%;
+    margin-bottom: -5px;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+    .oww-card__outer {
+        width: 36%;
+        margin: 0 32%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .oww-card__outer {
+        width: 28%;
+        margin: 0 36%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .oww-card__outer {
+        width: 75%;
+        margin: 0 12.5%;
+    }
+    .oww-logo {
+        width: 150%;
+        margin: -25% 0 0 -25%;
+    }
+}
+
+@media screen and (max-width: 564px) {
+    .oww-card__outer {
+        width: 100%;
+        margin: 0;
+    }
+    .oww-logo {
+        width: 200%;
+        margin: -50% 0 0 -50%;
+    }
 }
