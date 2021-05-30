@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
-function Scroll3D({ content }) {
+function Scroll3D({ content, zIndex, initialZ, offsetY }) {
 
+  if (!initialZ) initialZ = "0"
+  if (!offsetY) offsetY = "0"
 
   const [itemZ, setItemZ] = useState(0)
   const [cameraSpeed, setCameraSpeed] = useState(0)
@@ -49,9 +51,10 @@ function Scroll3D({ content }) {
     document.documentElement.style.setProperty("--scenePerspectiveOriginY", originY)
   }
 
+// " + yOffset ? yOffset : "0" + ", "
 
   return (
-    <>
+    <div className="viewport" style={{zIndex: zIndex}}>
       { canRender &&
         <div className="scene3D__container">
           <div className="scene3D">
@@ -61,7 +64,7 @@ function Scroll3D({ content }) {
                 <div
                   key={i}
                   style={
-                    { transform: "translate3D(0, 0, " + ((itemZ * cameraSpeed * i) + (i == 0 ? -200 : 0)) + "px)" }
+                    { transform: "translate3D(0, " + offsetY + ", " + ((itemZ * cameraSpeed * i) + (i == 0 ? initialZ : 0)) + "px)" }
                   }>
                   {e}
                 </div>)
@@ -70,7 +73,7 @@ function Scroll3D({ content }) {
           </div>
         </div>
       }
-    </>
+    </div>
   )
 }
 

@@ -43,9 +43,7 @@ function OWW() {
         {/* <img className="corridor" src="./images/oww-corridor.svg" alt="A spaceship corridor fixed to the background of the webpage." /> */}
       </div>
 
-      <div className="viewport">
-        <Scroll3D content={content} />
-      </div>
+      <Scroll3D content={content} initialZ={-200} />
 
     </div>
 

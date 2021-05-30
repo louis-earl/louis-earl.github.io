@@ -1,5 +1,5 @@
 :root {
-    --scenePerspective: 0.3;
+    --scenePerspective: 0.5;
     --scenePerspectiveOriginX: 50;
     --scenePerspectiveOriginY: 40;
     /* Gap between each card */
@@ -10,16 +10,6 @@
     --cameraZ: 0;
     --viewportHeight: 0;
 }
-
-/* :root {
-    --scenePerspective: 0.01;
-    --scenePerspectiveOriginX: 50;
-    --scenePerspectiveOriginY: 40;
-    --itemZ: 0.02;
-    --cameraSpeed: 5600;
-    --cameraZ: 0;
-    --viewportHeight: 0;
-} */
 
 .oww {
     color: #000000;
@@ -41,24 +31,6 @@
     background-size: cover;
 }
 
-/* .corridor__wrapper {
-    position: fixed;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-
-.corridor {
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
-    width: 100%;
-    z-index: -1;
-} */
 
 /* We want to be able to use the scrollbar to navigate z-axis */
 
