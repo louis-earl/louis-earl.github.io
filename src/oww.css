@@ -24,7 +24,7 @@
     width: auto;
     height: auto;
     z-index: -1;
-    background: url(./images/oww-corridor.svg) no-repeat fixed center;
+    background: url(./images/oww-corridor.svg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
