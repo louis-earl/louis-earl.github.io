@@ -6,8 +6,8 @@ function Hero() {
 
   const content = [
     <>
-      <h1 id="hero-title">Louis Earl</h1>
-      <h2 id="hero-subtitle">Software&nbsp;Developer&nbsp;for Web&nbsp;&&nbsp;Video&nbsp;Games</h2>
+      <h1 className="hero__title">Louis Earl</h1>
+      <h2 className="hero__subtitle">Software&nbsp;Developer&nbsp;for Web&nbsp;&&nbsp;Video&nbsp;Games</h2>
     </>
   ]
 
