@@ -79,7 +79,7 @@ a {
   width: auto;
   height: auto;
   z-index: -2;
-  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
+  background: #1E1432 url('./images/stars.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
