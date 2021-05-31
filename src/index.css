@@ -313,6 +313,9 @@ a .contact__method:hover {
     width: 100%;
   }
   .projects__grid {
-    grid-auto-columns: calc(100% - 80px);
+    grid-auto-columns: calc(100% - 120px);
+  }
+  .tech-label > p {
+    font-size: 12px;
   }
 }
