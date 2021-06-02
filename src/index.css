@@ -16,7 +16,7 @@ body {
 /* The main title */
 
 h1 {
-  font-family: 'Kiss Me or Not', cursive;
+  font-family: 'Kiss Me or Not', 'Open Sans', sans-serif;
   font-size: 120px;
   font-weight: 400;
   color: #FFD700;
