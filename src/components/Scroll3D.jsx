@@ -56,7 +56,7 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
   return (
     <div className="viewport" style={{zIndex: zIndex}}>
       { canRender &&
-        <div className="scene3D__container">
+        <div className="scene3D__container" style={{zIndex: zIndex}}>
           <div className="scene3D">
 
             {content && content.map((e, i) => {
