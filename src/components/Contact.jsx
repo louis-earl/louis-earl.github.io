@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="contact section">
       <h3>Don't Be a Stranger</h3>
-      <div className="contact__grid">
+      <div className="horizontal-grid">
         <ContactMethod 
         image="email" 
         label="louis.earl.14@gmail.com" 
