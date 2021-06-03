@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.3095e857.chunk.css",
-    "main.js": "/static/js/main.f8471644.chunk.js",
-    "main.js.map": "/static/js/main.f8471644.chunk.js.map",
+    "main.css": "/static/css/main.85c779a3.chunk.css",
+    "main.js": "/static/js/main.687ac8b8.chunk.js",
+    "main.js.map": "/static/js/main.687ac8b8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7e530a69.js",
     "runtime-main.js.map": "/static/js/runtime-main.7e530a69.js.map",
     "static/js/2.8708910b.chunk.js": "/static/js/2.8708910b.chunk.js",
     "static/js/2.8708910b.chunk.js.map": "/static/js/2.8708910b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3095e857.chunk.css.map": "/static/css/main.3095e857.chunk.css.map",
+    "static/css/main.85c779a3.chunk.css.map": "/static/css/main.85c779a3.chunk.css.map",
     "static/js/2.8708910b.chunk.js.LICENSE.txt": "/static/js/2.8708910b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/stars.5f1ec490.jpg",
     "static/media/oww.css": "/static/media/oww-corridor.12f6bac6.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.7e530a69.js",
     "static/js/2.8708910b.chunk.js",
-    "static/css/main.3095e857.chunk.css",
-    "static/js/main.f8471644.chunk.js"
+    "static/css/main.85c779a3.chunk.css",
+    "static/js/main.687ac8b8.chunk.js"
   ]
 }
