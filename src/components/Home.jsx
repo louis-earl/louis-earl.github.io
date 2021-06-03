@@ -20,9 +20,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="section__wrapper section__wrapper--dark">
-        <Contact />
-      </div>
+      <Contact />
+
       <Footer />
     </>
   )

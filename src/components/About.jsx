@@ -28,18 +28,18 @@ function About() {
 
       <div className="horizontal-grid horizontal-grid--about">
         <div className="about__bullet">
-          <img className="about__icon" src="./images/icon-welly.png" />
+          <img className="about__icon" src="./images/icon-welly.png" alt="Wellington beehive icon." />
           <h4>Wellington Based</h4>
         </div>
 
         <div className="about__bullet">
-          <img className="about__icon" src="./images/icon-massey.png" />
+          <img className="about__icon" src="./images/icon-massey.png" alt="Massey University icon." />
           <h4>Graduate</h4>
           <h4>Creative Media Production</h4>
         </div>
 
         <div className="about__bullet">
-          <img className="about__icon" src="./images/icon-eda.png" />
+          <img className="about__icon" src="./images/icon-eda.png" alt="Enspiral Dev Academy icon."/>
           <h4>Graduate</h4>
           <h4>EDA Bootcamp</h4>
         </div>

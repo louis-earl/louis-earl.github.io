@@ -223,6 +223,10 @@ a {
   z-index: -3;
 }
 
+.contact {
+  color: #FFFFFF;
+}
+
 .contact__method {
   display: flex;
   align-items: center;

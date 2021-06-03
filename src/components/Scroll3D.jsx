@@ -11,6 +11,8 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
   const canRender = itemZ && cameraSpeed
 
   useEffect(() => {
+    console.log("remounted")
+    window.scroll(0, 0)
     setSceneHeight()
 
     window.onscroll = () => moveCamera()
@@ -41,9 +43,7 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
     setItemZ(z)
 
     const height = window.innerHeight + scenePerspective * cameraSpeed + z * c * numberOfItems
-
     document.documentElement.style.setProperty("--viewportHeight", height)
-    console.log(window.screen.height)
 
     // screen ratio because the oww corridor doesn't scale nicely 
     const ratio = window.screen.width / window.screen.height
@@ -51,12 +51,10 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
     document.documentElement.style.setProperty("--scenePerspectiveOriginY", originY)
   }
 
-// " + yOffset ? yOffset : "0" + ", "
-
   return (
-    <div className="viewport" style={{zIndex: zIndex}}>
+    <div className="viewport" style={{ zIndex: zIndex }}>
       { canRender &&
-        <div className="scene3D__container" style={{zIndex: zIndex}}>
+        <div className="scene3D__container" style={{ zIndex: zIndex }}>
           <div className="scene3D">
 
             {content && content.map((e, i) => {

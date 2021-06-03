@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Scroll3D from './Scroll3D'
 import Starfield from './Starfield'
 
