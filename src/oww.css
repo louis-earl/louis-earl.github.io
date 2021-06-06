@@ -1,76 +1,9 @@
-:root {
-    --scenePerspective: 0.5;
-    --scenePerspectiveOriginX: 50;
-    --scenePerspectiveOriginY: 40;
-    /* Gap between each card */
-    --itemZ: 1;
-    /* Where 1 is the fastest  */
-    --cameraSpeed: 300;
-    /* Initial camera position */
-    --cameraZ: 0;
-    --viewportHeight: 0;
-}
-
 .oww {
     color: #000000;
 }
 
-.corridor__wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
+.project__background--oww {
     background: url(./images/oww-corridor.svg) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/* We want to be able to use the scrollbar to navigate z-axis */
-
-.viewport {
-    height: calc(var(--viewportHeight) * 1px)
-}
-
-/* Sets the scene perspective and perspective origin */
-
-.viewport .scene3D__container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 1px);
-    perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
-    will-change: perspective-origin;
-    transform: translate3d(0, 0, 0);
-    /* Allows hardware-accelerated CSS, so transitions are smoother */
-}
-
-/* Sets position of scene on the z-axis */
-
-.viewport .scene3D__container .scene3D {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    transform-style: preserve-3d;
-    transform: translateZ(calc(var(--cameraZ) * -1px));
-    will-change: transform;
-}
-
-/* Position all card elements in the scene */
-
-.viewport .scene3D__container .scene3D>div {
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 50%;
 }
 
 .oww-logo {
@@ -79,28 +12,16 @@
     width: 70%;
 }
 
-.oww__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.oww-card__outer {
+.project-card__outer--oww {
     background-color: #FFFFFF;
     box-shadow: 0px 4px 0px #CCCCCC;
     border-radius: 8px;
-    margin: 0 20px 60px 20px;
-    max-width: 800px;
 }
 
-.oww-card {
+.project-card--oww {
     border-radius: 8px;
     border: 4px solid #EEEEEE;
     box-shadow: inset 0px 4px 0px #DDDDDD;
-}
-
-.oww-card--text {
-    padding: 20px;
 }
 
 h3.oww-card__title {
@@ -108,9 +29,16 @@ h3.oww-card__title {
     font-size: 24px;
 }
 
-.oww-image {
+iframe {
+    display: block;
+    background: #000;
+    border: none;
+    aspect-ratio: 16 / 9;
     width: 100%;
-    border-radius: 4px;
+}
+
+.exposure-image {
+    width: 100%;
 }
 
 .oww-image--end {
@@ -122,7 +50,7 @@ h3.oww-card__title {
 }
 
 .contact--oww {
-  max-width: 752px;
+    max-width: 752px;
 }
 
 @media screen and (max-width: 564px) {

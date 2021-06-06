@@ -1,0 +1,52 @@
+.project__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.project__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card__outer {
+    margin: 0 20px 60px 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.project-card {
+    padding: 20px;
+}
+
+h3.project-card__title {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.project-image--end {
+    margin-bottom: -5px;
+}
+
+.project-image--break {
+    margin-bottom: 8px;
+}
+
+.contact--project {
+  max-width: 752px;
+}

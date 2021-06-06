@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 
 import TechLabel from './TechLabel'
 
-function ProjectCard({ image, title, year, tech, route }) {
+function ProjectPoster({ image, title, year, tech, route }) {
   return (
     <Link to={route}>
-      <div className={"project-card"}>
+      <div className={"project-poster"}>
         <img
-          className="project-card__poster"
+          className="project-poster__image"
           src={"./images/" + image + ".jpg"}
           alt={"Poster for " + title}
         />
-        <div className="project-card__info">
+        <div className="project-poster__info">
           <h4>{title}</h4>
           <p>{year}</p>
           <div className="tech-list">
@@ -26,4 +26,4 @@ function ProjectCard({ image, title, year, tech, route }) {
   )
 }
 
-export default ProjectCard
+export default ProjectPoster

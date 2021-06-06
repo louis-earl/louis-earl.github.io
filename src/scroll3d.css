@@ -1,0 +1,54 @@
+:root {
+    --scenePerspective: 0.5;
+    --scenePerspectiveOriginX: 50;
+    --scenePerspectiveOriginY: 40;
+    /* Gap between each card */
+    --itemZ: 1;
+    /* Where 1 is the fastest  */
+    --cameraSpeed: 300;
+    /* Initial camera position */
+    --cameraZ: 0;
+    --viewportHeight: 0;
+}
+
+/* We want to be able to use the scrollbar to navigate z-axis */
+
+.viewport {
+    height: calc(var(--viewportHeight) * 1px)
+}
+
+/* Sets the scene perspective and perspective origin */
+
+.viewport .scene3D__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 1px);
+    perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
+    will-change: perspective-origin;
+    transform: translate3d(0, 0, 0);
+    /* Allows hardware-accelerated CSS, so transitions are smoother */
+}
+
+/* Sets position of scene on the z-axis */
+
+.viewport .scene3D__container .scene3D {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(calc(var(--cameraZ) * -1px));
+    will-change: transform;
+}
+
+/* Position all card elements in the scene */
+
+.viewport .scene3D__container .scene3D>div {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+}

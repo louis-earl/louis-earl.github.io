@@ -4,6 +4,7 @@ const techList = [
     "Redux",
     "Web Sockets",
     "Canvas",
+    "CSS",
     "C#",
     "Unity Engine",
     "Unreal Engine",

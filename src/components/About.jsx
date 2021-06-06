@@ -4,12 +4,12 @@ function About() {
   return (
     <div className="section">
 
-      <div className="about__grid">
+      <div className="grid__2-3 grid__2-3--add-margin">
         <div className="about__content">
 
           <h3 className="about__title">Creator of All Things Fun and Interactive</h3>
 
-          <p className="paragraph-break">
+          <p className="add-break">
             Hello! I’m Louis (pronounced Louie, he/him). I am a software developer with a passion for creative tech.
           </p>
           <p>

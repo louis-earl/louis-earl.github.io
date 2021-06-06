@@ -11,7 +11,6 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
   const canRender = itemZ && cameraSpeed
 
   useEffect(() => {
-    console.log("remounted")
     window.scroll(0, 0)
     setSceneHeight()
 

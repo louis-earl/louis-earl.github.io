@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'eight-bit-dragon';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/eight-bit-dragon.woff') format('woff');
+  }
+
+.mm {
+    color: #FFFFFF
+}
+
+h1.mm-title {
+    text-align: center;
+    color: #00FF00;
+    font-family: 'eight-bit-dragon';
+    padding: 32px;
+    box-shadow:  0 0 2px #000, 0 0 0 12px #191919, 0 0 0 24px #323232;
+}
+
+.mm-title__wrapper {
+    background-color: #000000;
+}
+
+.mm__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background: url("./images/nightscape.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.project__background--mm {
+    background: url("./images/nightscape.jpg") no-repeat center;
+
+}
+
+.mm-logo {
+    margin: -25% 15% 0 15%;
+    height: 70%;
+    width: 70%;
+}
+
+.project-card__outer--mm {
+    background-color: #353535;
+    box-shadow:  0 0 2px #000, 0 0 0 4px #191919, 0 0 0 8px #323232;
+}
+
+
+h3.mm-card__title {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+.mm-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.mm-image--end {
+    margin-bottom: -5px;
+}
+
+.mm-image--break {
+    margin-bottom: 8px;
+}
+
+.mm-button {
+    padding: 16px;
+    margin: 8px;
+    background-color: rgba(53,53,53,0);
+    color: #00fa00;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.contact--mm {
+  max-width: 752px;
+}
+
+@media screen and (max-width: 564px) {
+    .mm-logo {
+        margin: -25% -10% 0 -10%;
+        height: 120%;
+        width: 120%;
+    }
+}
+
+.mafia {
+    color: #FF0000;
+    font-weight: 700;
+}
+
+.innocent {
+    color: #00FF00;
+    font-weight: 700;
+}

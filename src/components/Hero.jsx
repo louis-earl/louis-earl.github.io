@@ -1,6 +1,7 @@
 import React from 'react'
 import Scroll3D from './Scroll3D'
 import Starfield from './Starfield'
+import '../scroll3d.css'
 
 function Hero() {
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import ProjectPoster from './ProjectPoster'
 
 function ProjectsGridMajor() {
   return (
 
     <div className="projects__grid projects__grid--major scrollbar-hidden">
 
-      <ProjectCard
+      <ProjectPoster
         image="poster-mafia"
         title="Midnight Mysteries"
         year="2021"
@@ -14,7 +14,7 @@ function ProjectsGridMajor() {
         route="midnight-mysteries"
       />
 
-      <ProjectCard
+      <ProjectPoster
         image="poster-oww"
         title="One Way Wellington"
         year="2019"
@@ -22,7 +22,7 @@ function ProjectsGridMajor() {
         route="one-way-wellington"
       />
 
-      <ProjectCard
+      <ProjectPoster
         image="poster-racer"
         title="Super Racer Go!"
         year="2018"
