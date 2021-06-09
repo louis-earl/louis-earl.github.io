@@ -36,7 +36,7 @@ function MidnightMysteries() {
           <div className="project-card">
             <h3 className="mm-card__title">My Involvement</h3>
             <p className="add-break">
-              Midnight Mysteries was developed by an eight-person team within the span of one week. This was our final project while studying at Enspiral Dev Academy, and the completed product was presented at our graduation.
+              Midnight Mysteries was developed by an eight-person team within one week. This was our final project while studying at Enspiral Dev Academy, and the completed product was presented at our graduation.
             </p>
 
             <img className="project-image add-break" src="./images/mm-present-1.jpg" alt="Louis Earl presenting Midnight Mysteries at his graduation." />
@@ -47,7 +47,7 @@ function MidnightMysteries() {
                   As the Product Owner of Midnight Mysteries, I was responsible for the overall vision and direction of the project - to ensure the whole team was working on the same page.
                 </p>
                 <p className="add-break">
-                  My role evolved into a Team Lead position during development, where I regularly checked-in across the team to establish and assist with any blocks or needs.
+                  My role evolved into a Team Lead position during development, where I regularly checked in across the team to establish and assist with any blocks or needs.
                 </p>
                 <p className="add-break">
                   I maintained the team Kanban Board between daily sprints. This involved breaking up big tasks into a series of smaller 'cards'. Team members could then self-allocate tasks using the cards, which prevented overlapping work and minimised Git merge conflicts.

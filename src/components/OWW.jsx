@@ -24,7 +24,7 @@ function OWW() {
           <div className="project-card project-card--oww">
             <h3 className="oww-card__title">In A Galaxy, Not So Far Away...</h3>
             <p className="add-break">
-              Planet Wellington calls out to the galaxy in desperate need for artists - the world can only move forward with help from these creative thinkers! One Way Wellington is a 2D spaceship building/management game about transporting creative talent across the Milky Way to the ‘Coolest Little Capital’.
+              Planet Wellington calls out to the galaxy in desperate need of artists - the world can only move forward with help from these creative thinkers! One Way Wellington is a 2D spaceship building/management game about transporting creative talent across the Milky Way to the ‘Coolest Little Capital’.
             </p>
             <img className="project-image oww-image--end" src="./images/oww-ship.jpg" alt="A spaceship flying through space, filled with passengers." />
           </div>
@@ -78,7 +78,7 @@ function OWW() {
 
             <h4>Collect Passengers</h4>
             <p className="add-break">
-              As you arrive at each planet station, select passengers to board onto your ship. Be careful not to accommodate more passengers than you have the oxygen supplies for.
+              As you arrive at each planet station, select passengers to board your ship. Be careful not to accommodate more passengers than you have the oxygen supplies for.
             </p>
             <p className="add-break">
               You need to care for your passengers to keep them happy. Provide beds, bathrooms and cafes to tend to their basic needs.

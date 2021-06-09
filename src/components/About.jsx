@@ -13,7 +13,7 @@ function About() {
             Hello! I’m Louis (pronounced Louie, he/him). I am a software developer with a passion for creative tech.
           </p>
           <p>
-            I was drawn to tech because I love designing and building visual experiences with code. When programming, I find it exciting to dig into a complex problem because I have the curiosity to learn why and how things work. Problem-solving with code endorses the creative part of my brain, so the development process is as enjoyable as reaching the end result.
+            I was drawn to tech because I love designing and building visual experiences with code. When programming, I find it exciting to dig into a complex problem because I'm curious to learn why and how things work. Problem-solving with code endorses the creative part of my brain, so the development process is as enjoyable as reaching the end result.
           </p>
 
         </div>
