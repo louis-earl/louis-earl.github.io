@@ -16,6 +16,7 @@ function App() {
       <Route exact path="/midnight-mysteries" component={MidnightMysteries} />
       <Route exact path="/one-way-wellington" component={OWW} />
       <Route exact path="/super-racer-go" component={NotReady} />
+      <Route exact path="/show-me-the-money" component={NotReady} />
       <Route exact path="/portfolio" component={NotReady} />
       <Route exact path="/research" component={NotReady} />
       <Route component={NotFound} />

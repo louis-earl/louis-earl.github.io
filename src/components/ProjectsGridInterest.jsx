@@ -6,15 +6,13 @@ function ProjectsGridInterest() {
 
     <div className="projects__grid scrollbar-hidden">
 
-      {/* <ProjectPoster
-        image="project-portfolio"
-        title="Portfolio Website"
+      <ProjectPoster
+        image="poster-money"
+        title="$how Me The Money"
         year="2021"
-        tech={["JavaScript", "React", "Canvas", "CSS"]}
-        route="portfolio"
-      /> */}
-
-      <p>I'm always working on exciting new personal projects (and plan to show them off here soon!). Ask me about what I'm up to!</p>
+        tech={["JavaScript", "React", "Redux", "CSS"]}
+        route="show-me-the-money"
+      />
 
     </div>
   )
