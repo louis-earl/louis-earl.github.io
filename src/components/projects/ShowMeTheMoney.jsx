@@ -8,22 +8,24 @@ function MidnightMysteries() {
 
   return (
     <div className="smtm">
-      <div className="project__background project__background--smtm" />
 
-      <div className="project__content" >
-
+      <div className="smtm-hero">
         <div className="smtm-title__wrapper">
           <h1 className="smtm-title">$how Me The Money</h1>
         </div>
+      </div>
+
+      <div className="project__content" >
+
 
         <div className="project-card__outer project-card__outer--smtm">
           <div className="project-card">
-            <h3 className="smtm-card__title">An app for meetings to save you time and money</h3>
+            <h3 className="smtm-card__title">An App To Track The Cost Of Your Meetings</h3>
             <p className="add-break">
-              Midnight Mysteries is a battle of deception for four or more players. Avoid elimination each round while taking out the opposition to win this game!
+              $how Me The Money is an app designed to save time and money in meetings. It displays the cost of your meetings in real time, calculated based on the hourly wages of the meeting's attendees and the current duration of the meeting.
             </p>
             <p>
-              The game is played by two teams: the <span className="mafia">Mafia</span> and the <span className="innocent">Innocent</span>. The objective of the game is for the Mafia to “kill off” the Innocent until they are the majority, or for the Innocent to collectively vote off the entire Mafia.
+              The app keeps a record of your meeting history, and can display useful statistics to track the cost of your meetings over time.
             </p>
           </div>
         </div>
@@ -32,41 +34,29 @@ function MidnightMysteries() {
           <div className="project-card">
             <h3 className="smtm-card__title">My Involvement</h3>
             <p className="add-break">
-              Midnight Mysteries was developed by an eight-person team within one week. This was our final project while studying at Enspiral Dev Academy, and the completed product was presented at our graduation.
+              $how Me The Money was originally developed during study at Enspiral Dev Academy. I worked in a six-person team to develop the core functionality of the app. In two days, we successfully met our MVP goals before presenting to our cohort. 
+            </p>
+            <p>
+              After graduation, I continued to improve the app as an interest project. I overhauled the app style, then substantially expanded and improved upon the functionality to provide a more useful (and stable) product. 
             </p>
 
-            <img className="project-image add-break" src="./images/smtm-present-1.jpg" alt="Louis Earl presenting Midnight Mysteries at his graduation." />
-
-            <div className="grid__2-3">
-              <div>
-                <p className="add-break">
-                  As the Product Owner of Midnight Mysteries, I was responsible for the overall vision and direction of the project - to ensure the whole team was working on the same page.
-                </p>
-                <p className="add-break">
-                  My role evolved into a Team Lead position during development, where I regularly checked in across the team to establish and assist with any blocks or needs.
-                </p>
-                <p className="add-break">
-                  I maintained the team Kanban Board between daily sprints. This involved breaking up big tasks into a series of smaller 'cards'. Team members could then self-allocate tasks using the cards, which prevented overlapping work and minimised Git merge conflicts.
-                </p>
-                <p>
-                  Because the team was well organised to follow an agile workflow, I could also spend time doing what I love, prograsmtming for games. With my previous prograsmtming experience, I was happy to offer technical assistance when requested by the team.
-                </p>
-              </div>
-              <img className="project-image" src="./images/smtm-present-2.jpg" alt="Louis Earl laughing with his team." />
-            </div>
           </div>
         </div>
 
         <div className="project-card__outer project-card__outer--smtm">
           <div className="project-card">
 
-            <h3 className="smtm-card__title">The Game</h3>
+            <h3 className="smtm-card__title">The App</h3>
 
-            <p>Midnight Mysteries is currently live - play with your friends on the link below!</p>
+            <p>$how Me The Money is currently live - try it out on the link below!</p>
             <p>The page may take some time to load while the server wakes up (approx. 20 secs).</p>
 
-            <a href="https://midnight-mysteries.herokuapp.com/">
-              <button className="smtm-button">Check It Out!</button>
+            <a href="https://show-me-the-money-le.herokuapp.com/">
+              <button className="smtm-button">Open App</button>
+            </a>
+
+            <a href="https://github.com/louis-earl/show-me-the-money">
+              <button className="smtm-button">View GitHub</button>
             </a>
 
           </div>
