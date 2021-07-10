@@ -8,6 +8,7 @@ import MidnightMysteries from './projects/MidnightMysteries'
 import NotFound from './NotFound'
 import NotReady from './NotReady'
 import OWW from './projects/OWW'
+import ShowMeTheMoney from './projects/ShowMeTheMoney'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route exact path="/midnight-mysteries" component={MidnightMysteries} />
       <Route exact path="/one-way-wellington" component={OWW} />
       <Route exact path="/super-racer-go" component={NotReady} />
-      <Route exact path="/show-me-the-money" component={NotReady} />
+      <Route exact path="/show-me-the-money" component={ShowMeTheMoney} />
       <Route exact path="/portfolio" component={NotReady} />
       <Route exact path="/research" component={NotReady} />
       <Route component={NotFound} />

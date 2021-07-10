@@ -2,7 +2,7 @@
   font-family: 'Kiss Me or Not';
   font-style: normal;
   font-weight: normal;
-  src: url('./fonts/kiss-me-or-not.woff') format('woff');
+  src: url('../fonts/kiss-me-or-not.woff') format('woff');
 }
 
 body {
@@ -82,7 +82,7 @@ a {
   width: auto;
   height: auto;
   z-index: -2;
-  background: #1E1432 url('./images/stars.jpg') no-repeat center;
+  background: #1E1432 url('../images/stars.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -222,7 +222,7 @@ a {
   min-height: 100%;
   width: auto;
   height: auto;
-  background: #1E1432 url('./images/stars.jpg') no-repeat fixed center;
+  background: #1E1432 url('../images/stars.jpg') no-repeat fixed center;
   z-index: -3;
 }
 

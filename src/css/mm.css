@@ -2,7 +2,7 @@
     font-family: 'eight-bit-dragon';
     font-style: normal;
     font-weight: normal;
-    src: url('./fonts/eight-bit-dragon.woff') format('woff');
+    src: url('../fonts/eight-bit-dragon.woff') format('woff');
 }
 
 .mm {
@@ -32,7 +32,6 @@ h1.mm-title {
     width: auto;
     height: auto;
     z-index: -1;
-    background: url("./images/nightscape.jpg") no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,7 +39,7 @@ h1.mm-title {
 }
 
 .project__background--mm {
-    background: url("./images/nightscape.jpg") no-repeat center;
+    background: url("../images/nightscape.jpg") no-repeat center;
 }
 
 .mm-logo {
