@@ -3,11 +3,11 @@ import React from 'react'
 import { Route, Switch } from 'react-router'
 
 // Components 
-import Home from './Home'
-import MidnightMysteries from './MidnightMysteries'
+import Home from './home/Home'
+import MidnightMysteries from './projects/MidnightMysteries'
 import NotFound from './NotFound'
 import NotReady from './NotReady'
-import OWW from './OWW'
+import OWW from './projects/OWW'
 
 function App() {
   return (

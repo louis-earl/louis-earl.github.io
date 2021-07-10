@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import { start, stop } from '../util/starfield'
+import { start, stop } from '../../util/starfield'
 
 function Starfield() {
 

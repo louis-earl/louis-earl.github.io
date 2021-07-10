@@ -1,7 +1,7 @@
 import React from 'react'
 import ConditionalWrapper from './ConditionalWrapper'
 
-function ContactMethod({ image, label, link }) {
+function IconLabel({ image, label, link }) {
   return (
     <ConditionalWrapper
       condition={link}
@@ -19,4 +19,4 @@ function ContactMethod({ image, label, link }) {
   )
 }
 
-export default ContactMethod
+export default IconLabel

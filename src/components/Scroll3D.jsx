@@ -61,7 +61,7 @@ function Scroll3D({ content, zIndex, initialZ, offsetY }) {
                 <div
                   key={i}
                   style={
-                    { transform: "translate3D(0, " + offsetY + ", " + ((itemZ * cameraSpeed * i) + (i == 0 ? initialZ : 0)) + "px)" }
+                    { transform: "translate3D(0, " + offsetY + ", " + ((itemZ * cameraSpeed * i) + (i === 0 ? initialZ : 0)) + "px)" }
                   }>
                   {e}
                 </div>)

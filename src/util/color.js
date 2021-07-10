@@ -13,7 +13,7 @@ const techList = [
 export function getColor(techName) {
 
     const i = techList.indexOf(techName)
-    if (i == -1) {
+    if (i === -1) {
         console.warn("Tech (" + techName + ") not specified in techList. " + techList)
         return "#FFFFFF"
     }

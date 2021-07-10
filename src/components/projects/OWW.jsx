@@ -1,9 +1,9 @@
 import React from 'react'
 
-import '../oww.css'
-import '../project.css'
-import Contact from './Contact'
-import Scroll3D from './Scroll3D'
+import '../../oww.css'
+import '../../project.css'
+import Contact from '../Contact'
+import Scroll3D from '../Scroll3D'
 
 function OWW() {
 

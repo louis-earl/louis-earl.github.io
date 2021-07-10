@@ -1,8 +1,7 @@
 import React from 'react'
 
-import '../mm.css'
-import Contact from './Contact'
-import Scroll3D from './Scroll3D'
+import '../../mm.css'
+import Contact from '../Contact'
 
 function MidnightMysteries() {
 

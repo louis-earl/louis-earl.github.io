@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactMethod from './ContactMethod'
+import IconLabel from './IconLabel'
 
 function Modal({ title, message }) {
   return (
@@ -8,7 +8,7 @@ function Modal({ title, message }) {
         <h2>{title}</h2>
         <p>{message}</p>
         <div className="modal__button">
-          <ContactMethod image={"icon-home"} label={"Home Page"} link={"/"} />
+          <IconLabel image={"icon-home"} label={"Home Page"} link={"/"} />
         </div>
       </div>
     </div>

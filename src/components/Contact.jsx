@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactMethod from './ContactMethod'
+import IconLabel from './IconLabel'
 
 function Contact({ extraStyle }) {
   return (
@@ -9,25 +9,25 @@ function Contact({ extraStyle }) {
         <h3>Don't Be a Stranger</h3>
 
         <div className="horizontal-grid">
-          <ContactMethod
+          <IconLabel
             image="email"
             label="louis.earl.14@gmail.com"
             link="mailto: louis.earl.14@gmail.com"
           />
 
-          <ContactMethod
+          <IconLabel
             image="linkedin"
             label="Linkedin"
             link="https://www.linkedin.com/in/louis-earl/"
           />
 
-          <ContactMethod
+          <IconLabel
             image="github"
             label="GitHub"
             link="https://github.com/louis-earl"
           />
 
-          <ContactMethod
+          <IconLabel
             image="phone"
             label="Available on Request"
           />

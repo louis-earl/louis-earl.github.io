@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getColor } from '../util/color'
+import { getColor } from '../../util/color'
 
 function TechLabel({ label }) {
 
