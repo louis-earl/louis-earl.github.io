@@ -6,19 +6,16 @@ import Scroll3D from './Scroll3D'
 
 function MidnightMysteries() {
 
-  const content = [
-    <div className="mm-title__wrapper">
-      <h1 className="mm-title">Midnight Mysteries</h1>
-    </div>
-  ]
 
   return (
     <div className="mm">
       <div className="project__background project__background--mm" />
 
-      <Scroll3D content={content} initialZ={-200} zIndex={-1} />
-
       <div className="project__content" >
+
+        <div className="mm-title__wrapper">
+          <h1 className="mm-title">Midnight Mysteries</h1>
+        </div>
 
         <div className="project-card__outer project-card__outer--mm">
           <div className="project-card">
@@ -66,7 +63,8 @@ function MidnightMysteries() {
 
             <h3 className="mm-card__title">The Game</h3>
 
-            <p>Midnight Mysteries is currently live:</p>
+            <p>Midnight Mysteries is currently live - play with your friends on the link below!</p>
+            <p>The page may take some time to load while the server wakes up (approx. 20 secs).</p>
 
             <a href="https://midnight-mysteries.herokuapp.com/">
               <button className="mm-button">Check It Out!</button>
