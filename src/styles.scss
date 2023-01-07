@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #DF2D4A;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}

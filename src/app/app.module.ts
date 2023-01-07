@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreenStateService } from './services/splash-screen-state.service';
 import { SplashComponent } from './components/splash/splash.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { HomepageResolver } from './resolvers/homepage.resolver';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashComponent
+    SplashComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule
   ],
   providers: [
-    SplashScreenStateService
+    SplashScreenStateService,
+    HomepageResolver
   ],
   bootstrap: [
     AppComponent
