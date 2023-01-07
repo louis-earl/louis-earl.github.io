@@ -1,0 +1,16 @@
+<div *ngIf="showSplash" class="app-splash-screen" [ngStyle]="{'opacity': opacityChange, 'transition': splashTransition}">
+
+    <div class="app-splash-content">
+        <svg class="icon" width="244" height="188" viewBox="0 0 244 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="l-path" d="M135.5 125C131 135 125.15 177.188 102.5 179C77.5 181 64.5 163.5 43.5 156.5C16.6759 147.559 4.22752 168.04 9.5 175C19.7273 188.5 40.8796 173 47.5 145.5C51.4821 128.959 52.6316 123 55 100.5C59.1579 61 57.5 18.5 76.5 8.99998C95.5 -0.500048 80 63 55.8413 97.5001" stroke="url('#gradient')" stroke-width="16" stroke-linecap="round"/>
+            <path class="e-path" d="M197 47.5C197 47.5 203 12 176 12C149.022 12 126.538 90.9402 177.871 98.4813C178.346 98.551 178.345 98.4346 177.871 98.5243C103.536 112.577 134.523 179.999 175 179C215.5 178 235.5 107 235.5 107" stroke="url('#gradient')" stroke-width="16" stroke-linecap="round"/>
+            <defs>
+                <linearGradient id="gradient">
+                    <stop offset="5%"  stop-color="#2898A2" />
+                    <stop offset="95%" stop-color="#2898A2" />
+                  </linearGradient>
+              </defs>
+        </svg>                  
+    </div>
+
+</div>
