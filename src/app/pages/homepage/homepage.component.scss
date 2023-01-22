@@ -4,6 +4,7 @@
 }
 
 .hero__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,9 +14,12 @@
 }
 
 .hero__content {
-  max-width: 30rem;
+  max-width: 34rem;
   margin-bottom: 8rem;
   z-index: 5;
+  & p {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .squiggle {
@@ -25,7 +29,9 @@
 }
 
 .portrait {
+  position: absolute;
   z-index: 1;
+  right: 0;
 }
 
 .parallax {
@@ -36,7 +42,7 @@
 }
 .parallax__group {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     transform-style: preserve-3d;
   }
 .parallax__layer {
@@ -50,13 +56,47 @@
   transform: translateZ(0);
 }
 .parallax__layer--back {
-    transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
+}
+.parallax__layer--more {
+  transform: translateZ(-2px) scale(3);
 }
 
 .bg--light {
     background: radial-gradient(100% 100% at 0% 0%, #026A74 0%, #003238 100%);
+    // background-color: #026A74;
 }
 
 .bg--dark {
   background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000f12 100%);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.info__two {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  gap: 4rem;
+}
+
+.info__two > * {
+  margin: 0rem;
+}
+
+.info__two p {
+  margin-top: 0.25rem;
+}
+
+.wave {
+  mask-image: linear-gradient(black, black), url(../../../assets/waves.svg);
+  mask-size: 100% 100%, 100% 16rem;
+  mask-repeat: no-repeat;
+  mask-composite: exclude;
+  padding-top: 16rem;
+  margin-top: -16rem;
 }
