@@ -68,7 +68,8 @@
 }
 
 .bg--dark {
-  background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000f12 100%);
+  // background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000f12 100%);
+  background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000000 100%);
 }
 
 .flex-center {
@@ -86,6 +87,7 @@
 
 .info__two > * {
   margin: 0rem;
+  flex: 1 1;
 }
 
 .info__two p {
