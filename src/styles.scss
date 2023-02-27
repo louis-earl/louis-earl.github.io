@@ -17,16 +17,35 @@ h2 {
 }
 
 p {
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 24px;
+    line-height: 1.5;
 }
 
 button {
     font-size: 20px;
     font-weight: 700;
-    color: #E1F0F2;
-    background-color: #DF2D4A;
     border: none;
     padding: 1rem 2rem;
     border-radius: 2rem;
+    cursor: pointer;
+    &.primary {
+        color: #E1F0F2;
+        background-color: #DF2D4A;
+    }
+    &.secondary {
+        color: #E1F0F2;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 2px #DF2D4A;
+    }
+    &:hover {
+        filter: brightness(80%);
+    }
+    &:active {
+        filter: brightness(50%);
+    }
+}
+
+.button__group {
+    display: inline-flex;
+    gap: 2rem;
 }

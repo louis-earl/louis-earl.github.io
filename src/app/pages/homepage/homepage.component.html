@@ -1,4 +1,5 @@
-<div class="parallax bg--dark">
+<div (scroll)="onWindowScroll($event)"
+    class="parallax bg--dark">
     <div class="parallax__group">
         <div class="parallax__layer parallax__layer--more">
             <div class="squiggle">
@@ -13,11 +14,16 @@
                     <p>
                         I’m a hybrid Front-End Developer and UI/UX designer. I use curiosity, creativity, and lots of coffee to deliver brilliant product features - all while having fun.
                     </p>
-                    <button>
-                        Contact Me
-                    </button>
+                    <div class="button__group">
+                        <button class="primary">
+                            View Projects
+                        </button>
+                        <button class="secondary">
+                            Contact Me
+                        </button>
+                    </div>
                 </div>
-                <div class="portrait">
+                <div class="portrait" [style.marginTop]="portraitOffset + 'px'">
                     <img src="../../../assets/portrait.png">
                 </div>
             </div>
