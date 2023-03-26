@@ -12,7 +12,7 @@ export class HomepageComponent {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
-    this.portraitOffset = window.scrollY / 4;
+    this.portraitOffset = window.scrollY / 2;
     this.squiggleOffset = window.scrollY / 4;
   }
 }

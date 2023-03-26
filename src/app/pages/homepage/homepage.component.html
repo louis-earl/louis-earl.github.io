@@ -18,7 +18,11 @@
     </div>
     <div class="clip-container" [style.marginTop]="squiggleOffset + 'px'">
         <img class="squiggle" src="../../../assets/squiggle-1.svg">
-        <img class="portrait" [style.marginTop]="portraitOffset + 'px'" src="../../../assets/portrait.png">
+        <div class="portrait-container">
+            <div class="portrait-container-inner">
+                <img class="portrait" [style.marginTop]="portraitOffset + 'px'" src="../../../assets/portrait.png">
+            </div>
+        </div>
     </div>
 </section>
 
