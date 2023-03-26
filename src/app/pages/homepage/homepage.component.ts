@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class HomepageComponent {
 
   portraitOffset = 0;
+  squiggleOffset = 0;
 
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
-    this.portraitOffset = $event.target.scrollTop / 2.5;
+    this.portraitOffset = window.scrollY / 4;
+    this.squiggleOffset = window.scrollY / 4;
   }
 }

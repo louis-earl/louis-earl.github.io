@@ -1,3 +1,7 @@
+section {
+  min-height: 100vh;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -23,43 +27,23 @@
 }
 
 .squiggle {
+  z-index: 1;
+}
+
+.clip-container {
+  mask-image: url(../../../assets/squiggle-mask.svg), linear-gradient(transparent, transparent);
+  mask-size: auto auto, 100% 100%;
+  mask-repeat: no-repeat;
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .portrait {
+  padding-top: 200px;
   position: absolute;
-  z-index: 1;
-  right: 0;
-}
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__group {
-    position: relative;
-    min-height: 100vh;
-    transform-style: preserve-3d;
-  }
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
-}
-.parallax__layer--more {
-  transform: translateZ(-2px) scale(3);
+  right: 50px;
+  z-index: 2;
 }
 
 .bg--light {

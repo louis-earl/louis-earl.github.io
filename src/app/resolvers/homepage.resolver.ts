@@ -16,7 +16,7 @@ export class HomepageResolver implements Resolve<any> {
          setTimeout(() => {
             this.splashScreenStateService.stop();
             resolve(of(['item1', 'item2']));
-         }, 200);
+         }, 1200);
       });
 
    }

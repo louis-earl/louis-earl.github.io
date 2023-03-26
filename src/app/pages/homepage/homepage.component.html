@@ -1,50 +1,56 @@
-<div (scroll)="onWindowScroll($event)"
-    class="parallax bg--dark">
-    <div class="parallax__group">
-        <div class="parallax__layer parallax__layer--more">
-            <div class="squiggle">
-                <img src="../../../assets/squiggle-1.svg">
-            </div>
-        </div>
-        <div class="hero parallax__layer parallax__layer--back">
-            <div class="hero__container">
-                <div class="hero__content">
-                    <h1>Louis Earl</h1>
-                    <h2>UX Engineer</h2>
-                    <p>
-                        I’m a hybrid Front-End Developer and UI/UX designer. I use curiosity, creativity, and lots of coffee to deliver brilliant product features - all while having fun.
-                    </p>
-                    <div class="button__group">
-                        <button class="primary">
-                            View Projects
-                        </button>
-                        <button class="secondary">
-                            Contact Me
-                        </button>
-                    </div>
-                </div>
-                <div class="portrait" [style.marginTop]="portraitOffset + 'px'">
-                    <img src="../../../assets/portrait.png">
-                </div>
+<section class="hero bg--dark">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h1>Louis Earl</h1>
+            <h2>UX Engineer</h2>
+            <p>
+                I’m a hybrid Front-End Developer and UI/UX designer. I use curiosity, creativity, and lots of coffee to deliver brilliant product features - all while having fun.
+            </p>
+            <div class="button__group">
+                <a class="primary button" href="#my-projects">
+                    Check out my work
+                </a>
+                <button class="secondary">
+                    Contact Me
+                </button>
             </div>
         </div>
     </div>
-
-    <div class="parallax__group bg--light wave">         
-        <div class="flex-center">
-            <div class="info__two">
-                <h2>
-                    I design software that's a joy to use, then bring it to life with code.
-                </h2>
-                <p>
-                    As a bridge between Front-End Developer and UI/UX Designer, I collaborate on projects at all stages - from ideation to development and release.
-                </p>
-            </div>
-        </div>
-        <app-isometric-cards></app-isometric-cards>
+    <div class="clip-container" [style.marginTop]="squiggleOffset + 'px'">
+        <img class="squiggle" src="../../../assets/squiggle-1.svg">
+        <img class="portrait" [style.marginTop]="portraitOffset + 'px'" src="../../../assets/portrait.png">
     </div>
+</section>
 
-</div>
+<section class="bg--light wave">         
+    <div class="flex-center">
+        <div class="info__two">
+            <h2>
+                I design software that's a joy to use, then bring it to life with code.
+            </h2>
+            <p>
+                As a bridge between Front-End Developer and UI/UX Designer, I collaborate on projects at all stages - from ideation to development and release.
+            </p>
+        </div>
+    </div>
+    <app-isometric-cards></app-isometric-cards>
+</section>
+
+<section class="bg--dark">         
+    <div class="flex-center">
+        <div class="info__two">
+            <h2 id="my-projects">
+                My Projects
+            </h2>
+        </div>
+    </div>
+    <div>
+        **insert filter buttons here**
+    </div>
+    <div>
+        
+    </div>
+</section>
 
 
 <!-- <section class="hero">
