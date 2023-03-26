@@ -100,9 +100,10 @@ section {
 
 .wave {
   mask-image: linear-gradient(black, black), url(../../../assets/waves.svg);
-  mask-size: 100% 100%, 100% 16rem;
+  mask-size: 100% calc(100% + 1px), 100% 16rem;
   mask-repeat: no-repeat;
   mask-composite: exclude;
+  mask-position: 0px -1px;
   padding-top: 16rem;
   margin-top: -16rem;
 }
