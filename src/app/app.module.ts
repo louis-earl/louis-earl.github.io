@@ -8,13 +8,17 @@ import { SplashComponent } from './components/splash/splash.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HomepageResolver } from './resolvers/homepage.resolver';
 import { IsometricCardsComponent } from './components/isometric-cards/isometric-cards.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     HomepageComponent,
-    IsometricCardsComponent
+    IsometricCardsComponent,
+    ProjectsComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule, 
