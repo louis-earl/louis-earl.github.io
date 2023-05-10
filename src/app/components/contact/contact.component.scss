@@ -1,0 +1,24 @@
+.contact__container {
+  margin-inline: 20%;
+  margin-block: 8rem;
+  text-align: center;
+}
+
+.social {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    margin-block: 4rem;
+  }
+  &__item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}

@@ -1,7 +1,9 @@
 section {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
+  &.full-height {
+    min-height: 100vh;
+  }
 }
 
 .standard-container {
@@ -97,11 +99,29 @@ section {
 }
 
 .wave {
-  mask-image: linear-gradient(black, black), url(../../../assets/waves.svg);
+  mask-image: linear-gradient(black, black), url(../../../assets/wave-1.svg);
   mask-size: 100% calc(100% + 1px), 100% 16rem;
   mask-repeat: no-repeat;
   mask-composite: exclude;
   mask-position: 0px -1px;
   padding-top: 16rem;
   margin-top: -16rem;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url(../../../assets/wave-2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 16rem;
+  img {
+    width: 8rem;
+    position: absolute;
+    top: 1rem;
+    margin-inline: auto;
+  }
 }

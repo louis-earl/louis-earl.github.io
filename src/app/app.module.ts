@@ -10,6 +10,7 @@ import { HomepageResolver } from './resolvers/homepage.resolver';
 import { IsometricCardsComponent } from './components/isometric-cards/isometric-cards.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     HomepageComponent,
     IsometricCardsComponent,
     ProjectsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule, 
