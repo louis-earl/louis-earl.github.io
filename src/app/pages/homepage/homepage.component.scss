@@ -72,13 +72,14 @@ section {
 }
 
 .bg--light {
-    background: radial-gradient(100% 100% at 0% 0%, #026A74 0%, #003238 100%);
-    // background-color: #026A74;
+    // background: radial-gradient(100% 100% at 0% 0%, #026A74 0%, #003238 100%);
+    background-color: #026A74;
 }
 
 .bg--dark {
   // background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000f12 100%);
-  background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000000 100%);
+  // background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000000 100%);
+  background-color: #003238;
 }
 
 .info__two {
