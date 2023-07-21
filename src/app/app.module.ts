@@ -11,6 +11,7 @@ import { IsometricCardsComponent } from './components/isometric-cards/isometric-
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './components/contact/contact.component';
     IsometricCardsComponent,
     ProjectsComponent,
     ProjectCardComponent,
-    ContactComponent
+    ContactComponent,
+    ValocityGlobalComponent
   ],
   imports: [
     BrowserModule, 
