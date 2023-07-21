@@ -1,17 +1,3 @@
-section {
-  display: flex;
-  justify-content: center;
-  &.full-height {
-    min-height: 100vh;
-  }
-}
-
-.standard-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 2rem;
-}
-
 .hero__container {
   position: relative;
   display: flex;
@@ -40,7 +26,8 @@ section {
 }
 
 .clip-container {
-  mask-image: url(../../../assets/squiggle-mask.svg), linear-gradient(transparent, transparent);
+  mask-image: url(../../../assets/squiggle-mask.svg),
+    linear-gradient(transparent, transparent);
   mask-size: calc(400px + 25%) auto, 100% 100%;
   mask-repeat: no-repeat;
   mask-position: top right;
@@ -71,34 +58,6 @@ section {
   width: 30%;
 }
 
-.bg--light {
-    // background: radial-gradient(100% 100% at 0% 0%, #026A74 0%, #003238 100%);
-    background-color: #026A74;
-}
-
-.bg--dark {
-  // background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000f12 100%);
-  // background: radial-gradient(100% 100% at 0% 0%, #003238 0%, #000000 100%);
-  background-color: #003238;
-}
-
-.info__two {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
-  gap: 4rem;
-}
-
-.info__two > * {
-  margin: 0rem;
-  flex: 1 1;
-}
-
-.info__two p {
-  margin-top: 0.25rem;
-}
-
 .wave {
   mask-image: linear-gradient(black, black), url(../../../assets/wave-1.svg);
   mask-size: 100% calc(100% + 1px), 100% 16rem;
@@ -124,5 +83,76 @@ footer {
     position: absolute;
     top: 1rem;
     margin-inline: auto;
+  }
+}
+
+.merge-container {
+  position: relative;
+  height: 800px;
+}
+
+.merge-left,
+.merge-right,
+.merge-result {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.merge-left,
+.merge-right {
+  left: 25%;
+  height: 400px;
+  width: 600px;
+  animation: merge-cards 1s linear;
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: var(--scroll);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.merge-left {
+  transform: rotateX(-15deg) rotateY(30deg) translateY(0) translateX(-75%);
+  background-image: url(../../../assets/valocity-global.webp);
+}
+
+.merge-right {
+  transform: rotateX(15deg) rotateY(30deg) translateY(0) translateX(75%);
+  background-image: url(../../../assets/valocity-global.webp);
+}
+
+.merge-result {
+  left: 15%;
+  width: 750px;
+  // opacity: 0;
+  animation: merge-result 1s linear;
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: var(--scroll);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  object-fit: contain;
+  transform: rotateX(0deg) rotateY(0deg) translateY(800px) translateX(0);
+}
+
+@keyframes merge-cards {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) translateY(200px) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes merge-result {
+  50% {
+    // opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) translateY(150px) translateX(0);
+    opacity: 1;
   }
 }

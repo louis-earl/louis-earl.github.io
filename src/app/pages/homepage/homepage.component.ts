@@ -14,5 +14,6 @@ export class HomepageComponent {
   onWindowScroll($event: any) {
     this.portraitOffset = window.scrollY / 2;
     this.squiggleOffset = window.scrollY / 4;
+    document.body.style.setProperty('--scroll', (((window.scrollY/500) * -1) + 1.5).toString() + 's')
   }
 }
