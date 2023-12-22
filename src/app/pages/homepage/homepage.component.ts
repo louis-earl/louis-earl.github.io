@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-homepage',
@@ -10,10 +11,15 @@ export class HomepageComponent {
   portraitOffset = 0;
   squiggleOffset = 0;
 
+  isOverlayOpen$ = this.projectsService.isOverlayOpen$;
+
+  constructor(private projectsService: ProjectsService){}
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
     this.portraitOffset = window.scrollY / 2;
     this.squiggleOffset = window.scrollY / 4;
     document.body.style.setProperty('--scroll', (((window.scrollY/500) * -1) + 1.5).toString() + 's')
   }
+
 }

@@ -156,3 +156,25 @@ footer {
     opacity: 1;
   }
 }
+
+#transition-container {
+  transition: transform 0.4s;
+  &.hide {
+    transform: translateX(-100dvw);
+  }
+}
+
+#project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  transform: translateX(100dvw);
+  background-color: blueviolet;
+  transition: transform 0.4s;
+
+  &.open {
+    transform: translateX(0);
+  }
+}

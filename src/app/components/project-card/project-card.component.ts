@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-project-card',
@@ -12,9 +13,13 @@ export class ProjectCardComponent implements OnInit {
   @Input() link: string;
   @Input() reverseDirection: boolean;
 
-  constructor() { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
+  }
+
+  onProjectClick() {
+    this.projectsService.openProject();
   }
 
 }
