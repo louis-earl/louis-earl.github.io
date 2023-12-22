@@ -12,6 +12,7 @@ import { ProjectsComponent } from './components/projects-list/projects-list.comp
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
+import { ProjectContentHostComponent } from './components/project-content-host/project-content-host.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global
     ProjectsComponent,
     ProjectCardComponent,
     ContactComponent,
-    ValocityGlobalComponent
+    ValocityGlobalComponent,
+    ProjectContentHostComponent
   ],
   imports: [
     BrowserModule, 
