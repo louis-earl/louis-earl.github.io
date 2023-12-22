@@ -8,7 +8,7 @@ import { SplashComponent } from './components/splash/splash.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HomepageResolver } from './resolvers/homepage.resolver';
 import { IsometricCardsComponent } from './components/isometric-cards/isometric-cards.component';
-import { ProjectsComponent } from './components/projects/projects-list.component';
+import { ProjectsComponent } from './components/projects-list/projects-list.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
