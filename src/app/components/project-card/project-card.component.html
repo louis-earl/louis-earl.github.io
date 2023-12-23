@@ -1,10 +1,10 @@
-<div (click)="onProjectClick()" class="card__layout">
+<div class="card__layout">
     <div class="card__thumbnail" [ngClass]="{'reverse': reverseDirection}">
         <ng-content select="[thumbnail]"></ng-content>
     </div>
     <div class="card__content">
         <h3>{{title}}</h3>
         <ng-content select="[description]"></ng-content>
-        <a>Read More</a>
+        <a class="button secondary" routerLink="projects">Read More</a>
     </div>
 </div>

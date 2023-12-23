@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProjectContentHostComponent } from './project-content-host.component';
+import { ProjectHostComponent } from './project-host.component';
 
-describe('ProjectContentHostComponent', () => {
-  let component: ProjectContentHostComponent;
-  let fixture: ComponentFixture<ProjectContentHostComponent>;
+describe('ProjectHostComponent', () => {
+  let component: ProjectHostComponent;
+  let fixture: ComponentFixture<ProjectHostComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectContentHostComponent ]
+      declarations: [ ProjectHostComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectContentHostComponent);
+    fixture = TestBed.createComponent(ProjectHostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

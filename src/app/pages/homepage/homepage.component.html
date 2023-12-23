@@ -1,74 +1,72 @@
-<div id="transition-container" [ngClass]="{'hide': isOverlayOpen$ | async}">
-    <section class="bg--dark full-height">
-        <div class="hero__container">
-            <div class="hero__content">
-                <h1>Louis Earl</h1>
-                <h2>UX Engineer</h2>
-                <p>
-                    I’m a hybrid Front-End Developer and UI/UX designer. I use curiosity, creativity, and lots of coffee to deliver brilliant product features - all while having fun.
-                </p>
-                <div class="button__group">
-                    <a class="primary button" href="#my-projects">
-                        Check out my work
-                    </a>
-                    <button class="secondary">
-                        Contact Me
-                    </button>
-                </div>
+<section class="bg--dark full-height">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h1>Louis Earl</h1>
+            <h2>UX Engineer</h2>
+            <p>
+                I’m a hybrid Front-End Developer and UI/UX designer. I use curiosity, creativity, and lots of coffee to deliver brilliant product features - all while having fun.
+            </p>
+            <div class="button__group">
+                <a class="primary button" href="#my-projects">
+                    Check out my work
+                </a>
+                <button class="secondary">
+                    Contact Me
+                </button>
             </div>
         </div>
-        <div class="clip-container" [style.marginTop]="squiggleOffset + 'px'">
-            <img class="squiggle" src="../../../assets/squiggle-1.svg">
-            <div class="portrait-container">
-                <div class="portrait-container-inner">
-                    <img class="portrait" [style.marginTop]="portraitOffset + 'px'" src="../../../assets/portrait.png">
-                </div>
+    </div>
+    <div class="clip-container" [style.marginTop]="squiggleOffset + 'px'">
+        <img class="squiggle" src="../../../assets/squiggle-1.svg">
+        <div class="portrait-container">
+            <div class="portrait-container-inner">
+                <img class="portrait" [style.marginTop]="portraitOffset + 'px'" src="../../../assets/portrait.png">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg--light wave">  
-        <div class="standard-container">       
-            <div class="info__two">
-                <h2>
-                    I design software that's a joy to use...
-                </h2>
-                <h2>
-                    ...then bring it to life with code.
-                </h2>
-            </div>
-            <!-- <app-isometric-cards></app-isometric-cards> -->
-            <div class="merge-container">
-                <div class="merge-left"></div>
-                <div class="merge-right"></div>
-                <img class="merge-result" src="../../../assets/imac-frame.png"/>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg--dark">         
-        <div class="standard-container">
-            <h2 id="my-projects">
-                My Projects
+<section class="bg--light wave">  
+    <div class="standard-container">       
+        <div class="info__two">
+            <h2>
+                I design software that's a joy to use...
             </h2>
-            <app-projects-list></app-projects-list>
+            <h2>
+                ...then bring it to life with code.
+            </h2>
         </div>
-    </section>
-
-    <section class="bg--dark">
-        <div class="standard-container">
-            <app-contact></app-contact>
+        <!-- <app-isometric-cards></app-isometric-cards> -->
+        <div class="merge-container">
+            <div class="merge-left"></div>
+            <div class="merge-right"></div>
+            <img class="merge-result" src="../../../assets/imac-frame.png"/>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <img class="le-footer" src="../../../assets/le-footer.svg">
-        <p>Designed & Developed by Louis Earl 2023</p>
-    </footer>
-</div>
-<div id="project-overlay" [ngClass]="{'open': isOverlayOpen$ | async}">
+<section class="bg--dark">         
+    <div class="standard-container">
+        <h2 id="my-projects">
+            My Projects
+        </h2>
+        <app-projects-list></app-projects-list>
+    </div>
+</section>
+
+<section class="bg--dark">
+    <div class="standard-container">
+        <app-contact></app-contact>
+    </div>
+</section>
+
+<footer>
+    <img class="le-footer" src="../../../assets/le-footer.svg">
+    <p>Designed & Developed by Louis Earl 2023</p>
+</footer>
+<!-- <div id="project-overlay" [ngClass]="{'open': isOverlayOpen$ | async}">
     <app-project-content-host></app-project-content-host>
-</div>
+</div> -->
 
 <!-- <section class="hero">
     <div class="hero__container">

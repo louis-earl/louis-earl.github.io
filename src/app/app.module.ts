@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { ProjectsComponent } from './components/projects-list/projects-list.comp
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
-import { ProjectContentHostComponent } from './components/project-content-host/project-content-host.component';
+import { ProjectHostComponent } from './pages/project-host/project-host.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { ProjectContentHostComponent } from './components/project-content-host/p
     ProjectCardComponent,
     ContactComponent,
     ValocityGlobalComponent,
-    ProjectContentHostComponent
+    ProjectHostComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule, 
-    AppRoutingModule
+    BrowserAnimationsModule,
   ],
   providers: [
     SplashScreenStateService,
