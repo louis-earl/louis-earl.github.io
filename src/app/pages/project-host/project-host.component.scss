@@ -1,20 +1,25 @@
 .layout {
-    padding: 2rem;
-    background-color: #003238;
+    display: flex;
+    margin-inline: 2rem;
+    gap: 2rem;
     &__fixed {
-        position: fixed;
-        top: 2rem;
-        bottom: 2rem;
-        margin-inline-end: 380px;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        flex: 1;
+        gap: 2rem;
+        position: sticky;
+        top: 0;
+        height: 100dvh;
 
     }
     &__scroll {
-        width: 380px;
-        margin-inline-start: calc(100% - 380px);
+        flex: 0 1 30%;
     }
 }
 
 .headline {
+    margin-top: 2rem;
     &__title {
         display: inline-flex;
         align-items: center;
@@ -28,8 +33,8 @@
 }
 
 .project__gallery {
-    width: 100%;
-    height: 100%;
     background-color: #ffffff28;
     border-radius: 2rem;
+    flex: 1 1 auto;
+    margin-bottom: 2rem;
 }
