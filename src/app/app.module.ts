@@ -12,10 +12,10 @@ import { IsometricCardsComponent } from './components/isometric-cards/isometric-
 import { ProjectsComponent } from './components/projects-list/projects-list.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
 import { ProjectHostComponent } from './pages/project-host/project-host.component';
 import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valocity-onsite.component';
 import { ProjectGallaryComponent } from './components/project-gallary/project-gallary.component';
+import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +26,10 @@ import { ProjectGallaryComponent } from './components/project-gallary/project-ga
     ProjectsComponent,
     ProjectCardComponent,
     ContactComponent,
-    ValocityGlobalComponent,
     ProjectHostComponent,
     ValocityOnsiteComponent,
-    ProjectGallaryComponent
+    ProjectGallaryComponent,
+    ValocityGlobalComponent
   ],
   imports: [
     AppRoutingModule,
