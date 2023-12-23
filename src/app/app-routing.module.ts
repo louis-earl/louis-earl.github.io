@@ -5,6 +5,7 @@ import { HomepageResolver } from './resolvers/homepage.resolver';
 import { ProjectHostComponent } from './pages/project-host/project-host.component';
 import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valocity-onsite.component';
 import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
+import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,11 @@ const routes: Routes = [
         path: 'valocity-global',
         component: ValocityGlobalComponent
       },
-      
+      {
+        path: 'valocity-executive-summary',
+        component: ValocityExecutiveSummaryComponent
+      }
+
     ]
   }
 ];

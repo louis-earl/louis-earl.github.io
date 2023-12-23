@@ -16,6 +16,7 @@ import { ProjectHostComponent } from './pages/project-host/project-host.componen
 import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valocity-onsite.component';
 import { ProjectGallaryComponent } from './components/project-gallary/project-gallary.component';
 import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
+import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ValocityGlobalComponent } from './pages/projects/valocity-global/valoci
     ProjectHostComponent,
     ValocityOnsiteComponent,
     ProjectGallaryComponent,
-    ValocityGlobalComponent
+    ValocityGlobalComponent,
+    ValocityExecutiveSummaryComponent
   ],
   imports: [
     AppRoutingModule,
