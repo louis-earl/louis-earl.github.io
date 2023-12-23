@@ -50,6 +50,7 @@
         <h2 id="my-projects">
             My Projects
         </h2>
+        <p>A collection of my favourite creations from the past {{currentYear - 2019}} years.</p>
         <app-projects-list></app-projects-list>
     </div>
 </section>
@@ -62,7 +63,7 @@
 
 <footer>
     <img class="le-footer" src="../../../assets/le-footer.svg">
-    <p>Designed & Developed by Louis Earl 2023</p>
+    <p>Designed & Developed by Louis Earl {{currentYear}}</p>
 </footer>
 <!-- <div id="project-overlay" [ngClass]="{'open': isOverlayOpen$ | async}">
     <app-project-content-host></app-project-content-host>

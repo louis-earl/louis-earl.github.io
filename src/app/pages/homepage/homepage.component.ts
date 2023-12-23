@@ -10,6 +10,8 @@ export class HomepageComponent {
   portraitOffset = 0;
   squiggleOffset = 0;
 
+  currentYear = new Date().getFullYear();
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
     this.portraitOffset = window.scrollY / 2;
