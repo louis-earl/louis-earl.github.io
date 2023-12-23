@@ -4,6 +4,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HomepageResolver } from './resolvers/homepage.resolver';
 import { ValocityGlobalComponent } from './pages/valocity-global/valocity-global.component';
 import { ProjectHostComponent } from './pages/project-host/project-host.component';
+import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valocity-onsite.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,13 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectHostComponent,
     // resolve: {'itemsList': HomepageResolver},
-    data: {animation: 'ProjectsPage'}
+    data: {animation: 'ProjectsPage'},
+    children: [
+      {
+        path: 'valocity-onsite',
+        component: ValocityOnsiteComponent
+    }
+    ]
   }
 ];
 

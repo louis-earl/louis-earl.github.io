@@ -3,43 +3,19 @@
         <div class="headline">
             <div class="headline__title">
                 <a class="button secondary" routerLink="/">Back</a>
-                <h1>This is the title</h1>
+                <h1>{{ projectTitle$ | async }}</h1>
             </div>
-            <h2 class="headline__subtitle">This is the subtitle</h2>
+            <h2 class="headline__subtitle">{{ projectSubtitle$ | async }}</h2>
         </div>
 
-        <div class="project__gallery">
-
-        </div>
+        <app-project-gallary></app-project-gallary>
     </div>
     <div class="layout__scroll">
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
-        <p>My content needs to be longer than the stuff on the left.</p>
+        <router-outlet></router-outlet>
+        <div class="up-next">
+            <h3>Up Next:</h3>
+            <h2>Some other project</h2>
+        </div>
     </div>
 </div>
 

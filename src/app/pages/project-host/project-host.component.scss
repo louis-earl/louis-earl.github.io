@@ -1,7 +1,7 @@
 .layout {
     display: flex;
-    margin-inline: 2rem;
-    gap: 2rem;
+    margin-inline: 2rem 4rem;
+    gap: 4rem;
     &__fixed {
         display: flex;
         flex-direction: column;
@@ -15,6 +15,7 @@
     }
     &__scroll {
         flex: 0 1 30%;
+        margin-top: 15rem;
     }
 }
 
@@ -32,9 +33,9 @@
     }
 }
 
-.project__gallery {
+.up-next {
     background-color: #ffffff28;
+    margin: 2rem -2rem;
+    padding: 2rem;
     border-radius: 2rem;
-    flex: 1 1 auto;
-    margin-bottom: 2rem;
 }
