@@ -1,10 +1,10 @@
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { SplashScreenStateService } from '../services/splash-screen-state.service';
 
 @Injectable()
-export class HomepageResolver implements Resolve<any> {
+export class HomepageResolver  {
 
    constructor(
       private splashScreenStateService: SplashScreenStateService
