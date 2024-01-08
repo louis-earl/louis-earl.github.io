@@ -6,6 +6,7 @@ import { ProjectHostComponent } from './pages/project-host/project-host.componen
 import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valocity-onsite.component';
 import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
 import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
+import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'valocity-executive-summary',
         component: ValocityExecutiveSummaryComponent
+      },
+      {
+        path: 'midnight-mysteries',
+        component: MidnightMysteriesComponent
       }
 
     ]
