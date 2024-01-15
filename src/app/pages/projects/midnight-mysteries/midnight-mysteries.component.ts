@@ -16,6 +16,7 @@ export class MidnightMysteriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectsService.setTitle('Midnight Mysteries');
-    this.projectsService.setSubtitle('A multiplayer murder game')
+    this.projectsService.setSubtitle('A multiplayer murder game');
+    this.projectsService.setImages(['mm-present-1.jpg', 'mm-present-2.jpg'])
   }
 }

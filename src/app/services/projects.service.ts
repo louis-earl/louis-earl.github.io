@@ -15,6 +15,9 @@ export class ProjectsService {
   private _activeIndex = new BehaviorSubject<number>(0);
   public activeIndex$ = this._activeIndex.asObservable();
 
+  private _images = new BehaviorSubject<string[]>([]);
+  public images$ = this._images.asObservable();
+
   constructor() { }
 
   public setTitle(title: string) {
@@ -27,5 +30,9 @@ export class ProjectsService {
 
   public setActiveIndex(index: number) {
     this._activeIndex.next(index);
+  }
+
+  public setImages(images: string[]) {
+    this._images.next(images)
   }
 }

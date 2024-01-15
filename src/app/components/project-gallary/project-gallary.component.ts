@@ -10,6 +10,8 @@ export class ProjectGallaryComponent implements OnInit {
 
   activeIndex$ = this.projectsService.activeIndex$;
 
+  images$ = this.projectsService.images$
+
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {

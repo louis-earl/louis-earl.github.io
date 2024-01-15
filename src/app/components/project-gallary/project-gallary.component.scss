@@ -1,7 +1,16 @@
 :host {
+    position: relative;
     background-color: #ffffff28;
     border-radius: 2rem;
     flex: 1 1 auto;
     margin-bottom: 2rem;
     padding: 2rem;
+}
+
+img {
+    position: absolute;
+    width: calc(100% - 4rem);
+    height: calc((100% - 4rem));
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
