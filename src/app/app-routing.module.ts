@@ -7,6 +7,7 @@ import { ValocityOnsiteComponent } from './pages/projects/valocity-onsite/valoci
 import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
 import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
+import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/one-way-wellington.component';
 
 const routes: Routes = [
   {
@@ -37,8 +38,11 @@ const routes: Routes = [
       {
         path: 'midnight-mysteries',
         component: MidnightMysteriesComponent
+      },
+      {
+        path: 'one-way-wellington', 
+        component: OneWayWellingtonComponent
       }
-
     ]
   }
 ];
