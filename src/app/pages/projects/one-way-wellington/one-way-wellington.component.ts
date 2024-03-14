@@ -15,7 +15,7 @@ export class OneWayWellingtonComponent implements OnInit {
   ngOnInit(): void {
     this.projectsService.setTitle('One Way Wellington');
     this.projectsService.setSubtitle('A spaceship building game that\'s out of this world.');
-    this.projectsService.setImages(['mm-present-1.jpg', 'mm-present-2.jpg'])
+    this.projectsService.setImages(['oww-poster.jpg', 'oww-ship.jpg', 'oww-gameplay.jpg']);
   }
 
 }
