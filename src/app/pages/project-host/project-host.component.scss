@@ -42,4 +42,23 @@
     margin: 2rem -2rem;
     padding: 2rem;
     border-radius: 2rem;
+    display: flex;
+    gap: 2rem;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    &__kicker {
+        font-size: 20px;
+        opacity: 0.8;
+    }
+    &__logline {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &__image {
+        max-width: 156px;
+        object-fit: contain;
+    }
 }

@@ -1,6 +1,7 @@
 export interface Project {
     title: string;
     logline: string;
+    route: string;
     heroImage: string;
     contentImages: string[];
     nextUp: ProjectNames;

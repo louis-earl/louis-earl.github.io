@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { ProjectsService } from 'src/app/services/projects.service';
 
@@ -11,7 +11,9 @@ export class ProjectGallaryComponent {
 
   activeIndex$ = this.projectsService.activeIndex$;
 
-  images$ = this.projectsService.project$.pipe(map((project) => project.contentImages));
+  images$ = this.projectsService.project$.pipe(map((project) => {
+    console.log(project.contentImages)
+    return project.contentImages}));
 
   constructor(private projectsService: ProjectsService) { }
 

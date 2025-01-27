@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 import { Project, ProjectNames } from '../models/project.model';
 import { projects } from '../constants/projects.const';
 
@@ -8,7 +8,7 @@ import { projects } from '../constants/projects.const';
 })
 export class ProjectsService {
 
-  private _project = new Subject<Project>();
+  private _project = new ReplaySubject<Project>();
   public project$ = this._project.asObservable();
 
   private _nextUp = new Subject<Project>();

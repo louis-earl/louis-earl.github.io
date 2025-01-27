@@ -6,7 +6,7 @@
                     <span class="material-icons-round">
                         arrow_back
                     </span>
-                    <span>Back</span>
+                    <span>Home</span>
                 </a>
                 <h2>{{ projectTitle$ | async }}</h2>
             </div>
@@ -18,9 +18,19 @@
     <div class="layout__scroll">
         <router-outlet></router-outlet>
         <div class="up-next">
-            <h3>Up Next:</h3>
-            <h2>{{ (upNext$ | async)?.title }}</h2>
-            <img [src]="'../../assets/images/' + (upNext$ | async)?.heroImage"/>
+            <div class="up-next__content">
+                <span class="up-next__kicker">But wait, there's more!</span>
+                <a [href]="'projects/' + (upNext$ | async)?.route" class="up-next__logline">
+                    {{ (upNext$ | async)?.logline }}
+                    <span class="material-icons-round">
+                        arrow_forward
+                    </span>
+                </a>
+            </div>
+            <img 
+                class="up-next__image"
+                [src]="'../../assets/images/' + (upNext$ | async)?.heroImage"
+            />
         </div>
     </div>
 </div>
