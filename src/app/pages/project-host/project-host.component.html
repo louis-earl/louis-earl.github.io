@@ -2,7 +2,12 @@
     <div class="layout__fixed">
         <div class="headline">
             <div class="headline__title">
-                <a class="button secondary" routerLink="/">Back</a>
+                <a class="button secondary" routerLink="/">
+                    <span class="material-icons-round">
+                        arrow_back
+                    </span>
+                    <span>Back</span>
+                </a>
                 <h2>{{ projectTitle$ | async }}</h2>
             </div>
             <h2 class="headline__subtitle">{{ projectSubtitle$ | async }}</h2>

@@ -29,6 +29,7 @@ h2 {
 h3 {
   font-size: 28px;
   font-weight: 700;
+  margin-block: 1.25rem;
 }
 
 span.subtitle {
@@ -38,16 +39,20 @@ span.subtitle {
 }
 
 p {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
+  margin-block: 0 1.25rem;
 }
 
 p.small {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 button,
 a.button {
+  display: inline-flex;
+  gap: 0.5rem;
+  width: fit-content;
   font-size: 20px;
   font-weight: 700;
   border: none;
@@ -69,6 +74,9 @@ a.button {
   }
   &:active {
     filter: brightness(50%);
+  }
+  .material-icons-round {
+
   }
 }
 

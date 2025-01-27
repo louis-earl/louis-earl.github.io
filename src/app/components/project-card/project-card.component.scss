@@ -4,9 +4,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         position: relative;
-        cursor: pointer;
         &:hover::after{
             content: '';
+            cursor: pointer;
             position: absolute;
             left: -10%;
             top: 15%;

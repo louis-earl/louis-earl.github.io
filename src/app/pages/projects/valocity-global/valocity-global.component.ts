@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-valocity-global',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValocityGlobalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly projectsService: ProjectsService) { }
 
   ngOnInit(): void {
+    this.projectsService.setTitle('Valocity Global Platform')
+    this.projectsService.setSubtitle('A valuation ordering platform for lenders')
   }
 
 }
