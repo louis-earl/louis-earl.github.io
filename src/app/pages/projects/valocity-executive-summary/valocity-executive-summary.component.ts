@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectNames } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -11,8 +12,7 @@ export class ValocityExecutiveSummaryComponent implements OnInit {
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.projectsService.setTitle('Valocity Executive Summary Report')
-    this.projectsService.setSubtitle('A report that enables quick lending decisions')
+    this.projectsService.setProject(ProjectNames.ValocityExecutiveSummary)
   }
 
 }

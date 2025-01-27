@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -6,15 +7,12 @@ import { ProjectsService } from 'src/app/services/projects.service';
   templateUrl: './project-gallary.component.html',
   styleUrls: ['./project-gallary.component.scss']
 })
-export class ProjectGallaryComponent implements OnInit {
+export class ProjectGallaryComponent {
 
   activeIndex$ = this.projectsService.activeIndex$;
 
-  images$ = this.projectsService.images$
+  images$ = this.projectsService.project$.pipe(map((project) => project.contentImages));
 
   constructor(private projectsService: ProjectsService) { }
-
-  ngOnInit(): void {
-  }
 
 }

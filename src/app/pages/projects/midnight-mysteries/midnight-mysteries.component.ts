@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectNames } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -15,8 +16,6 @@ export class MidnightMysteriesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projectsService.setTitle('Midnight Mysteries');
-    this.projectsService.setSubtitle('A multiplayer murder game');
-    this.projectsService.setImages(['mm-present-1.jpg', 'mm-present-2.jpg'])
+    this.projectsService.setProject(ProjectNames.MidnightMysteries)
   }
 }

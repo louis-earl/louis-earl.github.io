@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ProjectsService } from 'src/app/services/projects.service';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-project-host',
@@ -8,8 +9,8 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class ProjectHostComponent {
 
-  projectTitle$ = this.projectsService.projectTitle$;
-  projectSubtitle$ = this.projectsService.projectSubtitle$
+  projectTitle$ = this.projectsService.project$.pipe(map((project) => project.title));
+  projectSubtitle$ = this.projectsService.project$.pipe(map((project) => project.title));
 
   constructor(private projectsService: ProjectsService) { }
 
