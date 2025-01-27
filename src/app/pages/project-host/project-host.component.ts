@@ -11,7 +11,6 @@ export class ProjectHostComponent {
 
   projectTitle$ = this.projectsService.project$.pipe(map((project) => project.title));
   projectSubtitle$ = this.projectsService.project$.pipe(map((project) => project.logline));
-  upNext$ = this.projectsService.nextUp$
 
   constructor(private projectsService: ProjectsService) { }
 

@@ -11,7 +11,7 @@ export class ProjectsService {
   private _project = new ReplaySubject<Project>();
   public project$ = this._project.asObservable();
 
-  private _nextUp = new Subject<Project>();
+  private _nextUp = new ReplaySubject<Project>();
   public nextUp$ = this._nextUp.asObservable();
 
   private _activeIndex = new BehaviorSubject<number>(0);
