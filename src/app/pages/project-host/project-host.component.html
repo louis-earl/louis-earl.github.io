@@ -19,7 +19,8 @@
         <router-outlet></router-outlet>
         <div class="up-next">
             <h3>Up Next:</h3>
-            <h2>Some other project</h2>
+            <h2>{{ (upNext$ | async)?.title }}</h2>
+            <img [src]="'../../assets/images/' + (upNext$ | async)?.heroImage"/>
         </div>
     </div>
 </div>
