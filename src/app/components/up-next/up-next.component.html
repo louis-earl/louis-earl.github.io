@@ -3,7 +3,7 @@
         <span class="up-next__kicker">{{ kicker }}</span>
         <a [href]="'projects/' + (upNext$ | async)?.route" class="up-next__logline">
             {{ (upNext$ | async)?.logline }}
-            <span class="material-icons-round">
+            <span class="material-icons-round inline-icon">
                 arrow_forward
             </span>
         </a>

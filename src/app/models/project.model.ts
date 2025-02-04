@@ -5,6 +5,7 @@ export interface Project {
     heroImage: string;
     contentImages: string[];
     nextUp: ProjectNames;
+    description: string;
 }
 
 export enum ProjectNames {

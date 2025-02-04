@@ -1,30 +1,34 @@
-<div class="expansion-container" [class]="isOpen ? 'open' : 'closed'">
+<div 
+    id="anchor" 
+    class="expansion-container" 
+    [ngClass]="!isOpen ? 'closed' : ''"
+    (click)="expandContent()"
+>
     <div 
         *ngIf="!isOpen" 
         class="show-more"
-        (click)="expandContent()"
     >
         <span class="prompt__title">Looking for some technical jargon?</span>
         <span class="prompt__subtitle">
-            Click here for more...
-            <span class="material-icons-round">
+            Click here for more
+            <span class="material-icons-round inline-icon">
                 add_circle
             </span>
         </span>
     </div>
-    <div 
-        *ngIf="isOpen" 
-        class="open"
-        >
-        <ng-content></ng-content>
-        <button 
-            class="button show-less"
-            (click)="collapseContent()"
-        >
-            Show less
-            <span class="material-icons-round">
-                remove_circle
-            </span>
-        </button>
-    </div>
+
+    <div class="expander" [ngClass]="isOpen ? 'expanded' : ''">
+        <div class="expander-content">
+            <ng-content></ng-content>
+            <button 
+                class="button show-less"
+                (click)="collapseContent(); $event.stopPropagation()"
+            >
+                Show less
+                <span class="material-icons-round">
+                    remove_circle
+                </span>
+            </button>
+        </div>
+      </div>
 </div>
