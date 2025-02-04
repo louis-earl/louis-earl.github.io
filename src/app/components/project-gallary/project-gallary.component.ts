@@ -11,9 +11,8 @@ export class ProjectGallaryComponent {
 
   activeIndex$ = this.projectsService.activeIndex$;
 
-  images$ = this.projectsService.project$.pipe(map((project) => {
-    console.log(project.contentImages)
-    return project.contentImages}));
+  images$ = this.projectsService.project$.pipe(map((project) => 
+     project.contentImages));
 
   constructor(private projectsService: ProjectsService) { }
 

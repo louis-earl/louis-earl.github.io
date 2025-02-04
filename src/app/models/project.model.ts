@@ -3,9 +3,14 @@ export interface Project {
     logline: string;
     route: string;
     heroImage: string;
-    contentImages: string[];
+    contentImages: ContentImage[];
     nextUp: ProjectNames;
     description: string;
+}
+
+export interface ContentImage {
+    fileName: string;
+    objectFit: 'contain' | 'cover'
 }
 
 export enum ProjectNames {
