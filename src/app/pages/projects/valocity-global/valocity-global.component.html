@@ -42,41 +42,43 @@
     </p>
 
 </div>
-<div class="segment-trigger">
+<app-expansion-content>
+    <div class="segment-trigger">
 
-    <h3>Mobile Responsiveness:</h3>
-    <p>
-        As the forms were a core part of our mobile app, Valocity Onsite, they needed to work effortlessly during onsite visits, as valuers used mobile devices to complete inspections. 
-    </p>
-    <p>
-        The stepper was designed to be mobile-first, appearing as a banner on smaller screens that expands into a menu, allowing for easy navigation on-the-go.
-    </p>
+        <h3>Mobile Responsiveness:</h3>
+        <p>
+            As the forms were a core part of our mobile app, <a routerLink="../valocity-onsite">Valocity Onsite</a>, they needed to work effortlessly during onsite visits, as valuers used mobile devices to complete inspections. 
+        </p>
+        <p>
+            The stepper was designed to be mobile-first, appearing as a banner on smaller screens that expands into a menu, allowing for easy navigation on-the-go.
+        </p>
 
-</div>
-<div class="segment-trigger">
+    </div>
+    <div class="segment-trigger">
 
-    <h3>Plug-In Method for Forms:</h3>
-    <p>
-        The biggest technical hurdle was building a system where different forms could "plug in" seamlessly. After some trial and error, I collaborated with the team to structure components and services effectively. 
-    </p>
-    <p>
-        I documented the process in a wiki guide and created a visual diagram for clarity, ensuring that new forms could be easily built using a modular system that required minimal setup.
-    </p>
+        <h3>Plug-In Method for Forms:</h3>
+        <p>
+            The biggest technical hurdle was building a system where different forms could "plug in" seamlessly. After some trial and error, I collaborated with the team to structure components and services effectively. 
+        </p>
+        <p>
+            I documented the process in a wiki guide and created a visual diagram for clarity, ensuring that new forms could be easily built using a modular system that required minimal setup.
+        </p>
 
-</div>
-<div class="segment-trigger">
+    </div>
+    <div class="segment-trigger">
 
-    <h3>State Management & API Integration:</h3>
-    <p>
-        Handling form data and integration with the back-end API was simplified by the event-driven architecture of the framework. Angular services managed the state and communication between components, ensuring seamless updates. The "Save" and "Submit" buttons triggered API actions, with proper synchronization to keep the form data consistent with the backend. 
-    </p>
-    <p>
-        The architecture also allowed for easy customization of forms, enabling complex forms like "Site Inspections" or "Full Valuations" to be added with minimal configuration.
-    </p>
-    <p>        
-        Additionally, I ensured proper handling of subscriptions to avoid potential memory leaks by scoping services to specific modules rather than app-wide and ensuring subscriptions were unsubscribed when components were destroyed.
-    </p>
-</div>
+        <h3>State Management & API Integration:</h3>
+        <p>
+            Handling form data and integration with the back-end API was simplified by the event-driven architecture of the framework. Angular services managed the state and communication between components, ensuring seamless updates. The "Save" and "Submit" buttons triggered API actions, with proper synchronization to keep the form data consistent with the backend. 
+        </p>
+        <p>
+            The architecture also allowed for easy customization of forms, enabling complex forms like "Site Inspections" or "Full Valuations" to be added with minimal configuration.
+        </p>
+        <p>        
+            Additionally, I ensured proper handling of subscriptions to avoid potential memory leaks by scoping services to specific modules rather than app-wide and ensuring subscriptions were unsubscribed when components were destroyed.
+        </p>
+    </div>
+</app-expansion-content>
 
 <div class="segment-trigger">
     <h2>UI/UX Enhancements</h2>

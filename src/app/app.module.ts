@@ -18,6 +18,7 @@ import { ProjectGallaryComponent } from './components/project-gallary/project-ga
 import { ValocityGlobalComponent } from './pages/projects/valocity-global/valocity-global.component';
 import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 import { UpNextComponent } from './components/up-next/up-next.component';
+import { ExpansionContentComponent } from './components/expansion-content/expansion-content.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UpNextComponent } from './components/up-next/up-next.component';
     ValocityOnsiteComponent,
     ProjectGallaryComponent,
     ValocityGlobalComponent,
-    ValocityExecutiveSummaryComponent
+    ValocityExecutiveSummaryComponent,
+    ExpansionContentComponent
   ],
   imports: [
     AppRoutingModule,

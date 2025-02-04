@@ -1,0 +1,36 @@
+.expansion-container {
+    background-color: #ffffff28;
+    margin: 2rem -2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.show-more {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-less {
+    position: sticky;
+    justify-content: center;
+    bottom: 2rem;
+    width: 100%;
+    background-color: #f2f2f2;
+    color: #282828;
+    border-radius: 4rem;
+    padding: 0.5rem 1rem;
+}
+
+.prompt {
+    &__title {
+        font-size: 20px;
+        opacity: 0.8;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
