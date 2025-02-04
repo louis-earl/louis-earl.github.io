@@ -7,7 +7,8 @@ export const projects: {[key in ProjectNames]: Project} = {
         route: 'midnight-mysteries',
         heroImage: 'midnight-mysteries.png',
         contentImages: ['mm-present-1.jpg', 'mm-present-2.jpg'],
-        nextUp: ProjectNames.OneWayWellington
+        nextUp: ProjectNames.OneWayWellington,
+        description: 'Using React and some websocket magic, I helped develop a multiplayer game that turns everyone in the room against each other.'
     },
     oneWayWellington: {
         title: 'One Way Wellington',
@@ -17,7 +18,8 @@ export const projects: {[key in ProjectNames]: Project} = {
         contentImages: [
             'oww-poster.jpg', 'oww-ship.jpg', 'oww-gameplay.jpg'
         ],
-        nextUp: ProjectNames.ValocityGlobal
+        nextUp: ProjectNames.ValocityGlobal,
+        description: 'I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.'
     },
     valocityExecutiveSummary: {
         title: 'Valocity Executive Summary',
@@ -27,17 +29,19 @@ export const projects: {[key in ProjectNames]: Project} = {
         contentImages: [
             
         ],
-        nextUp: ProjectNames.MidnightMysteries
+        nextUp: ProjectNames.MidnightMysteries,
+        description: 'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.'
     },
     valocityGlobal: {
         title: 'Valocity Connect',
-        logline: 'Frustrating forms? Not on my watch.',
+        logline: 'A dynamic form builder that simplifies property inspections.',
         route: 'valocity-global',
         heroImage: 'global-hero.webp',
         contentImages: [
             'global-hero.webp'
         ],
-        nextUp: ProjectNames.ValocityOnsite
+        nextUp: ProjectNames.ValocityOnsite,
+        description: 'Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.'
     },
     valocityOnsite: {
         title: 'Valocity Onsite',
@@ -45,8 +49,9 @@ export const projects: {[key in ProjectNames]: Project} = {
         route: 'valocity-onsite',
         heroImage: 'onsite-hero.webp',
         contentImages: [
-            
+            'onsite-hero.webp'
         ],
-        nextUp: ProjectNames.ValocityExecutiveSummary
+        nextUp: ProjectNames.ValocityExecutiveSummary,
+        description: 'I redesigned a mobile app that wasn\'t getting much use. Now it\'s set to streamline the way valuation firms collect property data'
     }
 }

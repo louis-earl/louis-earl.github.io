@@ -1,53 +1,15 @@
 <div class="project-list">
-    
-    <app-project-card 
-        title="A valuation ordering platform for lenders." 
-        link="projects/valocity-global"
+    <ng-container *ngFor="let project of projects; index as i">
+        <app-project-card
+            [title]="project.logline"
+            [link]="'projects/' + project.route"
+            [reverseDirection]="i % 2 === 1"
         >
-        <img thumbnail src="../../../assets/images/global-hero.webp">
-        <p description class="small">
-            Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.
-        </p>
-    </app-project-card>
+            <img thumbnail [src]="'../../../assets/images/' + project.heroImage" />
+            <p description class="small">
+                {{ project.description }}
+            </p>
+        </app-project-card>
 
-    <app-project-card 
-        title="An app that simplifies property valuations."
-        link="projects/valocity-onsite"
-        [reverseDirection]="true" 
-        >
-        <img thumbnail src="../../../assets/images/onsite-hero.webp">
-        <p description class="small">
-            I redesigned a mobile app that wasn't getting much use. Now it's set to streamline the way valuation firms collect property data.
-        </p>
-    </app-project-card>
-
-    <app-project-card
-        title="A report that enables quick lending decisions."
-        link="projects/valocity-executive-summary"
-        >
-        <p description class="small">
-            Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.  
-        </p>
-    </app-project-card>
-
-    <app-project-card 
-        title="A multiplayer murder mystery."
-        link="projects/midnight-mysteries"
-        [reverseDirection]="true"
-        >
-        <img thumbnail src="../../../assets/images/midnight-mysteries.png">
-        <p description class="small">
-            Using React and some websocket magic, I helped develop a multiplayer game that turns everyone in the room against each other. 
-        </p>
-    </app-project-card>
-
-    <app-project-card 
-        title="A video game that's out of this world." 
-        link="projects/one-way-wellington"
-        >
-        <img thumbnail src="../../../assets/images/oww-poster.jpg">
-        <p description class="small">
-            I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.
-        </p>
-    </app-project-card>
+    </ng-container>
 </div>
