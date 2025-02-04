@@ -30,12 +30,12 @@ export const projects: {[key in ProjectNames]: Project} = {
         nextUp: ProjectNames.MidnightMysteries
     },
     valocityGlobal: {
-        title: 'Valocity Global Platform',
-        logline: 'A valuation ordering platform for lenders',
+        title: 'Valocity Connect',
+        logline: 'Frustrating forms? Not on my watch.',
         route: 'valocity-global',
         heroImage: 'global-hero.webp',
         contentImages: [
-            
+            'global-hero.webp'
         ],
         nextUp: ProjectNames.ValocityOnsite
     },
