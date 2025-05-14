@@ -1,23 +1,21 @@
 <div class="layout">
     <div class="layout__fixed">
-        <div class="headline">
-            <div class="headline__title">
-                <a class="button secondary" routerLink="/">
-                    <span class="material-icons-round">
-                        arrow_back
-                    </span>
-                    <span>Home</span>
-                </a>
-                <h2>{{ projectTitle$ | async }}</h2>
-            </div>
-            <h2 class="headline__subtitle">{{ projectSubtitle$ | async }}</h2>
-        </div>
+        <header>
+            <a class="button secondary" routerLink="/">
+                <span class="material-icons-round">
+                    arrow_back
+                </span>
+                <span>Home</span>
+            </a>
+            <h2 class="title">{{ projectTitle$ | async }}</h2>
+            <span class="subtitle">{{ projectSubtitle$ | async }}</span>
+        </header>
 
         <app-project-gallary></app-project-gallary>
     </div>
     <div class="layout__scroll">
         <router-outlet></router-outlet>
-        <app-up-next></app-up-next>   
+        <app-up-next></app-up-next>
     </div>
 </div>
 

@@ -1,7 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .layout {
     display: flex;
     margin-inline: 2rem 4rem;
     gap: 4rem;
+    max-width: 1200px;
+
     &__fixed {
         display: flex;
         flex-direction: column;
@@ -13,25 +21,21 @@
         height: 100dvh;
 
     }
+
     &__scroll {
         flex: 0 1 30%;
         margin-top: 15rem;
     }
 }
 
-.headline {
+header {
     margin-top: 2rem;
-    &__title {
-        display: inline-flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-block-end: 0.5rem;
 
-        h2 {
-            margin: 0;
-        }
+    h2.title {
+        margin: 0;
     }
-    &__subtitle {
+
+    span.subtitle {
         margin: 0;
         font-size: 28px;
     }
