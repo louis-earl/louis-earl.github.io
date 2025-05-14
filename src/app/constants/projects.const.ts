@@ -21,7 +21,7 @@ export const projects: {[key in ProjectNames]: Project} = {
         contentImages: [
             {fileName: 'oww-poster.jpg', objectFit: 'contain'}, 
             {fileName: 'oww-ship.jpg', objectFit: 'cover'},
-            {fileName: 'oww-gameplay.jpg', objectFit: 'cover'},
+            {fileName: 'oww-gameplay.jpg', objectFit: 'contain'},
         ],
         nextUp: ProjectNames.ValocityGlobal,
         description: 'I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.'
