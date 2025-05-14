@@ -3,9 +3,10 @@ import { map } from 'rxjs/operators';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
-  selector: 'app-project-gallary',
-  templateUrl: './project-gallary.component.html',
-  styleUrls: ['./project-gallary.component.scss']
+    selector: 'app-project-gallary',
+    templateUrl: './project-gallary.component.html',
+    styleUrls: ['./project-gallary.component.scss'],
+    standalone: false
 })
 export class ProjectGallaryComponent {
 

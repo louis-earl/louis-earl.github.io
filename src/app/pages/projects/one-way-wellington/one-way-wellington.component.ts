@@ -3,11 +3,10 @@ import { ProjectNames } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
-  selector: 'app-one-way-wellington',
-  standalone: true,
-  imports: [],
-  templateUrl: './one-way-wellington.component.html',
-  styleUrl: './one-way-wellington.component.scss'
+    selector: 'app-one-way-wellington',
+    imports: [],
+    templateUrl: './one-way-wellington.component.html',
+    styleUrl: './one-way-wellington.component.scss'
 })
 export class OneWayWellingtonComponent implements OnInit {
 

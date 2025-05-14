@@ -3,9 +3,10 @@ import { ProjectsService } from 'src/app/services/projects.service';
 import { map } from 'rxjs/operators'
 
 @Component({
-  selector: 'app-project-host',
-  templateUrl: './project-host.component.html',
-  styleUrls: ['./project-host.component.scss']
+    selector: 'app-project-host',
+    templateUrl: './project-host.component.html',
+    styleUrls: ['./project-host.component.scss'],
+    standalone: false
 })
 export class ProjectHostComponent {
 

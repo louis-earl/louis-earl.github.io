@@ -4,10 +4,11 @@ import { slideInAnimation } from './animations';
 import { AnimationEvent } from '@angular/animations';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [slideInAnimation]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    animations: [slideInAnimation],
+    standalone: false
 })
 export class AppComponent {
   title = 'portfolio-neon';

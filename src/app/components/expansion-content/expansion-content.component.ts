@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-expansion-content',
-  templateUrl: './expansion-content.component.html',
-  styleUrl: './expansion-content.component.scss'
+    selector: 'app-expansion-content',
+    templateUrl: './expansion-content.component.html',
+    styleUrl: './expansion-content.component.scss',
+    standalone: false
 })
 export class ExpansionContentComponent {
   isOpen = false;

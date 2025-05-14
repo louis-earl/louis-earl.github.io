@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { projects } from 'src/app/constants/projects.const';
 
 @Component({
-  selector: 'app-projects-list',
-  templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.scss']
+    selector: 'app-projects-list',
+    templateUrl: './projects-list.component.html',
+    styleUrls: ['./projects-list.component.scss'],
+    standalone: false
 })
 export class ProjectsComponent {
 

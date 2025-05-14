@@ -3,11 +3,10 @@ import { ProjectNames } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
-  selector: 'app-midnight-mysteries',
-  standalone: true,
-  imports: [],
-  templateUrl: './midnight-mysteries.component.html',
-  styleUrl: './midnight-mysteries.component.scss'
+    selector: 'app-midnight-mysteries',
+    imports: [],
+    templateUrl: './midnight-mysteries.component.html',
+    styleUrl: './midnight-mysteries.component.scss'
 })
 export class MidnightMysteriesComponent implements OnInit {
 

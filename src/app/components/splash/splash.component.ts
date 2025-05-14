@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { SplashScreenStateService } from 'src/app/services/splash-screen-state.service';
 
 @Component({
-  selector: 'app-splash',
-  templateUrl: './splash.component.html',
-  styleUrls: ['./splash.component.scss'],
+    selector: 'app-splash',
+    templateUrl: './splash.component.html',
+    styleUrls: ['./splash.component.scss'],
+    standalone: false
 })
 export class SplashComponent implements OnInit {
   // The screen starts with the maximum opacity

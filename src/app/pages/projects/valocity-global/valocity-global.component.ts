@@ -3,9 +3,10 @@ import { ProjectNames } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
-  selector: 'app-valocity-global',
-  templateUrl: './valocity-global.component.html',
-  styleUrls: ['./valocity-global.component.scss']
+    selector: 'app-valocity-global',
+    templateUrl: './valocity-global.component.html',
+    styleUrls: ['./valocity-global.component.scss'],
+    standalone: false
 })
 export class ValocityGlobalComponent implements OnInit {
 
