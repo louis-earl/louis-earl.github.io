@@ -35,73 +35,66 @@
 <div class="segment-trigger">
     <h2>Key Challenges</h2>
     <p>
-        The biggest challenge was designing a flexible and scalable form framework that could cater to the diverse and complex requirements of various "Valuation Jobs." 
+        Redesigning the valuation forms came with several key challenges. The system had to support highly flexible, complex forms while remaining intuitive for users. Valuers needed to complete forms quickly and efficiently, often in the field using mobile devices. 
     </p>
     <p>
-        This framework had to be adaptable yet user-friendly, with a seamless experience across both mobile and desktop environments.
+        To achieve this, we had to tackle scalability, usability, and mobile responsiveness while ensuring the system remained easy to maintain and extend.
     </p>
 
 <app-expansion-content>
+
     <div class="segment-trigger">
 
-        <h3>Mobile Responsiveness:</h3>
+        <h3>Plug-In Method for Forms</h3>
         <p>
-            As the forms were a core part of our mobile app, <a routerLink="../valocity-onsite">Valocity Onsite</a>, they needed to work effortlessly during onsite visits, as valuers used mobile devices to complete inspections. 
+            I wanted to develop a system where different forms could "plug in" seamlessly to a wider form framework, requiring a highly flexible form architecture.
         </p>
         <p>
-            The stepper was designed to be mobile-first, appearing as a banner on smaller screens that expands into a menu, allowing for easy navigation on-the-go.
+            This was important because we offer different <i>types</i> of valuation jobs. For example:
+        </p>
+        <ul>
+            <li>
+                <strong>A Full Market Valuation:</strong> focused on a single property.
+            </li>
+            <li>
+                <strong>A Site Inspection:</strong> for assessing an active construction project with multiple buildings or apartments
+            </li>
+        </ul>
+        <p>
+             To add to the carnage, requirements differ greatly between markets such as India and UAE. Since new valuation types could be introduced in the future, the form system had to be both scalable and adaptable.
+        </p>
+        <p>
+            To achieve this, we designed a modular, plug-in architecture, where each form type was built as an independent component — for example, SiteInspectionFormComponent and FullMarketFormComponent. These components seamlessly integrated into a shared framework, which handled state management, validation, navigation, and API interactions. This allowed new forms to be added with minimal effort — without having to reimplement common features.
         </p>
 
     </div>
+
     <div class="segment-trigger">
 
-        <h3>Plug-In Method for Forms:</h3>
+        <h3>Improving Form Usability and Error Handling</h3>
         <p>
-            The biggest technical hurdle was building a system where different forms could "plug in" seamlessly. After some trial and error, I collaborated with the team to structure components and services effectively. 
+            One of the biggest pain points in the old system was error visibility. Users struggled to find validation errors, often scrolling through hundreds of fields to locate a single mistake.
         </p>
         <p>
-            I documented the process in a wiki guide and created a visual diagram for clarity, ensuring that new forms could be easily built using a modular system that required minimal setup.
+            To address this, we introduced step-based navigation with dynamic error indicators. Steps with validation errors were clearly highlighted, allowing users to jump directly to problem areas. Additionally, we implemented smart scrolling, so the form automatically adjusted to bring errors into view. These improvements significantly reduced user frustration and improved efficiency.
         </p>
-
     </div>
+
     <div class="segment-trigger">
 
-        <h3>State Management & API Integration:</h3>
+        <h3>Mobile Responsiveness</h3>
         <p>
-            Handling form data and integration with the back-end API was simplified by the event-driven architecture of the framework. Angular services managed the state and communication between components, ensuring seamless updates. The "Save" and "Submit" buttons triggered API actions, with proper synchronization to keep the form data consistent with the backend. 
+            Since valuers complete their inspections on-site, the challenge was to design a mobile interface that was more efficient than pen and paper — especially since these forms were also integrated into our mobile app, <a routerLink="../valocity-onsite">Valocity Onsite</a>. The forms needed to adapt seamlessly to all screen sizes, as valuers would later use desktops in the office to review and finalize the data.
         </p>
         <p>
-            The architecture also allowed for easy customization of forms, enabling complex forms like "Site Inspections" or "Full Valuations" to be added with minimal configuration.
-        </p>
-        <p>        
-            Additionally, I ensured proper handling of subscriptions to avoid potential memory leaks by scoping services to specific modules rather than app-wide and ensuring subscriptions were unsubscribed when components were destroyed.
+            To solve this, we prioritized mobile responsiveness alongside desktop needs during the design phase in Figma. The stepper collapsed into a banner on smaller screens, expanding into a menu for quick access to sections. Data tables were transformed into mobile-friendly cards to optimize vertical space, and each card featured an edit button that opened a mobile-optimized overlay for detailed interaction.
         </p>
     </div>
+    
+   
 </app-expansion-content>
 </div>
 
-
-<div class="segment-trigger">
-    <h2>UI/UX Enhancements</h2>
-    <p>
-        The previous forms were overwhelming—long, difficult to navigate, and frustrating when errors occurred. To fix this, I introduced a dynamic stepper:
-    </p>
-
-    <ul>
-        <li>
-            <strong>Step-based navigation:</strong>
-            Users could quickly jump between sections.
-        </li>
-        <li>
-            <strong>Error visibility:</strong>
-            Steps with validation errors were highlighted.
-        </li>
-        <li>
-            <strong>Smart scrolling:</strong>
-            As users scrolled down the form, the stepper updated automatically.
-        </li>
-    </ul>
-</div>
 
 <div class="segment-trigger">
     <h2>Impact</h2>

@@ -30,9 +30,9 @@ export const projects: {[key in ProjectNames]: Project} = {
         title: 'Valocity Executive Summary',
         logline: 'A report that enables quick lending decisions',
         route: 'valocity-executive-summary',
-        heroImage: '',
+        heroImage: 'executive-summary.png',
         contentImages: [
-            
+            {fileName: 'executive-summary.png', objectFit: 'contain'},
         ],
         nextUp: ProjectNames.MidnightMysteries,
         description: 'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.'
@@ -43,7 +43,8 @@ export const projects: {[key in ProjectNames]: Project} = {
         route: 'valocity-global',
         heroImage: 'global-hero.webp',
         contentImages: [
-            {fileName: 'global-hero.webp', objectFit: 'contain'}, 
+            {fileName: 'global-hero.webp', objectFit: 'contain'},
+            {fileName: 'modular-form.png', objectFit: 'contain'}
         ],
         nextUp: ProjectNames.ValocityOnsite,
         description: 'Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.'
