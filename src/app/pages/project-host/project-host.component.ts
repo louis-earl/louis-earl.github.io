@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { map } from 'rxjs/operators'
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
     selector: 'app-project-host',
@@ -13,7 +14,10 @@ export class ProjectHostComponent {
   projectTitle$ = this.projectsService.project$.pipe(map((project) => project.title));
   projectSubtitle$ = this.projectsService.project$.pipe(map((project) => project.logline));
 
-  constructor(private projectsService: ProjectsService) { }
+  constructor(
+    private navigation: NavigationService,
+    private projectsService: ProjectsService
+  ) { }
 
   @HostListener('window:scroll')
   onPageScroll() {
@@ -36,6 +40,10 @@ export class ProjectHostComponent {
 
   get segmentElements(): Element[] {
     return Array.from(document.getElementsByClassName('segment-trigger'));
+  }
+
+  back(): void {
+    this.navigation.back()
   }
 
 }
