@@ -34,7 +34,7 @@ export const projects: {[key in ProjectNames]: Project} = {
         contentImages: [
             {fileName: 'executive-summary-grid.webp', objectFit: 'cover'},
             {fileName: 'executive-summary-old.webp', objectFit: 'contain'},
-            {fileName: 'executive-summary-hero.png', objectFit: 'contain'},
+            {fileName: 'executive-summary-in-app.webp', objectFit: 'contain'},
         ],
         nextUp: ProjectNames.MidnightMysteries,
         description: 'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.'
