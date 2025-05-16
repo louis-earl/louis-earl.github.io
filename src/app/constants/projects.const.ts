@@ -28,7 +28,7 @@ export const projects: {[key in ProjectNames]: Project} = {
     },
     valocityExecutiveSummary: {
         title: 'Valocity Executive Summary',
-        logline: 'A report that enables quick lending decisions',
+        logline: 'A report that enables lightning-fast lending decisions.',
         route: 'valocity-executive-summary',
         heroImage: 'executive-summary-hero.png',
         contentImages: [
@@ -52,7 +52,7 @@ export const projects: {[key in ProjectNames]: Project} = {
     },
     valocityOnsite: {
         title: 'Valocity Onsite',
-        logline: 'An app that simplifies property valuations',
+        logline: 'An app that simplifies property valuations.',
         route: 'valocity-onsite',
         heroImage: 'onsite-hero.webp',
         contentImages: [

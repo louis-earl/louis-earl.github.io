@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ChildrenOutletContexts } from '@angular/router';
 import { slideInAnimation } from './animations';
 import { AnimationEvent } from '@angular/animations';
+import { NavigationService } from './services/navigation.service';
 
 @Component({
     selector: 'app-root',
@@ -13,7 +14,10 @@ import { AnimationEvent } from '@angular/animations';
 export class AppComponent {
   title = 'portfolio-neon';
   
-  constructor(private contexts: ChildrenOutletContexts) {}
+  constructor(
+    private contexts: ChildrenOutletContexts,
+    private navigation: NavigationService,
+  ) {}
 
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
