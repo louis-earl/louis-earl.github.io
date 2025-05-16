@@ -115,9 +115,9 @@ section {
 
 .bg--light {
   // background: radial-gradient(100% 100% at 0% 0%, #026A74 0%, #003238 100%);
-  background-color: var(--primary);
+  background-color: var(--surface);
   > * {
-    color: var(--on-primary);
+    color: var(--on-surface);
   }
 }
 

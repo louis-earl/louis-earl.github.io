@@ -19,10 +19,12 @@ import { ValocityGlobalComponent } from './pages/projects/valocity-global/valoci
 import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 import { UpNextComponent } from './components/up-next/up-next.component';
 import { ExpansionContentComponent } from './components/expansion-content/expansion-content.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
     SplashComponent,
     HomepageComponent,
     IsometricCardsComponent,

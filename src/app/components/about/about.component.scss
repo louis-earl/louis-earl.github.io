@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-block-end: 4rem;
+}
+
+.image-container {
+   
+}
+
+.image-sticky-container {
+    position: sticky;
+    top: 4rem;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
