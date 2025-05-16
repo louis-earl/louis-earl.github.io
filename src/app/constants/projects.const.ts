@@ -30,9 +30,10 @@ export const projects: {[key in ProjectNames]: Project} = {
         title: 'Valocity Executive Summary',
         logline: 'A report that enables quick lending decisions',
         route: 'valocity-executive-summary',
-        heroImage: 'executive-summary.png',
+        heroImage: 'executive-summary-hero.png',
         contentImages: [
-            {fileName: 'executive-summary.png', objectFit: 'contain'},
+            {fileName: 'executive-summary-grid.png', objectFit: 'cover'},
+            {fileName: 'executive-summary-hero.png', objectFit: 'contain'},
         ],
         nextUp: ProjectNames.MidnightMysteries,
         description: 'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.'
