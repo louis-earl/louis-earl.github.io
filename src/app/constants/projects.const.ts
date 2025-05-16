@@ -32,7 +32,8 @@ export const projects: {[key in ProjectNames]: Project} = {
         route: 'valocity-executive-summary',
         heroImage: 'executive-summary-hero.png',
         contentImages: [
-            {fileName: 'executive-summary-grid.png', objectFit: 'cover'},
+            {fileName: 'executive-summary-grid.webp', objectFit: 'cover'},
+            {fileName: 'executive-summary-old.webp', objectFit: 'contain'},
             {fileName: 'executive-summary-hero.png', objectFit: 'contain'},
         ],
         nextUp: ProjectNames.MidnightMysteries,
