@@ -8,7 +8,6 @@ import { SplashScreenStateService } from './services/splash-screen-state.service
 import { SplashComponent } from './components/splash/splash.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HomepageResolver } from './resolvers/homepage.resolver';
-import { IsometricCardsComponent } from './components/isometric-cards/isometric-cards.component';
 import { ProjectsComponent } from './components/projects-list/projects-list.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -24,6 +23,7 @@ import { ImageScrollerContainerComponent } from './components/image-scroller-con
 import { ImageScrollerTargetDirective } from './directives/image-scroller-target.directive';
 import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
 import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/one-way-wellington.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/o
     AboutComponent,
     SplashComponent,
     HomepageComponent,
-    IsometricCardsComponent,
     ProjectsComponent,
     ProjectCardComponent,
     ContactComponent,
@@ -47,7 +46,12 @@ import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/o
     MidnightMysteriesComponent,
     OneWayWellingtonComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, BrowserAnimationsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+  ],
   providers: [SplashScreenStateService, HomepageResolver],
   bootstrap: [AppComponent],
 })

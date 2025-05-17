@@ -12,48 +12,7 @@ html {
 body {
   color: var(--on-background);
   background-color: var(--background);
-  font-family: "Open Sans", sans-serif;
   margin: 0;
-}
-
-h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: 90px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 44px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-block: 1.25rem;
-}
-
-span.subtitle {
-  font-size: 20px;
-  font-weight: 700;
-  color: #c0c0c0;
-}
-
-p, li {
-  font-size: 20px;
-  line-height: 1.5;
-  margin-block: 0 1.25rem;
-  > a {
-    color: #FFC1B4;
-    text-decoration: underline;
-  }
-}
-
-p.small {
-  font-size: 16px;
 }
 
 a {
@@ -66,7 +25,7 @@ a.button {
   display: inline-flex;
   gap: 0.5rem;
   width: fit-content;
-  font-size: 20px;
+  font-size: var(--button-font-size);
   font-weight: 700;
   border: none;
   padding: 1rem 2rem;
