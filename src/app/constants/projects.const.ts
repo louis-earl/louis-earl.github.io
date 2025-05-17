@@ -58,7 +58,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     heroImage: 'oww-poster.jpg',
     contentImages: [
       { fileName: 'oww-poster.jpg', objectFit: 'contain' },
-      { fileName: 'oww-ship.jpg', objectFit: 'cover' },
+      { fileName: 'oww-ship.webp', objectFit: 'cover' },
       { fileName: 'oww-gameplay.jpg', objectFit: 'contain' },
     ],
     nextUp: ProjectNames.ValocityGlobal,

@@ -1,7 +1,6 @@
-<ng-container *ngFor="let image of images$ | async; index as i">
-    <img 
-        *ngIf="i === (activeIndex$ | async)"
-        [src]="'../../assets/images/' + image.fileName"
-        [style.objectFit]="image.objectFit"
-    />
-</ng-container>
+@if (activeImage; as activeImage) {
+<img
+  [src]="'../../assets/images/' + activeImage.fileName"
+  [style.objectFit]="activeImage.objectFit"
+/>
+}

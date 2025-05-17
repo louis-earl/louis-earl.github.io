@@ -1,22 +1,22 @@
 <div class="layout">
-    <div class="layout__fixed">
-        <header>
-            <a class="button text-button" (click)="back()">
-                <span class="material-icons-round">
-                    arrow_back
-                </span>
-                <span>Home</span>
-            </a>
-            <h2 class="title">{{ projectTitle$ | async }}</h2>
-            <span class="subtitle">{{ projectSubtitle$ | async }}</span>
-        </header>
+  <div class="layout__fixed">
+    <header>
+      <a class="button text-button" (click)="back()">
+        <span class="material-icons-round"> arrow_back </span>
+        <span>Home</span>
+      </a>
+      <h2 class="title">{{ projectTitle$ | async }}</h2>
+      <span class="subtitle">{{ projectSubtitle$ | async }}</span>
+    </header>
 
-        <app-project-gallary></app-project-gallary>
-    </div>
-    <div class="layout__scroll">
-        <router-outlet></router-outlet>
-        <app-up-next></app-up-next>
-    </div>
+    <app-project-gallary></app-project-gallary>
+  </div>
+  <div class="layout__scroll">
+    <app-image-scroller-container>
+      <router-outlet></router-outlet>
+    </app-image-scroller-container>
+    <app-up-next></app-up-next>
+  </div>
 </div>
 
 <app-contact></app-contact>

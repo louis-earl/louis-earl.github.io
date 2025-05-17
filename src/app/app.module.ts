@@ -20,6 +20,10 @@ import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-exe
 import { UpNextComponent } from './components/up-next/up-next.component';
 import { ExpansionContentComponent } from './components/expansion-content/expansion-content.component';
 import { AboutComponent } from './components/about/about.component';
+import { ImageScrollerContainerComponent } from './components/image-scroller-container/image-scroller-container.component';
+import { ImageScrollerTargetDirective } from './directives/image-scroller-target.directive';
+import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
+import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/one-way-wellington.component';
 
 @NgModule({
   declarations: [
@@ -37,19 +41,14 @@ import { AboutComponent } from './components/about/about.component';
     ProjectGallaryComponent,
     ValocityGlobalComponent,
     ValocityExecutiveSummaryComponent,
-    ExpansionContentComponent
+    ExpansionContentComponent,
+    ImageScrollerContainerComponent,
+    ImageScrollerTargetDirective,
+    MidnightMysteriesComponent,
+    OneWayWellingtonComponent,
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule, 
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    SplashScreenStateService,
-    HomepageResolver
-  ],
-  bootstrap: [
-    AppComponent
-  ],
+  imports: [AppRoutingModule, BrowserModule, BrowserAnimationsModule],
+  providers: [SplashScreenStateService, HomepageResolver],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,104 +1,141 @@
-<div class="segment-trigger active">
-    <h2>Project Overview</h2>
-    <p>
-        Valocity Connect is a platform that helps property valuers track their Valuation Jobs.
-    </p>
-    <p> 
-        Our team undertook a full redesign of the valuation forms, aiming to improve usability, navigation, and efficiency.
-    </p>
+<div appImageScrollerTarget="global-hero.webp" objectFit="contain">
+  <h2>Project Overview</h2>
+  <p>
+    Valocity Connect is a platform that helps property valuers track their
+    Valuation Jobs.
+  </p>
+  <p>
+    Our team undertook a full redesign of the valuation forms, aiming to improve
+    usability, navigation, and efficiency.
+  </p>
 </div>
 
 <div class="segment-trigger">
-    <h2>My Role</h2>
-    <p>
-        I led the front-end development and UX design for the valuation form overhaul, focusing on scalability, usability, and developer efficiency. 
-    </p>
-    <p>
-        My contributions included:
-    </p>
-    <ul>
-        <li>
-            <strong>Front-End Architecture:</strong>
-            Designed a modular Angular form framework, allowing teams to build new valuation forms quickly without reimplementing common features.
-        </li>
-        <li>
-            <strong>Complete UX Redesign:</strong>
-            Reimagined the valuation forms from the ground up, addressing pain points like poor navigation, overwhelming length, and difficult-to-locate validation errors.
-        </li>
-        <li>
-            <strong>Team Collaboration & Mentorship:</strong>
-            Worked closely with our lead UX designer and backend team to align design decisions with technical feasibility, while mentoring a junior front-end developer on Angular and RxJS best practices.
-        </li>
-    </ul>
+  <h2>My Role</h2>
+  <p>
+    I led the front-end development and UX design for the valuation form
+    overhaul, focusing on scalability, usability, and developer efficiency.
+  </p>
+  <p>My contributions included:</p>
+  <ul>
+    <li>
+      <strong>Front-End Architecture:</strong>
+      Designed a modular Angular form framework, allowing teams to build new
+      valuation forms quickly without reimplementing common features.
+    </li>
+    <li>
+      <strong>Complete UX Redesign:</strong>
+      Reimagined the valuation forms from the ground up, addressing pain points
+      like poor navigation, overwhelming length, and difficult-to-locate
+      validation errors.
+    </li>
+    <li>
+      <strong>Team Collaboration & Mentorship:</strong>
+      Worked closely with our lead UX designer and backend team to align design
+      decisions with technical feasibility, while mentoring a junior front-end
+      developer on Angular and RxJS best practices.
+    </li>
+  </ul>
 </div>
 
 <div class="segment-trigger">
-    <h2>Key Challenges</h2>
-    <p>
-        Redesigning the valuation forms came with several key challenges. The system had to support highly flexible, complex forms while remaining intuitive for users. Valuers needed to complete forms quickly and efficiently, often in the field using mobile devices. 
-    </p>
-    <p>
-        To achieve this, we had to tackle scalability, usability, and mobile responsiveness while ensuring the system remained easy to maintain and extend.
-    </p>
+  <h2>Key Challenges</h2>
+  <p>
+    Redesigning the valuation forms came with several key challenges. The system
+    had to support highly flexible, complex forms while remaining intuitive for
+    users. Valuers needed to complete forms quickly and efficiently, often in
+    the field using mobile devices.
+  </p>
+  <p>
+    To achieve this, we had to tackle scalability, usability, and mobile
+    responsiveness while ensuring the system remained easy to maintain and
+    extend.
+  </p>
 
-<app-expansion-content>
-
-    <div class="segment-trigger">
-
-        <h3>Plug-In Method for Forms</h3>
-        <p>
-            I wanted to develop a system where different forms could "plug in" seamlessly to a wider form framework, requiring a highly flexible form architecture.
-        </p>
-        <p>
-            This was important because we offer different <i>types</i> of valuation jobs. For example:
-        </p>
-        <ul>
-            <li>
-                <strong>A Full Market Valuation:</strong> focused on a single property.
-            </li>
-            <li>
-                <strong>A Site Inspection:</strong> for assessing an active construction project with multiple buildings or apartments
-            </li>
-        </ul>
-        <p>
-             To add to the carnage, requirements differ greatly between markets such as India and UAE. Since new valuation types could be introduced in the future, the form system had to be both scalable and adaptable.
-        </p>
-        <p>
-            To achieve this, we designed a modular, plug-in architecture, where each form type was built as an independent component — for example, SiteInspectionFormComponent and FullMarketFormComponent. These components seamlessly integrated into a shared framework, which handled state management, validation, navigation, and API interactions. This allowed new forms to be added with minimal effort — without having to reimplement common features.
-        </p>
-
+  <app-expansion-content>
+    <div appImageScrollerTarget="modular-form.png" objectFit="contain">
+      <h3>Plug-In Method for Forms</h3>
+      <p>
+        I wanted to develop a system where different forms could "plug in"
+        seamlessly to a wider form framework, requiring a highly flexible form
+        architecture.
+      </p>
+      <p>
+        This was important because banks can initiate different <i>types</i> of
+        jobs to their external partners. For example:
+      </p>
+      <ul>
+        <li>
+          <strong>Full Market Valuation:</strong> focused on a single property.
+        </li>
+        <li>
+          <strong>Project Site Inspection:</strong> for assessing an active
+          construction project with multiple buildings or apartments
+        </li>
+        <li>
+          <strong>Legal Clearance</strong> for a bank's legal team to review all
+          the documents related to a construction projects.
+        </li>
+      </ul>
+      <p>
+        To add to the carnage, requirements differ greatly between markets such
+        as India and UAE. Since new valuation types could be introduced in the
+        future, the form system had to be both scalable and adaptable.
+      </p>
+      <p>
+        To achieve this, we designed a modular, plug-in architecture, where each
+        form type was built as an independent component. These components
+        seamlessly integrated into a shared framework, which handled state
+        management, validation, navigation, and API interactions. This allowed
+        new forms to be added with minimal effort — without having to
+        reimplement common features.
+      </p>
     </div>
 
     <div class="segment-trigger">
-
-        <h3>Improving Form Usability and Error Handling</h3>
-        <p>
-            One of the biggest pain points in the old system was error visibility. Users struggled to find validation errors, often scrolling through hundreds of fields to locate a single mistake.
-        </p>
-        <p>
-            To address this, we introduced step-based navigation with dynamic error indicators. Steps with validation errors were clearly highlighted, allowing users to jump directly to problem areas. Additionally, we implemented smart scrolling, so the form automatically adjusted to bring errors into view. These improvements significantly reduced user frustration and improved efficiency.
-        </p>
+      <h3>Improving Form Usability and Error Handling</h3>
+      <p>
+        One of the biggest pain points in the old system was error visibility.
+        Users struggled to find validation errors, often scrolling through
+        hundreds of fields to locate a single mistake.
+      </p>
+      <p>
+        To address this, we introduced step-based navigation with dynamic error
+        indicators. Steps with validation errors were clearly highlighted,
+        allowing users to jump directly to problem areas. Additionally, we
+        implemented smart scrolling, so the form automatically adjusted to bring
+        errors into view. These improvements significantly reduced user
+        frustration and improved efficiency.
+      </p>
     </div>
 
     <div class="segment-trigger">
-
-        <h3>Mobile Responsiveness</h3>
-        <p>
-            Since valuers complete their inspections on-site, the challenge was to design a mobile interface that was more efficient than pen and paper — especially since these forms were also integrated into our mobile app, <a routerLink="../valocity-onsite">Valocity Onsite</a>. The forms needed to adapt seamlessly to all screen sizes, as valuers would later use desktops in the office to review and finalize the data.
-        </p>
-        <p>
-            To solve this, we prioritized mobile responsiveness alongside desktop needs during the design phase in Figma. The stepper collapsed into a banner on smaller screens, expanding into a menu for quick access to sections. Data tables were transformed into mobile-friendly cards to optimize vertical space, and each card featured an edit button that opened a mobile-optimized overlay for detailed interaction.
-        </p>
+      <h3>Mobile Responsiveness</h3>
+      <p>
+        Since valuers complete their inspections on-site, the challenge was to
+        design a mobile interface that was more efficient than pen and paper —
+        especially since these forms were also integrated into our mobile app,
+        <a routerLink="../valocity-onsite">Valocity Onsite</a>. The forms needed
+        to adapt seamlessly to all screen sizes, as valuers would later use
+        desktops in the office to review and finalize the data.
+      </p>
+      <p>
+        To solve this, we prioritized mobile responsiveness alongside desktop
+        needs during the design phase in Figma. The stepper collapsed into a
+        banner on smaller screens, expanding into a menu for quick access to
+        sections. Data tables were transformed into mobile-friendly cards to
+        optimize vertical space, and each card featured an edit button that
+        opened a mobile-optimized overlay for detailed interaction.
+      </p>
     </div>
-    
-   
-</app-expansion-content>
+  </app-expansion-content>
 </div>
 
-
 <div class="segment-trigger">
-    <h2>Impact</h2>
-    <p>
-        While we didn't collect concrete metrics, the redesign significantly improved usability. Users now have a more structured, efficient experience when completing valuations.
-    </p>
+  <h2>Impact</h2>
+  <p>
+    While we didn't collect concrete metrics, the redesign significantly
+    improved usability. Users now have a more structured, efficient experience
+    when completing valuations.
+  </p>
 </div>
