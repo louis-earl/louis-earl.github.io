@@ -6,10 +6,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: 'A dynamic form builder that simplifies property inspections.',
     route: 'valocity-global',
     heroImage: 'global-hero.webp',
-    contentImages: [
-      { fileName: 'global-hero.webp', objectFit: 'contain' },
-      { fileName: 'modular-form.png', objectFit: 'contain' },
-    ],
     nextUp: ProjectNames.ValocityOnsite,
     description:
       'Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.',
@@ -19,7 +15,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: 'An app that simplifies property valuations.',
     route: 'valocity-onsite',
     heroImage: 'onsite-hero.webp',
-    contentImages: [{ fileName: 'onsite-hero.webp', objectFit: 'contain' }],
     nextUp: ProjectNames.ValocityExecutiveSummary,
     description:
       "I redesigned a mobile app that wasn't getting much use. Now it's set to streamline the way valuation firms collect property data",
@@ -29,11 +24,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: 'A report that enables lightning-fast lending decisions.',
     route: 'valocity-executive-summary',
     heroImage: 'executive-summary-hero.png',
-    contentImages: [
-      { fileName: 'executive-summary-grid.webp', objectFit: 'cover' },
-      { fileName: 'executive-summary-old.webp', objectFit: 'contain' },
-      { fileName: 'executive-summary-in-app.webp', objectFit: 'contain' },
-    ],
     nextUp: ProjectNames.MidnightMysteries,
     description:
       'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.',
@@ -43,10 +33,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: 'A multiplayer murder game that turns friends into suspects.',
     route: 'midnight-mysteries',
     heroImage: 'midnight-mysteries.png',
-    contentImages: [
-      { fileName: 'mm-present-1.jpg', objectFit: 'cover' },
-      { fileName: 'mm-present-2.jpg', objectFit: 'cover' },
-    ],
     nextUp: ProjectNames.OneWayWellington,
     description:
       'Using React and some websocket magic, I helped develop a multiplayer game that turns everyone in the room against each other.',
@@ -56,11 +42,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: "A spaceship building game that's out of this world.",
     route: 'one-way-wellington',
     heroImage: 'oww-poster.jpg',
-    contentImages: [
-      { fileName: 'oww-poster.jpg', objectFit: 'contain' },
-      { fileName: 'oww-ship.webp', objectFit: 'cover' },
-      { fileName: 'oww-gameplay.jpg', objectFit: 'contain' },
-    ],
     nextUp: ProjectNames.ValocityGlobal,
     description:
       'I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.',

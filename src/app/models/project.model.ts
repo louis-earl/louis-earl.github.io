@@ -3,7 +3,6 @@ export interface Project {
     logline: string;
     route: string;
     heroImage: string;
-    contentImages: ContentImage[];
     nextUp: ProjectNames;
     description: string;
 }
