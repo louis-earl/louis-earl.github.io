@@ -1,5 +1,10 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { ContentImage } from 'src/app/models/project.model';
 import { ImageScrollerService } from 'src/app/services/image-scroller.service';
 
@@ -15,6 +20,7 @@ export class ImageScrollerContainerComponent implements AfterViewInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
+    private elementRef: ElementRef,
     private imageScrollerService: ImageScrollerService
   ) {}
 
@@ -39,8 +45,8 @@ export class ImageScrollerContainerComponent implements AfterViewInit {
   }
 
   getSegmentElements(): Element[] {
-    const segmentElements = Array.from(
-      document.getElementsByClassName('segment-trigger')
+    const segmentElements: Element[] = Array.from(
+      this.elementRef.nativeElement.getElementsByClassName('segment-trigger')
     );
     if (segmentElements.length === 0) {
       console.error('No segment elements found.');
