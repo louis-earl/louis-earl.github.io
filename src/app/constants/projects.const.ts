@@ -17,7 +17,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     heroImage: 'onsite-hero.webp',
     nextUp: ProjectNames.ValocityExecutiveSummary,
     description:
-      "I redesigned a mobile app that wasn't getting much use. Now it's set to streamline the way valuation firms collect property data",
+      "I redesigned a mobile app that wasn't getting much use. Now it's set to streamline the way valuation firms collect property data.",
   },
   valocityExecutiveSummary: {
     title: 'Valocity Executive Summary',

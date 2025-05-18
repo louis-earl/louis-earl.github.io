@@ -1,4 +1,4 @@
-<div class="card__layout">
+<div class="card__layout" [routerLink]="link">
     <div class="card__thumbnail" [ngClass]="{'reverse': reverseDirection}">
         <ng-content select="[thumbnail]"></ng-content>
     </div>
