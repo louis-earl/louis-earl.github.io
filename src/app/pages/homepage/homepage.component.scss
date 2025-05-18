@@ -1,3 +1,18 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &.full-height {
+    min-height: 100vh;
+  }
+}
+
+h1 {
+  margin-block: 0 4rem;
+}
+
 .hero__container {
   position: relative;
   display: flex;
@@ -5,38 +20,38 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: 0 2rem;
 }
 
 .hero__content {
   max-width: 34rem;
-  margin-bottom: 8rem;
+  margin-inline: 2rem;
   z-index: 5;
   & p {
     margin-bottom: 4rem;
   }
 }
 
-.squiggle {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: calc(400px + 25%);
-  color: var(--primary);
-}
-
 .clip-container {
+  --clip-container-width: calc(400px + 25%);
+  --clip-container-offset-y: 0px;
   mask-image: url(../../../assets/squiggle-mask.svg),
     linear-gradient(transparent, transparent);
-  mask-size: calc(400px + 25%) auto, 100% 100%;
+  mask-size: var(--clip-container-width) auto, 100% 100%;
   mask-repeat: no-repeat;
   mask-position: top right;
   position: absolute;
-  top: 0;
+  top: var(--clip-container-offset-y);
   right: 0;
   bottom: 0;
   left: 0;
+  .squiggle {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--clip-container-width);
+    color: var(--primary);
+  }
 }
 
 .portrait-container {
@@ -59,14 +74,26 @@
   width: 30%;
 }
 
-.wave {
-  mask-image: linear-gradient(black, black), url(../../../assets/wave-1.svg);
-  mask-size: 100% calc(100% + 1px), 100% 16rem;
-  mask-repeat: no-repeat;
-  mask-composite: exclude;
-  mask-position: 0px -1px;
-  padding-top: 16rem;
-  margin-top: -16rem;
+.wave-container {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+
+  .wave {
+    width: 100%;
+    aspect-ratio: 6 / 1;
+    max-height: 280px;
+    min-height: 80px;
+    mask-image: linear-gradient(black, black), url(../../../assets/wave-1.svg);
+    mask-repeat: no-repeat;
+    mask-composite: exclude;
+    mask-position: 0px 1px;
+    background-color: var(--surface);
+  }
+}
+
+.shape-fill {
+  fill: var(--surface);
 }
 
 footer {
@@ -87,73 +114,30 @@ footer {
   }
 }
 
-.merge-container {
-  position: relative;
-  height: 800px;
-}
-
-.merge-left,
-.merge-right,
-.merge-result {
-  position: absolute;
-  transform-style: preserve-3d;
-}
-
-.merge-left,
-.merge-right {
-  left: 25%;
-  height: 400px;
-  width: 600px;
-  animation: merge-cards 1s linear;
-  animation-play-state: paused;
-  /* Bind the animation to scroll */
-  animation-delay: var(--scroll);
-  /* These last 2 properites clean up overshoot weirdness */
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-
-.merge-left {
-  transform: rotateX(-15deg) rotateY(30deg) translateY(0) translateX(-75%);
-  // background-image: url(../../../assets/valocity-global.webp);
-}
-
-.merge-right {
-  transform: rotateX(15deg) rotateY(30deg) translateY(0) translateX(75%);
-  // background-image: url(../../../assets/valocity-global.webp);
-}
-
-.merge-result {
-  left: 15%;
-  width: 750px;
-  // opacity: 0;
-  animation: merge-result 1s linear;
-  animation-play-state: paused;
-  /* Bind the animation to scroll */
-  animation-delay: var(--scroll);
-  /* These last 2 properites clean up overshoot weirdness */
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  object-fit: contain;
-  transform: rotateX(0deg) rotateY(0deg) translateY(800px) translateX(0);
-}
-
-@keyframes merge-cards {
-  50% {
-    opacity: 1;
+@media screen and (max-width: 599.98px) {
+  section.full-height {
+    padding-top: 50%;
   }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg) translateY(200px) translateX(0);
-    opacity: 0;
-  }
-}
 
-@keyframes merge-result {
-  50% {
-    // opacity: 0;
+  h1 {
+    margin-block: 0 2rem;
   }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg) translateY(150px) translateX(0);
-    opacity: 1;
+
+  .clip-container {
+    --clip-container-width: 115%;
+    --clip-container-offset-y: -6rem;
+  }
+
+  .portrait-container {
+    height: auto;
+  }
+
+  .portrait-container-inner {
+    justify-content: flex-start;
+  }
+
+  .portrait {
+    width: 66%;
+    margin-top: 50%;
   }
 }

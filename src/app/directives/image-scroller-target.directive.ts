@@ -40,7 +40,6 @@ export class ImageScrollerTargetDirective implements OnInit {
           const el = document.createElement('img');
           el.src = '../../assets/images/' + this.fileName;
           el.style.objectFit = this.objectFit;
-          el.style.width = '100%';
           el.classList.add('inserted-image');
           this.hostElement.nativeElement.prepend(el);
         } else {

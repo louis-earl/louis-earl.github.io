@@ -4,7 +4,7 @@ export const projects: { [key in ProjectNames]: Project } = {
   valocityGlobal: {
     title: 'Valocity Connect',
     logline: 'A dynamic form builder that simplifies property inspections.',
-    route: 'valocity-global',
+    route: 'valocity-connect',
     heroImage: 'global-hero.webp',
     nextUp: ProjectNames.ValocityOnsite,
     description:

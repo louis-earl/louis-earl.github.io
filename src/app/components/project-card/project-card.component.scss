@@ -1,38 +1,44 @@
 .card {
-    &__layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        position: relative;
-        &:hover::after{
-            content: '';
-            cursor: pointer;
-            position: absolute;
-            left: -10%;
-            top: 15%;
-            width: 120%;
-            height: 70%;
-            background: #02869233;
-            border-radius: 2rem;
-            z-index: 0;
-        }
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    position: relative;
+    &:hover::after {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      left: -10%;
+      top: 15%;
+      width: 120%;
+      height: 70%;
+      background: #02869233;
+      border-radius: 2rem;
+      z-index: 0;
     }
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+  &__thumbnail {
+    z-index: 1;
+    ::ng-deep img {
+      aspect-ratio: 1/1;
+      width: 100%;
+      object-fit: contain;
     }
-    &__thumbnail {
-        z-index: 1;
-        ::ng-deep img {
-            aspect-ratio: 1/1;
-            width: 100%;
-            object-fit: contain;
-        }
-    }
+  }
 }
 
 .reverse {
-    order: 1;
+  order: 1;
+}
+
+@media screen and (max-width: 599.98px) {
+  .card__layout {
+    display: block;
+  }
 }

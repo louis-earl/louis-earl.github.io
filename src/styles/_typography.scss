@@ -11,14 +11,13 @@
 
 @media (max-width: 1000px) {
   :root {
-    // mobile
     --headline-1: 60px;
     --headline-2: 32px;
     --headline-3: 24px;
     --body-large: 16px;
     --body-medium: 14px;
     --body-small: 12px;
-    --button-font-size: 20px;
+    --button-font-size: 16px;
   }
 }
 
@@ -60,7 +59,7 @@ li {
   line-height: 1.5;
   margin-block: 0 1.25rem;
   > a {
-    color: #ffc1b4;
+    color: var(--emphasis);
     text-decoration: underline;
   }
 }

@@ -28,7 +28,7 @@ const routes: Routes = [
         component: ValocityOnsiteComponent
       },
       {
-        path: 'valocity-global',
+        path: 'valocity-connect',
         component: ValocityGlobalComponent
       },
       {
