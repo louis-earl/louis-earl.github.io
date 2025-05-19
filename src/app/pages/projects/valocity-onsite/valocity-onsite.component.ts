@@ -5,7 +5,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 @Component({
     selector: 'app-valocity-onsite',
     templateUrl: './valocity-onsite.component.html',
-    styleUrls: ['./valocity-onsite.component.scss'],
+    styleUrl: '../project-shared.scss',
     standalone: false
 })
 export class ValocityOnsiteComponent implements OnInit {

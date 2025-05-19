@@ -6,9 +6,9 @@
 
 .layout {
   display: flex;
-  margin-inline: 2rem;
+  margin-inline: 2rem 4rem;
   gap: 4rem;
-  width: calc(100% - 4rem);
+  width: calc(100% - 6rem);
   max-width: 1200px;
 
   &__fixed {
@@ -22,7 +22,7 @@
   }
 
   &__scroll {
-    flex: 0 1 30%;
+    flex: 0 1 33.33%;
     margin-top: 15rem;
   }
 }

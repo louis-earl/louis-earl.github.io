@@ -5,7 +5,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 @Component({
     selector: 'app-midnight-mysteries',
     templateUrl: './midnight-mysteries.component.html',
-    styleUrl: './midnight-mysteries.component.scss',
+    styleUrl: '../project-shared.scss',
     standalone: false,
 })
 export class MidnightMysteriesComponent implements OnInit {

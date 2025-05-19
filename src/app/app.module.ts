@@ -24,6 +24,7 @@ import { ImageScrollerTargetDirective } from './directives/image-scroller-target
 import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
 import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/one-way-wellington.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     ImageScrollerTargetDirective,
     MidnightMysteriesComponent,
     OneWayWellingtonComponent,
+    HeroComponent,
   ],
   imports: [
     AppRoutingModule,

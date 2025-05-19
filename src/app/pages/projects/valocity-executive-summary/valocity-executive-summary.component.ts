@@ -5,7 +5,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 @Component({
     selector: 'app-valocity-executive-summary',
     templateUrl: './valocity-executive-summary.component.html',
-    styleUrls: ['./valocity-executive-summary.component.scss'],
+    styleUrl: '../project-shared.scss',
     standalone: false
 })
 export class ValocityExecutiveSummaryComponent implements OnInit {

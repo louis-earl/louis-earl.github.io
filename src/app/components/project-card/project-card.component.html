@@ -5,6 +5,9 @@
     <div class="card__content">
         <h3>{{title}}</h3>
         <ng-content select="[description]"></ng-content>
-        <a class="button secondary" [routerLink]="link">Read More</a>
+        <a class="button text-button" [routerLink]="link">
+            Read More
+            <span class="material-icons-round"> arrow_forward </span>
+        </a>
     </div>
 </div>
