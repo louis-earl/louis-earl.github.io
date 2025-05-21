@@ -2,59 +2,87 @@
   <div appImageScrollerTarget="oww-poster.jpg" objectFit="contain">
     <h2>In a galaxy, not so far away...</h2>
     <p>
-      One Way Wellington is a 2D spaceship building/management game about
-      transporting creative talent across the Milky Way to the ‘Coolest Little
-      Capital’.
+      What started as a quirky game idea turned into one of the most challenging and rewarding projects I’ve ever worked on.
+    </p>
+    <p>
+      One Way Wellington is a 2D spaceship building and management game, where players transport creative talent across the galaxy to New Zealand’s capital. The game was developed in collaboration with WellingtonNZ and presented at the Massey Exposure Exhibition in 2019.
+    </p>
+
+    <h3>My Role</h3>
+    <p>
+      I was the creator, designer, and developer of One Way Wellington. I built the gameplay systems, wrote the code, and directed the project’s creative vision. During production, I led a team of seven second-year students who contributed to UI design, character art, and 2D asset creation. I also coordinated with WellingtonNZ to ensure the game’s themes aligned with their creative outreach goals.
     </p>
   </div>
 
-  <div appImageScrollerTarget="oww-ship.webp" objectFit="cover">
-    <h2>My involvement</h2>
+
+  <div appImageScrollerTarget="oww-gameplay.jpg" objectFit="contain">
+    <h2>The Gameplay</h2>
+    <h3>Build-Your-Own Spaceship</h3>
     <p>
-      As the Creator and Developer of One Way Wellington, I've been responsible
-      for everything from ideation to production and release.
+      Using a flexible tile-based system, players lay out rooms, corridors, and airlocks — then equip the ship with essentials like fuel storage and oxygen tanks. Builder-bots handle construction in real time, reacting dynamically as the blueprint evolves.
     </p>
+
+    <h3>Chart a Course Across the Galaxy</h3>
     <p>
-      During the production phase, I lead a team of seven 2nd-year students. In
-      groups, they successfully developed the User Interface, Character Design
-      and 2D Assets.
+      Use the star map to plan your journey, choosing which planets to visit along the way. Each stop brings new passengers eager to join your voyage — as long as you have enough fuel to get them safely to Wellington.
     </p>
+
+    <h3>Pick Up Passengers (and Keep Them Alive)</h3>
     <p>
-      This solo project has been an exciting venture because I’ve pursued what I
-      love, designing and programming video games, while taking the project
-      through the entire production pipeline alongside Wellington-based client,
-      WellingtonNZ.
-    </p>
-    <p>
-      One Way Wellington was presented at the Massey Exposure Exhibition,
-      November 2019.
+      They’re artists, dreamers... and kind of needy. At each station, you choose who boards your ship. Every passenger has needs — oxygen, food, rest, and the occasional bathroom break. Make sure your ship’s systems can handle the load, or risk seeing your mission fall apart mid-flight.
     </p>
   </div>
 
   <div appImageScrollerTarget="oww-gameplay.jpg" objectFit="contain">
-    <h2>The gameplay</h2>
-    <h3>Build Your Ship</h3>
+    <h2>Key Learnings</h2>
+    <h3>A Technical Playground</h3>
     <p>
-      In One Way Wellington, your first task is to construct a spaceship. Lay
-      down the ship plans, then hire advanced builder robots to build them.
+      Every feature in One Way Wellington had to talk to each other in real time. What started as a fun game project quickly spiraled into a full-blown system design rabbit hole — and my curious brain loved every second of it.
     </p>
+    <app-expansion-content title="The nerdy bits I couldn’t leave out">
+      <ul>
+        <li>
+          <strong>2D Tile-Based Building:</strong> The entire game world was built on a tile grid. Every system — from AI to pathfinding to oxygen — relied on this. It was the foundation for everything.
+        </li>
+        <li>
+          <strong>Real-Time Oxygen Simulation:</strong> I used a flood-fill algorithm to simulate oxygen flow between rooms. But here's the catch: it had to update in real time. Passengers consumed oxygen <i>every game tick</i>, so I had to optimize hard — recalculating only when something actually changed.
+        </li>
+        <li>
+          <strong>Builder Bots & Construction Queue:</strong> Builder robots followed a live-updating construction queue, even as players placed new tiles. Keeping them coordinated without bugs was a huge challenge.
+        </li>
+        <li>
+          <strong>AI & Pathfinding:</strong> Passengers constantly asked, “Where’s the closest bed?” They used the tile system to find destinations, then plotted a path through doors, rooms… even airlocks. And if an airlock opened? That triggered a reflow in the oxygen system. Everything was connected.
+        </li>
+        <li>
+          <strong>Save/Load System:</strong> Saving meant capturing the entire game state — layout, passengers, construction, oxygen levels — and restoring it perfectly. No pressure.
+        </li>
+        <li>
+          <strong>Achievements & Event System:</strong> I built an event system to track player progress, and give helpful nudges along the way.
+        </li>
+      </ul>
+    </app-expansion-content>
 
-    <h3>Travel The Galaxy</h3>
+    <h3>Scope Creep Is Real</h3>
     <p>
-      Once your ship ticks all the boxes, it's time to set sail. Using the map,
-      draw a path between planets en-route to Planet Wellington. You can travel
-      as far across the galaxy as you have fuel.
-    </p>
-
-    <h3>Collect Passengers</h3>
-    <p>
-      As you arrive at each planet station, select passengers to board your
-      ship. Be careful not to accommodate more passengers than you have the
-      oxygen supplies for.
+      The biggest challenge wasn’t technical — it was knowing when to stop. I had a million ideas and limited time. I learned hard (and sometimes painful) lessons about managing scope and prioritizing features.
     </p>
     <p>
-      You need to care for your passengers to keep them happy. Provide beds,
-      bathrooms and cafes to tend to their basic needs.
+      But I wouldn’t change a thing. By the end of the project, I walked away with real-world experience, hard-earned wisdom, and a toolkit of technical skills I use to this day.
     </p>
   </div>
+
+  <div appImageScrollerTarget="oww-exposure.webp" objectFit="contain">
+    <h2>Where it Landed</h2>
+    <p>
+      <i>A playable demo, a public exhibition, and a proud developer.</i>
+    </p>
+    <p>
+      The final game was a playable, ambitious demo packed with technical systems I’d never built before — and I’m incredibly proud of what I accomplished. One Way Wellington was shown at
+      <a href="https://exposure2019.massey.ac.nz/students/creative-media-production/louis-earl" target="_blank">Massey Exposure 2019</a>, and proved that with enough stubbornness and coffee, I can build some really cool stuff!
+    </p>
+    <p>
+      Want to see it in motion? <a href="https://youtu.be/yEqYl7gQWyg" target="_blank">Here’s a quick gameplay trailer.</a>
+    </p>
+  </div>
+
 </app-image-scroller-container>

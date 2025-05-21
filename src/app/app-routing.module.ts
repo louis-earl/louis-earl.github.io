@@ -14,6 +14,7 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: HomepageComponent,
+    title: 'Louis Earl | UX Engineer',
     // resolve: {'itemsList': HomepageResolver},
     data: {animation: 'HomePage'}
   },
@@ -25,23 +26,28 @@ const routes: Routes = [
     children: [
       {
         path: 'valocity-onsite',
-        component: ValocityOnsiteComponent
+        component: ValocityOnsiteComponent,
+        title: 'Louis Earl | Valocity Onsite',
       },
       {
         path: 'valocity-connect',
-        component: ValocityGlobalComponent
+        component: ValocityGlobalComponent,
+        title: 'Louis Earl | Valocity Connect',
       },
       {
         path: 'valocity-executive-summary',
-        component: ValocityExecutiveSummaryComponent
+        component: ValocityExecutiveSummaryComponent,
+        title: 'Louis Earl | Valocity Executive Summary',
       },
       {
         path: 'midnight-mysteries',
-        component: MidnightMysteriesComponent
+        component: MidnightMysteriesComponent,
+        title: 'Louis Earl | Midnight Mysteries',
       },
       {
         path: 'one-way-wellington', 
-        component: OneWayWellingtonComponent
+        component: OneWayWellingtonComponent,
+        title: 'Louis Earl | One Way Wellington',
       }
     ]
   }

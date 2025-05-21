@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-expansion-content',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ExpansionContentComponent {
   isOpen = false;
+  @Input() title: string = 'Curious about the nitty-gritty?';
 
   expandContent() {
     this.isOpen = true;

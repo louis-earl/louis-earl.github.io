@@ -2,7 +2,7 @@
   <div appImageScrollerTarget="global-hero.webp" objectFit="contain">
     <h2>Project Overview</h2>
     <p>
-      Valocity Connect is a platform that helps property valuers track their
+      Valocity Connect is a platform that helps property valuers track and complete their
       Valuation Jobs.
     </p>
     <p>
@@ -11,7 +11,7 @@
     </p>
   </div>
 
-  <div class="segment-trigger">
+  <div appImageScrollerTarget="connect-progression.webp" objectFit="contain">
     <h2>My Role</h2>
     <p>
       I led the front-end development and UX design for the valuation form
@@ -20,15 +20,15 @@
     <p>My contributions included:</p>
     <ul>
       <li>
-        <strong>Front-End Architecture:</strong>
-        Designed a modular Angular form framework, allowing teams to build new
-        valuation forms quickly without reimplementing common features.
-      </li>
-      <li>
         <strong>Complete UX Redesign:</strong>
         Reimagined the valuation forms from the ground up, addressing pain
         points like poor navigation, overwhelming length, and
         difficult-to-locate validation errors.
+      </li>
+      <li>
+        <strong>Front-End Architecture:</strong>
+        Designed a modular Angular form framework, allowing teams to build new
+        valuation forms quickly without reimplementing common features.
       </li>
       <li>
         <strong>Team Collaboration & Mentorship:</strong>
@@ -39,62 +39,49 @@
     </ul>
   </div>
 
-  <div class="segment-trigger">
+  <div appImageScrollerTarget="connect-paper.webp" objectFit="contain">
     <h2>Key Challenges</h2>
     <p>
-      Redesigning the valuation forms came with several key challenges. The
-      system had to support highly flexible, complex forms while remaining
-      intuitive for users. Valuers needed to complete forms quickly and
-      efficiently, often in the field using mobile devices.
+      The existing forms were built for straightforward, single-property valuations. But our product was evolving to support a new “Site Inspection” valuation—for developments with multiple high-rise buildings, each containing hundreds of units. The old system already struggled with basic navigation and error validation, and it simply couldn’t handle the nested, repeatable data structures we needed.
     </p>
     <p>
-      To achieve this, we had to tackle scalability, usability, and mobile
-      responsiveness while ensuring the system remained easy to maintain and
-      extend.
+      This was a chance for me to flex both sides of my brain: rethinking not just the interface, but how the system handled complexity under the hood. We needed a form experience that could support deeply nested data without overwhelming the user—keeping in mind that valuation data is collected out in the field on mobile devices, and then reviewed back in the office on desktop.
+    </p>
+    <p>
+      That meant designing for scalability, mobile responsiveness, and real-world usability—all while keeping the system maintainable and easy to extend in the long term.
     </p>
 
     <app-expansion-content>
       <div appImageScrollerTarget="modular-form.png" objectFit="contain">
         <h3>Plug-In Method for Forms</h3>
         <p>
-          I wanted to develop a system where different forms could "plug in"
-          seamlessly to a wider form framework, requiring a highly flexible form
-          architecture.
+          I built a flexible form architecture that allowed different valuation types to "plug in"
+          to a wider form framework—critical for supporting a wide range of job types across international markets.
         </p>
         <p>
-          This was important because banks can initiate different
-          <i>types</i> of jobs to their external partners. For example:
+          Banks could initiate vastly different workflows, for example:
         </p>
         <ul>
           <li>
-            <strong>Full Market Valuation:</strong> focused on a single
-            property.
+            <strong>Full Market Valuations</strong> for single
+            properties.
           </li>
           <li>
-            <strong>Project Site Inspection:</strong> for assessing an active
-            construction project with multiple buildings or apartments
+            <strong>Site Inspections</strong> for multi-building construction projects.
           </li>
           <li>
-            <strong>Legal Clearance</strong> for a bank's legal team to review
-            all the documents related to a construction projects.
+            <strong>Legal Clearances</strong> for document reviews for an entire development.
           </li>
         </ul>
         <p>
-          To add to the carnage, requirements differ greatly between markets
-          such as India and UAE. Since new valuation types could be introduced
-          in the future, the form system had to be both scalable and adaptable.
+          Each form type came with unique requirements, and these varied even further between markets like India and the UAE. We needed a scalable system that could evolve as new job types were introduced.
         </p>
         <p>
-          To achieve this, we designed a modular, plug-in architecture, where
-          each form type was built as an independent component. These components
-          seamlessly integrated into a shared framework, which handled state
-          management, validation, navigation, and API interactions. This allowed
-          new forms to be added with minimal effort — without having to
-          reimplement common features.
+          The solution was a modular plug-in architecture: each form type was developed as an independent component, then integrated into a central framework that handled shared functionality—state management, validation, navigation, and API interactions. This made it easy to add new forms without duplicating logic or reinventing the wheel.
         </p>
       </div>
 
-      <div class="segment-trigger">
+      <div appImageScrollerTarget="connect-stepper.webp" objectFit="contain">
         <h3>Improving Form Usability and Error Handling</h3>
         <p>
           One of the biggest pain points in the old system was error visibility.
@@ -111,7 +98,7 @@
         </p>
       </div>
 
-      <div class="segment-trigger">
+      <div appImageScrollerTarget="connect-subform.webp" objectFit="contain">
         <h3>Mobile Responsiveness</h3>
         <p>
           Since valuers complete their inspections on-site, the challenge was to
@@ -136,9 +123,10 @@
   <div class="segment-trigger">
     <h2>Impact</h2>
     <p>
-      While we didn't collect concrete metrics, the redesign significantly
-      improved usability. Users now have a more structured, efficient experience
-      when completing valuations.
+      Since launch, more than 1,000 development projects have been registered in the system—each requiring regular inspections throughout the construction lifecycle. The redesigned forms make these complex site visits faster and more seamless for valuers in the field, while giving banks a quicker, clearer path to approve loans for under-construction properties.
+    </p>
+    <p>
+      The system now supports multiple valuation types, including Full Market Valuations in both India and the UAE, all built on a flexible, scalable architecture. Today, these forms are live inside the Valocity Onsite mobile app via a webview, helping users around the world complete valuations with confidence—whether they're inspecting a single home or a massive high-rise project.
     </p>
   </div>
 </app-image-scroller-container>

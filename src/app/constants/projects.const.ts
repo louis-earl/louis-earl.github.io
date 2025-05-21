@@ -12,7 +12,7 @@ export const projects: { [key in ProjectNames]: Project } = {
   },
   valocityOnsite: {
     title: 'Valocity Onsite',
-    logline: 'An app that simplifies property valuations.',
+    logline: 'An app that speeds-up property valuations.',
     route: 'valocity-onsite',
     heroImage: 'onsite-hero.webp',
     nextUp: ProjectNames.ValocityExecutiveSummary,
