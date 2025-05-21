@@ -63,6 +63,8 @@ header {
 @media screen and (max-width: 599.98px) {
   .layout {
     flex-direction: column;
+    margin-inline: 2rem;
+    width: calc(100% - 4rem);
     &__fixed {
       position: static;
     }

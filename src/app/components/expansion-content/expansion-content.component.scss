@@ -56,3 +56,11 @@
     gap: 0.5rem;
   }
 }
+
+@media screen and (max-width: 599.98px) {
+  .expansion-container {
+    margin: 1rem -1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}

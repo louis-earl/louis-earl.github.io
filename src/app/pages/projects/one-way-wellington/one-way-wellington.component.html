@@ -1,73 +1,115 @@
 <app-image-scroller-container>
-  <div appImageScrollerTarget="oww-poster.jpg" objectFit="contain">
+  <div appImageScrollerTarget="oww-ship.webp" objectFit="contain">
     <h2>In a galaxy, not so far away...</h2>
     <p>
-      What started as a quirky game idea turned into one of the most challenging and rewarding projects I’ve ever worked on.
+      What started as a quirky game idea turned into one of the most challenging
+      and rewarding projects I’ve ever worked on.
     </p>
     <p>
-      One Way Wellington is a 2D spaceship building and management game, where players transport creative talent across the galaxy to New Zealand’s capital. The game was developed in collaboration with WellingtonNZ and presented at the Massey Exposure Exhibition in 2019.
+      One Way Wellington is a 2D spaceship building and management game, where
+      players transport creative talent across the galaxy to New Zealand’s
+      capital. The game was developed in collaboration with WellingtonNZ and
+      presented at the Massey Exposure Exhibition in 2019.
     </p>
 
     <h3>My Role</h3>
     <p>
-      I was the creator, designer, and developer of One Way Wellington. I built the gameplay systems, wrote the code, and directed the project’s creative vision. During production, I led a team of seven second-year students who contributed to UI design, character art, and 2D asset creation. I also coordinated with WellingtonNZ to ensure the game’s themes aligned with their creative outreach goals.
+      I was the creator, designer, and developer of One Way Wellington. I built
+      the gameplay systems, wrote the code, and directed the project’s creative
+      vision. During production, I led a team of seven second-year students who
+      contributed to UI design, character art, and 2D asset creation. I also
+      coordinated with WellingtonNZ to ensure the game’s themes aligned with
+      their creative outreach goals.
     </p>
   </div>
-
 
   <div appImageScrollerTarget="oww-gameplay.jpg" objectFit="contain">
     <h2>The Gameplay</h2>
     <h3>Build-Your-Own Spaceship</h3>
     <p>
-      Using a flexible tile-based system, players lay out rooms, corridors, and airlocks — then equip the ship with essentials like fuel storage and oxygen tanks. Builder-bots handle construction in real time, reacting dynamically as the blueprint evolves.
+      Using a flexible tile-based system, players lay out rooms, corridors, and
+      airlocks — then equip the ship with essentials like fuel storage and
+      oxygen tanks. Builder-bots handle construction in real time, reacting
+      dynamically as the blueprint evolves.
     </p>
 
     <h3>Chart a Course Across the Galaxy</h3>
     <p>
-      Use the star map to plan your journey, choosing which planets to visit along the way. Each stop brings new passengers eager to join your voyage — as long as you have enough fuel to get them safely to Wellington.
+      Use the star map to plan your journey, choosing which planets to visit
+      along the way. Each stop brings new passengers eager to join your voyage —
+      as long as you have enough fuel to get them safely to Wellington.
     </p>
 
     <h3>Pick Up Passengers (and Keep Them Alive)</h3>
     <p>
-      They’re artists, dreamers... and kind of needy. At each station, you choose who boards your ship. Every passenger has needs — oxygen, food, rest, and the occasional bathroom break. Make sure your ship’s systems can handle the load, or risk seeing your mission fall apart mid-flight.
+      They’re artists, dreamers... and kind of needy. At each station, you
+      choose who boards your ship. Every passenger has needs — oxygen, food,
+      rest, and the occasional bathroom break. Make sure your ship’s systems can
+      handle the load, or risk seeing your mission fall apart mid-flight.
     </p>
   </div>
 
-  <div appImageScrollerTarget="oww-gameplay.jpg" objectFit="contain">
+  <div appImageScrollerTarget="oww-dev.webp" objectFit="contain">
     <h2>Key Learnings</h2>
     <h3>A Technical Playground</h3>
     <p>
-      Every feature in One Way Wellington had to talk to each other in real time. What started as a fun game project quickly spiraled into a full-blown system design rabbit hole — and my curious brain loved every second of it.
+      I built One Way Wellington in Unity using C#, diving headfirst into
+      gameplay logic, AI systems, and real-time simulation. Every system had to
+      talk to each other in real time — from passengers breathing oxygen to
+      builder-bots reacting to new room placements. What started as a fun game
+      project quickly spiraled into a full-blown system design rabbit hole, and
+      my curious brain loved every second of it.
     </p>
     <app-expansion-content title="The nerdy bits I couldn’t leave out">
-      <ul>
-        <li>
-          <strong>2D Tile-Based Building:</strong> The entire game world was built on a tile grid. Every system — from AI to pathfinding to oxygen — relied on this. It was the foundation for everything.
-        </li>
-        <li>
-          <strong>Real-Time Oxygen Simulation:</strong> I used a flood-fill algorithm to simulate oxygen flow between rooms. But here's the catch: it had to update in real time. Passengers consumed oxygen <i>every game tick</i>, so I had to optimize hard — recalculating only when something actually changed.
-        </li>
-        <li>
-          <strong>Builder Bots & Construction Queue:</strong> Builder robots followed a live-updating construction queue, even as players placed new tiles. Keeping them coordinated without bugs was a huge challenge.
-        </li>
-        <li>
-          <strong>AI & Pathfinding:</strong> Passengers constantly asked, “Where’s the closest bed?” They used the tile system to find destinations, then plotted a path through doors, rooms… even airlocks. And if an airlock opened? That triggered a reflow in the oxygen system. Everything was connected.
-        </li>
-        <li>
-          <strong>Save/Load System:</strong> Saving meant capturing the entire game state — layout, passengers, construction, oxygen levels — and restoring it perfectly. No pressure.
-        </li>
-        <li>
-          <strong>Achievements & Event System:</strong> I built an event system to track player progress, and give helpful nudges along the way.
-        </li>
-      </ul>
+      <h4>2D Tile-Based Building:</h4>
+      <p>
+        The entire game world was built on a tile grid. Every system — from AI
+        to pathfinding to oxygen — relied on this. It was the foundation for
+        everything.
+      </p>
+      <h4>Real-Time Oxygen Simulation:</h4>
+      <p>
+        I used a flood-fill algorithm to simulate oxygen flow between rooms. But
+        here's the catch: it had to update in real time. Passengers consumed
+        oxygen
+        <i>every game tick</i>, so I had to optimize hard — recalculating only
+        when something actually changed.
+      </p>
+      <h4>Builder Bots & Construction Queue:</h4>
+      <p>
+        Builder robots followed a live-updating construction queue, even as
+        players placed new tiles. Keeping them coordinated without bugs was a
+        huge challenge.
+      </p>
+      <h4>AI & Pathfinding:</h4>
+      <p>
+        Passengers constantly asked, “Where’s the closest bed?” They used the
+        tile system to find destinations, then plotted a path through doors,
+        rooms… even airlocks. And if an airlock opened? That triggered a reflow
+        in the oxygen system. Everything was connected.
+      </p>
+      <h4>Save/Load System:</h4>
+      <p>
+        Saving meant capturing the entire game state — layout, passengers,
+        construction, oxygen levels — and restoring it perfectly. No pressure.
+      </p>
+      <h4>Achievements & Event System:</h4>
+      <p>
+        I built an event system to track player progress, and give helpful
+        nudges along the way.
+      </p>
     </app-expansion-content>
 
     <h3>Scope Creep Is Real</h3>
     <p>
-      The biggest challenge wasn’t technical — it was knowing when to stop. I had a million ideas and limited time. I learned hard (and sometimes painful) lessons about managing scope and prioritizing features.
+      The biggest challenge wasn’t technical — it was knowing when to stop. I
+      had a million ideas and limited time. I learned hard (and sometimes
+      painful) lessons about managing scope and prioritizing features.
     </p>
     <p>
-      But I wouldn’t change a thing. By the end of the project, I walked away with real-world experience, hard-earned wisdom, and a toolkit of technical skills I use to this day.
+      But I wouldn’t change a thing. By the end of the project, I walked away
+      with real-world experience, hard-earned wisdom, and a toolkit of technical
+      skills I use to this day.
     </p>
   </div>
 
@@ -77,12 +119,21 @@
       <i>A playable demo, a public exhibition, and a proud developer.</i>
     </p>
     <p>
-      The final game was a playable, ambitious demo packed with technical systems I’d never built before — and I’m incredibly proud of what I accomplished. One Way Wellington was shown at
-      <a href="https://exposure2019.massey.ac.nz/students/creative-media-production/louis-earl" target="_blank">Massey Exposure 2019</a>, and proved that with enough stubbornness and coffee, I can build some really cool stuff!
+      The final game was a playable, ambitious demo packed with technical
+      systems I’d never built before — and I’m incredibly proud of what I
+      accomplished. One Way Wellington was shown at
+      <a
+        href="https://exposure2019.massey.ac.nz/students/creative-media-production/louis-earl"
+        target="_blank"
+        >Massey Exposure 2019</a
+      >, and proved that with enough stubbornness and coffee, I can build some
+      really cool stuff!
     </p>
     <p>
-      Want to see it in motion? <a href="https://youtu.be/yEqYl7gQWyg" target="_blank">Here’s a quick gameplay trailer.</a>
+      Want to see it in motion?
+      <a href="https://youtu.be/yEqYl7gQWyg" target="_blank"
+        >Here’s a quick gameplay trailer.</a
+      >
     </p>
   </div>
-
 </app-image-scroller-container>
