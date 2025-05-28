@@ -1,0 +1,34 @@
+.brain-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.skills-card {
+  width: 30%;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--surface-transparent);
+  &--technical {
+    margin-right: auto;
+  }
+  &--creative {
+    margin-left: auto;
+  }
+  li {
+    font-size: var(--body-medium);
+    margin-block-end: 0.5rem;
+  }
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  &.technical-brain {
+    bottom: 0;
+  }
+  &.creative-brain {
+    top: 0;
+  }
+}
