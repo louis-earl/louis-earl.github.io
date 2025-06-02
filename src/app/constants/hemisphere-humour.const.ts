@@ -1,12 +1,11 @@
 export const hemisphereHumour = [
   "What's going on in there?",
-  "Left brain, right brain, all gain.",
-  "A peek under the hood (of my skull).",
-  "Where code meets color.",
-  "Brain dump, but make it useful.",
-  "Organised chaos—professionally speaking.",
-  "Thoughts, pixels, and semicolons.",
-  "My two hemispheres walk into a portfolio...",
-  "One part logic, one part vibes.",
-  "Ctrl + Z, but for neurons."
+  'A peek under the hood.',
+  "Let's take a look inside....",
+  'Allow myself to introduce... myself.',
+  "Here's how the brain's wired.",
+  'The inner workings (no scalpel required).',
+  'Dissecting the design-dev brain.',
+  'Anatomy of a hybrid mind.',
+  'A tour of the two hemispheres.',
 ];
