@@ -1,0 +1,33 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+  width: 100%;
+  max-width: 1264px;
+  margin: 2rem;
+  background-color: #014d56d2;
+  backdrop-filter: blur(64px);
+  color: var(--on-surface);
+  border: 1px solid #107b86;
+  border-radius: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    a:not(:last-child) {
+      border-right: 1px solid var(--on-surface);
+      padding-right: 2rem;
+    }
+}

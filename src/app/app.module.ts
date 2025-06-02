@@ -26,6 +26,7 @@ import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/o
 import { LayoutModule } from '@angular/cdk/layout';
 import { HeroComponent } from './components/hero/hero.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SkillsComponent } from './components/skills/skills.component';
     MidnightMysteriesComponent,
     OneWayWellingtonComponent,
     HeroComponent,
-    SkillsComponent
+    SkillsComponent,
+    HeaderComponent
   ],
   imports: [
     AppRoutingModule,
