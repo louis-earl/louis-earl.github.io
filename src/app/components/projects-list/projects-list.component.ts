@@ -9,7 +9,7 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
     styleUrls: ['./projects-list.component.scss'],
     imports: [ProjectCardComponent]
 })
-export class ProjectsComponent {
+export class ProjectsListComponent {
 
   projects = Object.values(projects);
 
