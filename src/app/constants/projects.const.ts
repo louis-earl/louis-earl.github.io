@@ -1,4 +1,8 @@
-import { Project, ProjectNames } from '../models/project.model';
+import {
+  Project,
+  ProjectCategories,
+  ProjectNames,
+} from '../models/project.model';
 
 export const projects: { [key in ProjectNames]: Project } = {
   valocityGlobal: {
@@ -9,6 +13,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     nextUp: ProjectNames.ValocityOnsite,
     description:
       'Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.',
+    categories: [ProjectCategories.Design, ProjectCategories.Development],
   },
   valocityOnsite: {
     title: 'Valocity Onsite',
@@ -18,6 +23,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     nextUp: ProjectNames.ValocityExecutiveSummary,
     description:
       "I redesigned a mobile app that wasn't getting much use. Now it's set to streamline the way valuation firms collect property data.",
+    categories: [ProjectCategories.Design],
   },
   valocityExecutiveSummary: {
     title: 'Valocity Executive Summary',
@@ -27,6 +33,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     nextUp: ProjectNames.MidnightMysteries,
     description:
       'Redesigning a report intended for A4 print/PDF. Despite more complex requirements, I put together a simple, more intuitive prototype.',
+    categories: [ProjectCategories.Design],
   },
   midnightMysteries: {
     title: 'Midnight Mysteries',
@@ -36,6 +43,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     nextUp: ProjectNames.OneWayWellington,
     description:
       'Using React and some websocket magic, I helped develop a multiplayer game that turns everyone in the room against each other.',
+    categories: [ProjectCategories.Development, ProjectCategories.Game],
   },
   oneWayWellington: {
     title: 'One Way Wellington',
@@ -45,5 +53,6 @@ export const projects: { [key in ProjectNames]: Project } = {
     nextUp: ProjectNames.ValocityGlobal,
     description:
       'I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.',
+    categories: [ProjectCategories.Development, ProjectCategories.Game],
   },
 };

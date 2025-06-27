@@ -1,14 +1,23 @@
+<div class="project-filter">
+    <p>Looking for something specific?</p>
+    <mat-chip-listbox (change)="onFilterChange($event)">
+        <mat-chip-option [value]="null" selected>
+            All
+        </mat-chip-option>
+        @for (category of projectCategories; track $index) {
+        <mat-chip-option [value]="category">
+            {{ category }}
+        </mat-chip-option>
+        }
+    </mat-chip-listbox>
+</div>
 <div class="project-list">
-  @for (project of projects; track project; let i = $index) {
-    <app-project-card
-      [title]="project.logline"
-      [link]="'projects/' + project.route"
-      [reverseDirection]="i % 2 === 1"
-      >
-      <img thumbnail [src]="'../../../assets/images/' + project.heroImage" />
-      <p description>
-        {{ project.description }}
-      </p>
+    @for (project of projects; track project; let i = $index) {
+    <app-project-card [title]="project.logline" [link]="'projects/' + project.route" [reverseDirection]="i % 2 === 1">
+        <img thumbnail [src]="'../../../assets/images/' + project.heroImage" />
+        <p description>
+            {{ project.description }}
+        </p>
     </app-project-card>
-  }
+    }
 </div>
