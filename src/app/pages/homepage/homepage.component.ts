@@ -1,10 +1,15 @@
 import { Component, HostListener } from '@angular/core';
+import { HeroComponent } from '../../components/hero/hero.component';
+import { AboutComponent } from '../../components/about/about.component';
+import { ProjectsComponent } from '../../components/projects-list/projects-list.component';
+import { SkillsComponent } from '../../components/skills/skills.component';
+import { ContactComponent } from '../../components/contact/contact.component';
 
 @Component({
     selector: 'app-homepage',
     templateUrl: './homepage.component.html',
     styleUrls: ['./homepage.component.scss'],
-    standalone: false
+    imports: [HeroComponent, AboutComponent, ProjectsComponent, SkillsComponent, ContactComponent]
 })
 export class HomepageComponent {
 

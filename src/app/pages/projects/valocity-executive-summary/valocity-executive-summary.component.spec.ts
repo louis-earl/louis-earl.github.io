@@ -8,8 +8,8 @@ describe('ValocityExecutiveSummaryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ValocityExecutiveSummaryComponent ]
-    })
+    imports: [ValocityExecutiveSummaryComponent]
+})
     .compileComponents();
   });
 

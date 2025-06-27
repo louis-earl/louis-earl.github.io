@@ -9,10 +9,9 @@ import { ContentImage } from 'src/app/models/project.model';
 import { ImageScrollerService } from 'src/app/services/image-scroller.service';
 
 @Component({
-  selector: 'app-image-scroller-container',
-  templateUrl: './image-scroller-container.component.html',
-  styleUrl: './image-scroller-container.component.scss',
-  standalone: false,
+    selector: 'app-image-scroller-container',
+    templateUrl: './image-scroller-container.component.html',
+    styleUrl: './image-scroller-container.component.scss',
 })
 export class ImageScrollerContainerComponent implements AfterViewInit {
   activatorHeightMultiplier = 0.3;
