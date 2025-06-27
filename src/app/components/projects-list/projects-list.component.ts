@@ -13,16 +13,18 @@ import { ProjectCategories } from 'src/app/models/project.model';
 export class ProjectsListComponent {
   projects = Object.values(projects);
   projectCategories = Object.values(ProjectCategories);
+  selectedCategory: ProjectCategories | null = null;
 
   constructor() {}
 
   onFilterChange(category: MatChipListboxChange) {
-    if (category.value === null) {
+    this.selectedCategory = category.value;
+    if (category.value) {
+      this.projects = Object.values(projects).filter((project) =>
+        project.categories.includes(category.value)
+      );
+    } else {
       this.projects = Object.values(projects);
-      return;
     }
-    this.projects = Object.values(projects).filter((project) =>
-      project.categories.includes(category.value)
-    );
   }
 }

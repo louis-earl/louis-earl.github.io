@@ -1,11 +1,10 @@
 <div class="project-filter">
-    <p>Looking for something specific?</p>
     <mat-chip-listbox (change)="onFilterChange($event)">
-        <mat-chip-option [value]="null" selected>
+        <mat-chip-option [value]="null" [selectable]="!!selectedCategory" selected>
             All
         </mat-chip-option>
         @for (category of projectCategories; track $index) {
-        <mat-chip-option [value]="category">
+        <mat-chip-option [value]="category" [selectable]="category !== selectedCategory">
             {{ category }}
         </mat-chip-option>
         }
