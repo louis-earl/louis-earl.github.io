@@ -45,8 +45,8 @@ h3 {
   }
   .card__thumbnail ::ng-deep img {
     position: static;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    border-radius: 1rem;
   }
   .reverse {
     order: 0;

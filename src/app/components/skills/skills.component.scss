@@ -43,10 +43,10 @@
 
 @media (max-width: 1000px) {
   .skills-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     margin-block-start: 0;
     .brain-placeholder {
-      grid-area: 1 / 1 / 2 / 3;
+      display: none;
     }
   }
   .brain-container {
