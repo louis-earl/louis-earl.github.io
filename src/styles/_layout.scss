@@ -15,11 +15,6 @@ body {
   margin: 0;
 }
 
-a {
-  color: #e1f0f2;
-  text-decoration: none;
-}
-
 button,
 a.button {
   display: inline-flex;
@@ -44,6 +39,7 @@ a.button {
     box-shadow: 0px 0px 0px 2px var(--primary);
   }
   &.text-button {
+    color: var(--on-primary);
     padding-inline: 0;
   }
   &:hover {

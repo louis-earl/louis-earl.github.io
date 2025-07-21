@@ -16,8 +16,10 @@
     opacity: 0.8;
   }
   &__logline {
+    color: var(--on-primary);
     font-size: var(--body-large);
     font-weight: 700;
+    text-decoration: none;
   }
   &__image {
     max-width: 156px;
