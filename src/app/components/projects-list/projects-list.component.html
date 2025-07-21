@@ -1,15 +1,13 @@
+<div class="project-filter">
+    <app-filter-chips (categorySelected)="onFilterChange($event)"/>
+</div>
 <div class="project-list">
-    <ng-container *ngFor="let project of projects; index as i">
-        <app-project-card
-            [title]="project.logline"
-            [link]="'projects/' + project.route"
-            [reverseDirection]="i % 2 === 1"
-        >
-            <img thumbnail [src]="'../../../assets/images/' + project.heroImage" />
-            <p description>
-                {{ project.description }}
-            </p>
-        </app-project-card>
-
-    </ng-container>
+    @for (project of projects; track project; let i = $index) {
+    <app-project-card [title]="project.logline" [link]="'projects/' + project.route" [reverseDirection]="i % 2 === 1">
+        <img thumbnail [src]="'../../../assets/images/' + project.heroImage" />
+        <p description>
+            {{ project.description }}
+        </p>
+    </app-project-card>
+    }
 </div>

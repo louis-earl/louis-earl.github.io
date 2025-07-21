@@ -3,10 +3,9 @@ import { ContentImage } from 'src/app/models/project.model';
 import { ImageScrollerService } from 'src/app/services/image-scroller.service';
 
 @Component({
-  selector: 'app-project-gallary',
-  templateUrl: './project-gallary.component.html',
-  styleUrls: ['./project-gallary.component.scss'],
-  standalone: false,
+    selector: 'app-project-gallary',
+    templateUrl: './project-gallary.component.html',
+    styleUrls: ['./project-gallary.component.scss'],
 })
 export class ProjectGallaryComponent implements OnInit {
   activeImageChanges$ = this.imageScrollerService.activeImage$;

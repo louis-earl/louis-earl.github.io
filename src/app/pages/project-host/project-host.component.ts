@@ -3,12 +3,23 @@ import { ProjectsService } from 'src/app/services/projects.service';
 import { map } from 'rxjs/operators';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { ImageScrollerService } from 'src/app/services/image-scroller.service';
+import { ProjectGallaryComponent } from '../../components/project-gallary/project-gallary.component';
+import { RouterOutlet } from '@angular/router';
+import { UpNextComponent } from '../../components/up-next/up-next.component';
+import { ContactComponent } from '../../components/contact/contact.component';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-project-host',
-  templateUrl: './project-host.component.html',
-  styleUrls: ['./project-host.component.scss'],
-  standalone: false,
+    selector: 'app-project-host',
+    templateUrl: './project-host.component.html',
+    styleUrls: ['./project-host.component.scss'],
+    imports: [
+        ProjectGallaryComponent,
+        RouterOutlet,
+        UpNextComponent,
+        ContactComponent,
+        AsyncPipe,
+    ],
 })
 export class ProjectHostComponent {
   projectTitle$ = this.projectsService.project$.pipe(

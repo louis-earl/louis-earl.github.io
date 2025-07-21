@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-expansion-content',
     templateUrl: './expansion-content.component.html',
     styleUrl: './expansion-content.component.scss',
-    standalone: false
+    imports: [NgClass]
 })
 export class ExpansionContentComponent {
   isOpen = false;

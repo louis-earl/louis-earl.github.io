@@ -7,10 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 
-@Directive({
-  selector: '[appImageScrollerTarget]',
-  standalone: false,
-})
+@Directive({ selector: '[appImageScrollerTarget]', })
 export class ImageScrollerTargetDirective implements OnInit {
   @Input('appImageScrollerTarget') fileName = '';
   @Input() objectFit: 'contain' | 'cover';

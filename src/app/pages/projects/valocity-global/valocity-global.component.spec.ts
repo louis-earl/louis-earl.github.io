@@ -8,8 +8,8 @@ describe('ValocityGlobalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ValocityGlobalComponent ]
-    })
+    imports: [ValocityGlobalComponent]
+})
     .compileComponents();
   });
 
