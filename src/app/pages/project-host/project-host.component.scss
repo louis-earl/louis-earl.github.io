@@ -4,7 +4,19 @@
   align-items: center;
 }
 
-.layout {
+.home-button-container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#home-button {
+  margin-block-start: 2rem;
+}
+
+.layout,
+.home-button-container,
+app-contact {
   display: flex;
   margin-inline: 2rem 4rem;
   gap: 4rem;
@@ -18,7 +30,7 @@
     flex: 1;
     gap: 2rem;
     position: sticky;
-    top: 0;
+    top: 6rem;
   }
 
   &__scroll {
@@ -68,5 +80,19 @@ header {
 
   .gallary-container {
     display: none;
+  }
+
+  #home-button {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out;
+    will-change: background-color, box-shadow;
+    &.scrolled {
+      background-color: var(--surface);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
   }
 }

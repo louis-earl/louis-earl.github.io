@@ -10,18 +10,21 @@ import { ContactComponent } from '../../components/contact/contact.component';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-project-host',
-    templateUrl: './project-host.component.html',
-    styleUrls: ['./project-host.component.scss'],
-    imports: [
-        ProjectGallaryComponent,
-        RouterOutlet,
-        UpNextComponent,
-        ContactComponent,
-        AsyncPipe,
-    ],
+  selector: 'app-project-host',
+  templateUrl: './project-host.component.html',
+  styleUrls: ['./project-host.component.scss'],
+  imports: [
+    ProjectGallaryComponent,
+    RouterOutlet,
+    UpNextComponent,
+    ContactComponent,
+    AsyncPipe,
+  ],
 })
 export class ProjectHostComponent {
+
+  isScrolled = false;
+
   projectTitle$ = this.projectsService.project$.pipe(
     map((project) => project.title)
   );
@@ -29,9 +32,19 @@ export class ProjectHostComponent {
     map((project) => project.logline)
   );
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    this.isScrolled = scrollTop > 0;
+  }
+
   constructor(
     private navigation: NavigationService,
-    private projectsService: ProjectsService,
+    private projectsService: ProjectsService
   ) {}
 
   back(): void {
