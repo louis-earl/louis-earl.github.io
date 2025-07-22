@@ -16,13 +16,13 @@ const routes: Routes = [
     component: HomepageComponent,
     title: 'Louis Earl | UX Engineer',
     // resolve: {'itemsList': HomepageResolver},
-    data: {animation: 'HomePage'}
+    data: { animation: 'HomePage' },
   },
   {
     path: 'projects',
     component: ProjectHostComponent,
     // resolve: {'itemsList': HomepageResolver},
-    data: {animation: 'ProjectsPage'},
+    data: { animation: 'ProjectsPage' },
     children: [
       {
         path: 'valocity-onsite',
@@ -45,16 +45,21 @@ const routes: Routes = [
         title: 'Louis Earl | Midnight Mysteries',
       },
       {
-        path: 'one-way-wellington', 
+        path: 'one-way-wellington',
         component: OneWayWellingtonComponent,
         title: 'Louis Earl | One Way Wellington',
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
