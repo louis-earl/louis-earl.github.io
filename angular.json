@@ -20,9 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": {
-              "base": "dist/portfolio-neon"
-            },
+            "outputPath": "dist/portfolio-neon",
             "index": "src/index.html",
             "polyfills": [
               "src/polyfills.ts"
@@ -107,7 +105,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://louis-earl.github.io/",
+            "remote": "origin",
+            "repo": "https://github.com/louis-earl/louis-earl.github.io.git"
+          }
         }
       }
     }
