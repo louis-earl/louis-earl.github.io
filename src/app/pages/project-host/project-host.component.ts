@@ -22,7 +22,6 @@ import { AsyncPipe } from '@angular/common';
   ],
 })
 export class ProjectHostComponent {
-
   isScrolled = false;
 
   projectTitle$ = this.projectsService.project$.pipe(
@@ -34,12 +33,11 @@ export class ProjectHostComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const scrollTop =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
-    this.isScrolled = scrollTop > 0;
+    const el = document.getElementById('scroll-anchor');
+    if (!el) return;
+
+    const top = el.getBoundingClientRect().top;
+    this.isScrolled = top <= 80;
   }
 
   constructor(

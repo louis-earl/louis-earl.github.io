@@ -1,0 +1,16 @@
+footer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url(../../../assets/wave-2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  img {
+    width: 8rem;
+    position: absolute;
+    top: 1rem;
+    margin-inline: auto;
+  }
+}

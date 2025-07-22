@@ -1,7 +1,6 @@
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-block: 12rem;
   gap: 2rem;
 
   .social {
@@ -41,9 +40,8 @@
       width: calc(100% - 1.5rem);
       max-width: 400px;
       border-radius: 50%;
-      background-color: var(--surface-transparent);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: 0.75rem solid var(--surface-transparent)
+      // background-color: var(--surface-transparent);
+      // border: 0.75rem solid var(--surface-transparent)
     }
   }
 }
