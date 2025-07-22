@@ -1,12 +1,11 @@
 .contact {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
   gap: 2rem;
 
-  .image-container,
   .contact__details {
-    direction: ltr;
+    flex: 1.2 1 250px;
   }
 
   .social {
@@ -40,6 +39,7 @@
   }
 
   .image-container {
+    flex: 1 1 200px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
