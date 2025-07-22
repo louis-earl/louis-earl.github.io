@@ -13,6 +13,11 @@ section {
   position: absolute;
   bottom: 100%;
   width: 100%;
+  &.reverse {
+    bottom: unset;
+    top: 100%;
+    transform: rotate(180deg);
+  }
 
   .wave {
     width: 100%;
@@ -31,19 +36,25 @@ section {
   fill: var(--surface);
 }
 
+#contact {
+  margin-block: 22rem 14rem;
+}
+
 footer {
+  background-color: var(--surface);
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-image: url(../../../assets/wave-2.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  img {
-    width: 8rem;
-    position: absolute;
-    top: 1rem;
-    margin-inline: auto;
-  }
+  padding-block-start: 1rem;
+  // background-image: url(../../../assets/wave-2.svg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center top;
+  // img {
+  //   width: 8rem;
+  //   position: absolute;
+  //   top: 1rem;
+  //   margin-inline: auto;
+  // }
 }
