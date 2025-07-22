@@ -109,7 +109,9 @@
           "options": {
             "baseHref": "https://louis-earl.github.io/",
             "remote": "origin",
-            "repo": "https://github.com/louis-earl/louis-earl.github.io.git"
+            "repo": "https://github.com/louis-earl/louis-earl.github.io.git",
+            "name": "Louis Earl (Automatic Deployment)",
+            "email": "louis.earl.14@gmail.com"
           }
         }
       }
