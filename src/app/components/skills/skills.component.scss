@@ -42,15 +42,26 @@
 }
 
 @media (max-width: 1000px) {
+  .skills-intro {
+    margin-block-end: 3rem;
+    .skills-intro-text {
+      max-width: 100%;
+    }
+  }
+
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     margin-block-start: 0;
+    .skills-card {
+      padding: 1rem;
+      margin-inline: -1rem;;
+    }
     .brain-placeholder {
       display: none;
     }
   }
   .brain-container {
-    margin-inline: 2rem;
+    margin: 1rem 2rem;
     transform: none;
     img {
       position: static;
