@@ -27,12 +27,19 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .up-next {
     flex-direction: column-reverse;
     align-items: center;
-    padding: 1rem;
-    margin: 0;
+    padding: 1.5rem 1rem;
+    margin: 0 -1rem;
     border-radius: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .up-next {
+    margin: 0 -0.75rem;
+    padding: 1.5rem 0.75rem;
   }
 }

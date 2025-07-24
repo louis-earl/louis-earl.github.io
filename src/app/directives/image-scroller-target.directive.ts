@@ -7,7 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 
-@Directive({ selector: '[appImageScrollerTarget]', })
+@Directive({ selector: '[appImageScrollerTarget]' })
 export class ImageScrollerTargetDirective implements OnInit {
   @Input('appImageScrollerTarget') fileName = '';
   @Input() objectFit: 'contain' | 'cover';
@@ -29,7 +29,7 @@ export class ImageScrollerTargetDirective implements OnInit {
 
   ngOnInit(): void {
     this.breakpointObserver
-      .observe([Breakpoints.XSmall])
+      .observe('(max-width: 768px)')
       .subscribe((result) => {
         if (result.matches) {
           this.removeImageIfExists();

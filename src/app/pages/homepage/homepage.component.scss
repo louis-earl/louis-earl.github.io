@@ -40,6 +40,12 @@ section {
   margin-block: 22rem 14rem;
 }
 
+@media screen and (max-width: 768px) {
+  #contact {
+    margin-block: 16rem 8rem;
+  }
+}
+
 footer {
   background-color: var(--surface);
   position: relative;
