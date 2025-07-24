@@ -57,7 +57,7 @@ header {
   }
 }
 
-.gallary-container {
+.gallery-container {
   display: flex;
   aspect-ratio: 4 / 3;
   padding: 2rem;
@@ -78,7 +78,7 @@ header {
   .layout {
     gap: 2rem;
   }
-  .gallary-container {
+  .gallery-container {
     padding: 1rem;
     border-radius: 1rem;
   }
@@ -103,7 +103,7 @@ header {
     }
   }
 
-  .gallary-container {
+  .gallery-container {
     display: none;
   }
 
