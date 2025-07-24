@@ -14,21 +14,22 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-block-start: 2rem;
-    .social__item {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      border-radius: 1rem;
+    .social-button {
+      padding-inline: 0;
+    }
       img {
         width: 2rem;
       }
-    }
+    
     .social__title {
       font-size: var(--body-medium);
       font-weight: 600;
     }
   }
   .email-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
     margin-block: 4rem;
     .email {
       font-size: var(--headline-3);

@@ -11,18 +11,30 @@
     </p>
 
     <div class="email-container">
-      <span class="email">louis.earl.14&#64;gmail.com</span>
+      <a href="mailto:louis.earl.14@gmail.com" class="tooltip">
+        <span class="email">louis.earl.14&#64;gmail.com</span>
+        <span class="tooltip-text">Open in mail</span>
+      </a>
+
+      <button class="button icon-button tooltip" (click)="copyEmail()">
+        @if (copySuccess) {
+          <span class="material-icons-round"> check </span>
+        } @else {
+          <span class="material-icons-round"> content_copy </span>
+        }
+        <span class="tooltip-text">Copy to clipboard</span>
+      </button>
     </div>
 
     <div class="social">
-      <div class="social__item">
+      <a class="button social-button" href="https://www.linkedin.com/in/louis-earl/" target="_blank" rel="noopener noreferrer">
         <img src="../../../assets/social-linkedin.png" />
         <span class="social__title">LinkedIn</span>
-      </div>
-      <div class="social__item">
+      </a>
+      <a class="button social-button" href="https://github.com/louis-earl" target="_blank" rel="noopener noreferrer">
         <img src="../../../assets/social-github.png" />
         <span class="social__title">GitHub</span>
-      </div>
+      </a>
     </div>
   </div>
 </div>
