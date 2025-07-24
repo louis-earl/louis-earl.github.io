@@ -69,3 +69,14 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    .skills-card {
+      padding: 1rem;
+      margin-inline: 0;
+    }
+  }
+}

@@ -27,3 +27,9 @@
 .tooltip:hover .tooltip-text {
   visibility: visible;
 }
+
+@media (max-width: 600px) {
+  .tooltip:hover .tooltip-text {
+    visibility: hidden;
+  }
+}

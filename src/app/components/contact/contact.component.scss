@@ -27,7 +27,8 @@
     }
   }
   .email-container {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     margin-block: 4rem;
@@ -49,5 +50,11 @@
       max-width: 400px;
       border-radius: 50%;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .email-container .email {
+    font-size: var(--body-large);
   }
 }

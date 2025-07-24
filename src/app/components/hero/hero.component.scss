@@ -1,6 +1,9 @@
+:host {
+  display: contents;
+}
+
 h1 {
   margin-block: 0 4rem;
-  text-wrap: nowrap;
 }
 
 .hero {
@@ -47,12 +50,11 @@ h1 {
 .portrait-container {
   height: 100%;
   max-height: 580px;
-  display: flex;
-  justify-content: center;
 
   .portrait {
     z-index: 2;
     object-fit: contain;
+    max-width: 100dvw;
   }
 }
 
