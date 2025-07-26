@@ -95,6 +95,10 @@ a.button {
   }
 }
 
+.image-slot:has(.inserted-image) {
+  margin-block: 1.5rem;
+}
+
 .inserted-image {
   width: 100%;
 }

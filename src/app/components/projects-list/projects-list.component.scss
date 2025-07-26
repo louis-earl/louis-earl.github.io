@@ -3,3 +3,10 @@
     flex-direction: column;
     margin-bottom: 16rem;
 }
+
+@media screen and (max-width: 768px) {
+  .project-list {
+    margin-bottom: 8rem;
+  }
+    
+}

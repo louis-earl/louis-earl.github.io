@@ -31,16 +31,23 @@ export class ImageScrollerTargetDirective implements OnInit {
     this.breakpointObserver
       .observe('(max-width: 768px)')
       .subscribe((result) => {
-        if (result.matches) {
+        if (!result.matches) {
           this.removeImageIfExists();
+          return;
+        }
+        this.removeImageIfExists();
 
-          const el = document.createElement('img');
-          el.src = '../../assets/images/' + this.fileName;
-          el.style.objectFit = this.objectFit;
-          el.classList.add('inserted-image');
+        const el = document.createElement('img');
+        el.src = '../../assets/images/' + this.fileName;
+        el.style.objectFit = this.objectFit;
+        el.classList.add('inserted-image');
+
+        const imageSlot =
+          this.hostElement.nativeElement.querySelector('.image-slot');
+        if (imageSlot) {
+          imageSlot.appendChild(el);
+        } else if (this.hostElement.nativeElement.firstChild) {
           this.hostElement.nativeElement.prepend(el);
-        } else {
-          this.removeImageIfExists();
         }
       });
   }
