@@ -1,0 +1,99 @@
+<app-image-scroller-container>
+    <div appImageScrollerTarget="onsite-hero.webp" objectFit="contain">
+        <h2>
+            Project Overview
+        </h2>
+        <p>
+            The Valocity Dashboard is a central hub for lender operations—giving users powerful tools to manage their valuation orders.
+        </p>
+        <p>
+            I joined the project partway through development, with the goal of helping the team turn a tangle of legacy front-end code into a scalable, maintainable dashboard experience. My focus was purely on the front-end, but the project gave me an opportunity to lead architectural discussions, refactor a large codebase, and deliver advanced UI features with real impact.
+        </p>
+    </div>
+
+    <div appImageScrollerTarget="onsite-hero.webp" objectFit="contain">
+        <h2>
+            My Role
+        </h2>
+        <p>
+            I was the lead front-end developer on the Dashboard rebuild. I worked closely with a team of full-stack engineers and took responsibility for modernizing the front-end architecture, implementing complex UI behavior, and introducing maintainable design patterns with Angular and RxJS.
+        </p>
+        <p>
+            My contributions included:
+        </p>
+        <ul>
+            <li>
+                Architectural Refactor: Inherited a disorganized front-end codebase and led the effort to clean, modularize, and scale it. I introduced separation of concerns via dedicated services, which handled state, filters, layout persistence, and API interactions.
+            </li>
+            <li>
+                Dashboard Layouts: Built a plug-in system that let users save and load dashboard configurations—filters, pagination, and column settings—as reusable “Layouts.” These became essential for power users who needed quick access to custom views like “Draft Orders Assigned to Me” or “Overdue Jobs.”
+            </li>
+            <li>
+                Advanced Grid System: Integrated a Kendo UI table with support for multi-type filters (text, select, date, number), column reordering/resizing, nested expandable rows, and pagination. All filter states were fully reactive and saved to layouts.
+            </li>
+            <li>
+                Onboarding Tour: Created a context-aware welcome modal and step-by-step product tour using Intro.js, guiding new users through the key features of the redesigned dashboard.
+            </li>
+        </ul>
+    </div>
+
+    <div appImageScrollerTarget="onsite-hero.webp" objectFit="contain">
+        <h2>
+            Key Challenges
+        </h2>
+        <p>
+            When I rejoined the team after a 4-month break, I found a front-end codebase that had grown chaotic and difficult to maintain. With the project only halfway complete, I facilitated workshops to align the team and restructure the code for long-term sustainability.
+        </p>
+        <p>
+            The grid system presented its own complexities:
+        </p>
+        <ul>
+            <li>
+                Multiple filters could be active at once, with combinations of range, select, and date types.
+            </li>
+            <li>
+                Filter state needed to persist across layout saves and reloads.
+            </li>
+            <li>
+                Components had to stay lightweight, delegating logic to centralized services while remaining reactive to state changes.
+            </li>
+        </ul>
+        <p>
+            To solve this, I built a series of focused services—FilterService, LayoutService, GridService—each responsible for one domain. These services published events via observables, allowing components to subscribe to only what they needed. This not only simplified development but made it easy to extend the system later.
+        </p>
+        <p>
+            The result? Clean, decoupled code that felt effortless to work with.
+        </p>
+    </div>
+
+    <div appImageScrollerTarget="onsite-hero.webp" objectFit="contain">
+        <h2>
+            Impact
+        </h2>
+        <p>
+            Once launched, the new Dashboard replaced a clunky legacy experience that frustrated users with rigid filters and limited customization.
+        </p>
+        <p>
+            The redesigned version delivered:
+        </p>
+        <ul>
+            <li>
+                Fast, flexible filtering across multiple columns
+            </li>
+            <li>
+                Nested tables for deeper visibility without leaving the page
+            </li>
+            <li>
+                Saved layouts for quick context switching
+            </li>
+            <li>
+                A smoother, more scalable codebase for future growth
+            </li>
+        </ul>
+        <p>
+            Our clients in India quickly adopted the new system and reported a significant boost in efficiency. For the first time, they could tailor the dashboard to their workflow—and find what they were looking for in seconds, not minutes.
+        </p>
+
+    </div>
+
+</app-image-scroller-container>

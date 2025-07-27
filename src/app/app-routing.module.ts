@@ -8,6 +8,7 @@ import { ValocityGlobalComponent } from './pages/projects/valocity-global/valoci
 import { ValocityExecutiveSummaryComponent } from './pages/projects/valocity-executive-summary/valocity-executive-summary.component';
 import { MidnightMysteriesComponent } from './pages/projects/midnight-mysteries/midnight-mysteries.component';
 import { OneWayWellingtonComponent } from './pages/projects/one-way-wellington/one-way-wellington.component';
+import { ValocityDashboardComponent } from './pages/projects/valocity-dashboard/valocity-dashboard.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: 'valocity-connect',
         component: ValocityGlobalComponent,
         title: 'Louis Earl | Valocity Connect',
+      },
+      {
+        path: 'valocity-dashboard',
+        component: ValocityDashboardComponent,
+        title: 'Louis Earl | Valocity Dashboard',
       },
       {
         path: 'valocity-executive-summary',

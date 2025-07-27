@@ -10,10 +10,20 @@ export const projects: { [key in ProjectNames]: Project } = {
     logline: 'A dynamic form builder that simplifies property inspections.',
     route: 'valocity-connect',
     heroImage: 'global-hero.webp',
-    nextUp: ProjectNames.ValocityOnsite,
+    nextUp: ProjectNames.ValocityDashboard,
     description:
       'Embracing my role as a hybrid developer/designer, I jump between designing feature-rich interfaces in Figma, to writing beautiful, well tested code in Angular.',
     categories: [ProjectCategories.Design, ProjectCategories.Development],
+  },
+  valocityDashboard: {
+    title: 'Valocity Dashboard',
+    logline: 'A dashboard overhaul that delivers insights at a glance.',
+    route: 'valocity-dashboard',
+    heroImage: 'dashboard-hero.webp',
+    nextUp: ProjectNames.ValocityOnsite,
+    description:
+      'I led the frontend development of a dashboard that helps lenders track their valuation orders.',
+    categories: [ProjectCategories.Development],
   },
   valocityOnsite: {
     title: 'Valocity Onsite',
