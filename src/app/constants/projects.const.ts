@@ -9,6 +9,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'Valocity Connect',
     logline: 'A dynamic form builder that simplifies property inspections.',
     route: 'valocity-connect',
+    thumbnail: 'thumbs/valocity-connect.webp',
     heroImage: 'global-hero.webp',
     nextUp: ProjectNames.ValocityDashboard,
     description:
@@ -19,7 +20,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'Valocity Dashboard',
     logline: 'A dashboard overhaul that delivers insights at a glance.',
     route: 'valocity-dashboard',
-    heroImage: 'dashboard-hero.webp',
+    heroImage: '',
     nextUp: ProjectNames.ValocityOnsite,
     description:
       'I led the frontend development of a dashboard that helps lenders track their valuation orders.',
@@ -29,6 +30,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'Valocity Onsite',
     logline: 'An app helping property valuations go paperless.',
     route: 'valocity-onsite',
+    thumbnail: 'thumbs/valocity-onsite.webp',
     heroImage: 'onsite-hero.webp',
     nextUp: ProjectNames.ValocityExecutiveSummary,
     description:
@@ -39,6 +41,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'Valocity Executive Summary',
     logline: 'A report that enables lightning-fast lending decisions.',
     route: 'valocity-executive-summary',
+    thumbnail: 'thumbs/valocity-executive-summary.webp',
     heroImage: 'executive-summary-hero.png',
     nextUp: ProjectNames.MidnightMysteries,
     description:
@@ -49,6 +52,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'Midnight Mysteries',
     logline: 'A multiplayer murder game that turns friends into suspects.',
     route: 'midnight-mysteries',
+    thumbnail: 'thumbs/midnight-mysteries.webp',
     heroImage: 'midnight-mysteries.png',
     nextUp: ProjectNames.OneWayWellington,
     description:
@@ -59,6 +63,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'One Way Wellington',
     logline: "A spaceship building game that's out of this world.",
     route: 'one-way-wellington',
+    thumbnail: 'thumbs/one-way-wellington.webp',
     heroImage: 'oww-poster.jpg',
     nextUp: ProjectNames.ValocityGlobal,
     description:

@@ -1,27 +1,29 @@
-# PortfolioNeon
+# louis-earl.github.io
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+Source for [louis-earl.github.io](https://louis-earl.github.io), the portfolio of Louis Earl, a front-end engineer and UI/UX designer in Melbourne.
 
-## Development server
+Built with Angular 21: standalone components, the built-in control flow, signals and lazy-loaded case study routes. The visual language is a "modern blueprint": white paper with a faint drafting grid, blueprint-blue panels, and line drawings standing in for screenshots that can't be shown publicly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development
 
-## Code scaffolding
+```bash
+npm ci
+npm start          # dev server on http://localhost:4200
+npm run build      # production build in dist/portfolio-neon/browser
+npm test           # unit tests (Karma + Jasmine)
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run the tests headless (for example in CI or a container), use `npx ng test --watch=false --browsers=ChromeHeadlessCI`.
 
-## Build
+## Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `src/app/pages/homepage` – the homepage: hero, highlights, selected work, about and contact.
+- `src/app/components/layer-stack` – the interactive exploded "design / front end / back end" stack in the hero.
+- `src/app/components/blueprint-sketch` – line-drawn screens used on the case study cards.
+- `src/app/constants/featured-work.const.ts` – content for the featured case studies.
+- `src/app/pages/projects` – the individual case study pages.
+- `src/styles` – design tokens (colours, type) and shared layout styles, including the blueprint grid backgrounds.
 
-## Running unit tests
+## Deployment
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pushing a `release/**` branch runs the GitHub Actions workflow, which builds the app and publishes it to the `gh-pages` branch.

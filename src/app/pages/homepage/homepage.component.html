@@ -1,45 +1,87 @@
-<section class="full-height">
-  <app-hero></app-hero>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="paper paper--fade-out">
+  <app-site-header />
+  <main id="main">
+    <app-hero />
+  </main>
+</div>
+
+<section class="container highlights" aria-label="Highlights">
+  @for (highlight of highlights; track highlight.value) {
+    <div class="highlight">
+      <p class="highlight__value">{{ highlight.value }}</p>
+      <p class="highlight__label">{{ highlight.label }}</p>
+    </div>
+  }
 </section>
 
-<section class="bg--light">
-  <div class="wave-container">
-    <div class="wave"></div>
+<section id="work" class="container work" aria-labelledby="work-title">
+  <h2 id="work-title">Selected plans</h2>
+  <p class="work__intro">Three projects, each drawn across all three layers.</p>
+
+  <div class="work__grid">
+    @for (work of featuredWork; track work.title; let first = $first) {
+      <article class="case" [class.case--wide]="first">
+        <app-blueprint-sketch
+          class="case__sketch"
+          [variant]="work.sketch"
+          [label]="work.sketchLabel"
+          [caption]="work.sketchCaption"
+        />
+        <div class="case__body">
+          <ul class="case__tags" aria-label="Focus areas">
+            @for (tag of work.tags; track tag) {
+              <li class="chip">{{ tag }}</li>
+            }
+          </ul>
+          <h3>{{ work.title }}</h3>
+          <p class="case__years mono">{{ work.years }}</p>
+          <p class="case__summary">{{ work.summary }}</p>
+          @if (work.route) {
+            <a class="case__link" [routerLink]="work.route">
+              Open the plans <span aria-hidden="true">→</span>
+            </a>
+          } @else {
+            <span class="case__soon mono">Full case study coming soon</span>
+          }
+        </div>
+      </article>
+    }
   </div>
-  <div class="standard-container">
-    <app-about></app-about>
-  </div>
+
+  <h3 class="more__title">More work</h3>
+  <ul class="more">
+    @for (project of moreWork; track project.route) {
+      <li>
+        <a class="more__item" [routerLink]="'/projects/' + project.route">
+          <img
+            [src]="'assets/images/' + project.thumbnail"
+            alt=""
+            loading="lazy"
+            width="120"
+            height="88"
+          />
+          <span>
+            <strong>{{ project.title }}</strong>
+            <span>{{ project.logline }}</span>
+          </span>
+        </a>
+      </li>
+    }
+  </ul>
 </section>
 
-<section id="my-projects">
-  <div class="standard-container">
-    <h2>My Projects</h2>
-    <p>
-      A collection of my favourite creations from the past
-      {{ currentYear - 2019 }} years.
-    </p>
-    <app-projects-list></app-projects-list>
-  </div>
+<section id="about" class="blueprint" aria-labelledby="about-title">
+  <app-about />
 </section>
 
-<section class="bg--light">
-  <div class="wave-container">
-    <div class="wave"></div>
-  </div>
-  <div class="standard-container">
-    <app-skills></app-skills>
-  </div>
-  <div class="wave-container reverse">
-    <div class="wave"></div>
+<section id="contact" class="paper paper--fade-in" aria-label="Contact">
+  <div class="container contact-wrap">
+    <app-contact />
+    <footer class="footer mono">
+      Drawn by L. Earl · Built with Angular 21 and signals · Rev 5.0 ·
+      {{ currentYear }}
+    </footer>
   </div>
 </section>
-
-<section id="contact">
-  <div class="standard-container">
-    <app-contact></app-contact>
-  </div>
-</section>
-
-<footer>
-  <p>Designed & Developed by Louis Earl {{ currentYear }}</p>
-</footer>

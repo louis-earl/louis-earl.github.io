@@ -1,20 +1,19 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent {
-  copySuccess = false;
+  readonly copySuccess = signal(false);
 
   copyEmail() {
     const email = 'louis.earl.14@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
-      this.copySuccess = true;
-      setTimeout(() => {
-        this.copySuccess = false;
-      }, 2000);
+      this.copySuccess.set(true);
+      setTimeout(() => this.copySuccess.set(false), 2000);
     });
   }
 }

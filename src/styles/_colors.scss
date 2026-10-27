@@ -1,11 +1,28 @@
 :root {
-    --background: #011F23;
-    --on-background: #fefefe;
-    --surface: #014E56;
-    --surface-transparent: #02869233;
-    --surface-transparent-neutral: #ffffff28;
-    --on-surface: #fefefe;
-    --primary: #c92447;
-    --on-primary: #ffffff;
-    --emphasis: #ffb2b7;
+  // Ink and paper
+  --background: #ffffff;
+  --on-background: #0b1b33;
+  --muted: #3b4b66;
+  --border: #dce5f5;
+  --border-strong: #c7d5ee;
+
+  // Surfaces
+  --surface: #f4f7fd;
+  --on-surface: #0b1b33;
+  --surface-transparent: #1f5fd10f;
+  --surface-transparent-neutral: #f4f7fd;
+  --surface-inverse: #0b1b33;
+  --on-surface-inverse: #ffffff;
+
+  // Blueprint
+  --primary: #1f5fd1;
+  --on-primary: #ffffff;
+  --primary-tint: #eaf1fd;
+  --on-primary-muted: #eaf1fd;
+  --emphasis: #1a55c4;
+  --emphasis-hover: #123e91;
+
+  // Grid lines
+  --grid-line: rgba(31, 95, 209, 0.06);
+  --grid-line-on-primary: rgba(255, 255, 255, 0.14);
 }

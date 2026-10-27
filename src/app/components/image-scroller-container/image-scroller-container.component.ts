@@ -26,7 +26,10 @@ export class ImageScrollerContainerComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.checkActiveImage();
     this.segmentElements = this.getSegmentElements();
-    this.imageScrollerService.setActiveImage(this.getFallbackImage());
+    const fallbackImage = this.getFallbackImage();
+    if (fallbackImage) {
+      this.imageScrollerService.setActiveImage(fallbackImage);
+    }
     this.observeBreakpoint();
   }
 
@@ -69,8 +72,11 @@ export class ImageScrollerContainerComponent implements AfterViewInit {
     return activeImage;
   }
 
-  getFallbackImage(): ContentImage {
+  getFallbackImage(): ContentImage | null {
     const element = this.segmentElements[0];
+    if (!element) {
+      return null;
+    }
     element.classList.add('active');
     return this.getDataFromElement(element);
   }

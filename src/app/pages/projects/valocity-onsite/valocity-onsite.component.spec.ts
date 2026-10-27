@@ -1,3 +1,4 @@
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ValocityOnsiteComponent } from './valocity-onsite.component';
@@ -8,7 +9,8 @@ describe('ValocityOnsiteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [ValocityOnsiteComponent]
+    imports: [ValocityOnsiteComponent],
+      providers: [provideRouter([])]
 })
     .compileComponents();
   });

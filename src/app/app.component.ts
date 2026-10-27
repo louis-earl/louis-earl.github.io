@@ -1,37 +1,33 @@
 import { Component } from '@angular/core';
-import { ChildrenOutletContexts } from '@angular/router';
+import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';
 import { AnimationEvent } from '@angular/animations';
 import { NavigationService } from './services/navigation.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    animations: [slideInAnimation],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  animations: [slideInAnimation],
+  imports: [RouterOutlet],
 })
 export class AppComponent {
-  title = 'portfolio-neon';
-  
   constructor(
     private contexts: ChildrenOutletContexts,
     private navigation: NavigationService,
   ) {}
 
   getRouteAnimationData() {
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
   }
 
   onAnimationEvent(event: AnimationEvent) {
-    console.log('animation event:', event)
     if (event.toState === 'ProjectsPage') {
-      console.log('going to projects page')
-      document.body.style.setProperty('--projects-page-offset', (-window.scrollY).toString() + 'px')
-    }
-    else if (event.toState === 'HomePage') {
-      console.log('going to home page')
-      console.log(window.scrollY)
+      document.body.style.setProperty(
+        '--projects-page-offset',
+        (-window.scrollY).toString() + 'px',
+      );
     }
   }
-
 }
