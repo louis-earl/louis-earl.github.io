@@ -34,9 +34,19 @@ export class HomepageComponent {
   ].map((name) => projects[name]);
 
   readonly highlights = [
-    { value: '60s → <3s', label: 'load time for users with 1,000+ centres' },
-    { value: 'v16 → v21', label: 'every Angular major, led end to end' },
-    { value: 'Award', label: 'BuildIQ, Cityscape Global 2024' },
+    {
+      value: 'Design to production',
+      label: 'I design it and build it, so nothing gets lost in the handoff.',
+    },
+    {
+      value: 'Built to scale',
+      label: 'Interfaces that stay fast and clear with thousands of records.',
+    },
+    {
+      value: 'Architecture I love',
+      label:
+        'Digging into front-end structure, where design meets problem solving.',
+    },
   ];
 
   readonly currentYear = new Date().getFullYear();

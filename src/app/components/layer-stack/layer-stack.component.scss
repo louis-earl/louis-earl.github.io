@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .scene {
@@ -12,9 +11,24 @@
   align-items: center;
   justify-content: center;
   perspective: 1400px;
+  // Reset the global button styles; the whole diagram is the click target.
+  min-height: 0;
+  padding: 0;
+  border-radius: 24px;
+  background: none;
+  cursor: pointer;
+
+  &:active {
+    transform: none;
+  }
+
+  &:hover .layer--design {
+    --lift: 12px;
+  }
 }
 
 .stack {
+  display: block;
   position: relative;
   width: 280px;
   height: 280px;
@@ -31,6 +45,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-align: left;
+  transform: translateZ(calc(var(--z, 0px) + var(--lift, 0px)));
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &__label {
@@ -98,18 +114,6 @@
     border: 2px solid var(--primary);
     background: rgba(234, 241, 253, 0.55);
   }
-}
-
-.toggle {
-  min-height: 44px;
-  padding: 0 1.125rem;
-  border-radius: 999px;
-  background: var(--background);
-  color: var(--emphasis);
-  box-shadow: inset 0 0 0 1px var(--border-strong);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 400;
 }
 
 @media (max-width: 600px) {

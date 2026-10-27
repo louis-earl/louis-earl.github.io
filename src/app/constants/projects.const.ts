@@ -23,7 +23,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     heroImage: '',
     nextUp: ProjectNames.ValocityOnsite,
     description:
-      'I led the frontend development of a dashboard that helps lenders track their valuation orders.',
+      'I led the front-end development of a dashboard that helps lenders track their valuation orders.',
     categories: [ProjectCategories.Development],
   },
   valocityOnsite: {
