@@ -17,8 +17,8 @@
 </section>
 
 <section id="work" class="container work" aria-labelledby="work-title">
-  <h2 id="work-title">Selected plans</h2>
-  <p class="work__intro">Three projects, each drawn across all three layers.</p>
+  <h2 id="work-title">Selected work</h2>
+  <p class="work__intro">A few projects I'm proud of, and the thinking behind them.</p>
 
   <div class="work__grid">
     @for (work of featuredWork; track work.title; let first = $first) {
@@ -40,7 +40,7 @@
           <p class="case__summary">{{ work.summary }}</p>
           @if (work.route) {
             <a class="case__link" [routerLink]="work.route">
-              Open the plans <span aria-hidden="true">→</span>
+              Read the case study <span aria-hidden="true">→</span>
             </a>
           } @else {
             <span class="case__soon mono">Full case study coming soon</span>

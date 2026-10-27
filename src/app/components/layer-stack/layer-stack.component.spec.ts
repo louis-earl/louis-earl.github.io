@@ -20,15 +20,14 @@ describe('LayerStackComponent', () => {
     expect(component.topOffset()).toBe(160);
   });
 
-  it('assembles the stack when the toggle is pressed', () => {
+  it('assembles the stack when the diagram is pressed', () => {
     const button: HTMLButtonElement =
-      fixture.nativeElement.querySelector('button');
+      fixture.nativeElement.querySelector('button.scene');
     button.click();
     fixture.detectChanges();
 
     expect(component.exploded()).toBeFalse();
     expect(component.topOffset()).toBe(24);
     expect(button.getAttribute('aria-pressed')).toBe('false');
-    expect(button.textContent?.trim()).toBe('Explode the stack');
   });
 });

@@ -1,40 +1,34 @@
-<div
+<button
+  type="button"
   class="scene"
-  role="img"
-  aria-label="An exploded diagram of three stacked layers: design, front end and back end"
+  aria-label="Diagram of three stacked layers: design, front end and back end. Press to assemble or explode it"
+  [attr.aria-pressed]="exploded()"
+  (click)="toggle()"
 >
-  <div class="stack" [style.transform]="stackTransform()">
-    <div class="layer layer--back blueprint blueprint--fine">
+  <span class="stack" [style.transform]="stackTransform()">
+    <span class="layer layer--back blueprint blueprint--fine">
       <span class="layer__label">03 Back end · .NET · SQL</span>
       <span class="layer__tables">
         <span></span><span></span><span></span>
       </span>
-    </div>
-    <div
+    </span>
+    <span
       class="layer layer--front"
-      [style.transform]="'translateZ(' + middleOffset() + 'px)'"
+      [style.--z]="middleOffset() + 'px'"
     >
       <span class="layer__label">02 Front end · Angular 21</span>
       <span class="layer__bar layer__bar--solid"></span>
       <span class="layer__row"><span></span><span></span></span>
       <span class="layer__bar"></span>
-    </div>
-    <div
+    </span>
+    <span
       class="layer layer--design"
-      [style.transform]="'translateZ(' + topOffset() + 'px)'"
+      [style.--z]="topOffset() + 'px'"
     >
       <span class="layer__label">01 Design · Figma</span>
       <span class="layer__bar"></span>
       <span class="layer__row"><span></span><span></span></span>
       <span class="layer__bar"></span>
-    </div>
-  </div>
-</div>
-<button
-  type="button"
-  class="toggle"
-  [attr.aria-pressed]="exploded()"
-  (click)="toggle()"
->
-  {{ exploded() ? 'Assemble the stack' : 'Explode the stack' }}
+    </span>
+  </span>
 </button>
