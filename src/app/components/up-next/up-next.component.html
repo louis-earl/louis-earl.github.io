@@ -8,8 +8,7 @@
             </span>
         </a>
     </div>
-    <img 
-        class="up-next__image"
-        [src]="'../../assets/images/' + (upNext$ | async)?.heroImage"
-    />
+    @if ((upNext$ | async)?.heroImage; as heroImage) {
+        <img class="up-next__image" [src]="'assets/images/' + heroImage" alt="" />
+    }
 </div>

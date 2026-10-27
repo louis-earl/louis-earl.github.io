@@ -3,6 +3,7 @@
   margin: 2rem -2rem 0;
   padding: 2rem;
   border-radius: 2rem;
+  border: 1px solid var(--border);
   display: flex;
   gap: 2rem;
   &__content {
@@ -16,7 +17,7 @@
     opacity: 0.8;
   }
   &__logline {
-    color: var(--on-primary);
+    color: var(--emphasis);
     font-size: var(--body-large);
     font-weight: 700;
     text-decoration: none;

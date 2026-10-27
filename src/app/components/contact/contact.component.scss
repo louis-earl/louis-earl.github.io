@@ -1,60 +1,49 @@
 .contact {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
   gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3.5rem;
+  border-radius: 40px;
+  background: var(--surface-inverse);
+  color: var(--on-surface-inverse);
 
-  .contact__details {
-    flex: 1.2 1 250px;
-  }
-
-  .social {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-block-start: 2rem;
-    .social-button {
-      padding-inline: 0;
-    }
-      img {
-        width: 2rem;
-      }
-    
-    .social__title {
-      font-size: var(--body-medium);
-      font-weight: 600;
-    }
-  }
-  .email-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-    margin-block: 4rem;
-    .email {
-      font-size: var(--headline-3);
-      font-weight: 400;
-      color: var(--emphasis);
-      text-decoration: underline;
+  &__text {
+    flex: 1 1 420px;
+    min-width: 0;
+    p {
+      margin: 0;
+      color: var(--border-strong);
     }
   }
 
-  .image-container {
-    flex: 1 1 200px;
+  &__actions {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 50%;
-    }
+    flex-direction: column;
+    gap: 0.75rem;
   }
 }
 
-@media (max-width: 768px) {
-  .contact .email-container .email {
-    font-size: var(--body-large);
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+}
+
+.email {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 2rem 1.5rem;
+    border-radius: 28px;
+  }
+  .email .button.inverse {
+    flex: 1;
+    font-size: 14px;
+    padding-inline: 1rem;
   }
 }

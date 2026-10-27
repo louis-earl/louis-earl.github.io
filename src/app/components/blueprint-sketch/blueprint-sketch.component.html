@@ -1,0 +1,45 @@
+<div class="screen" aria-hidden="true">
+  <div class="screen__bar"><span></span><span></span><span></span></div>
+  @switch (variant()) {
+    @case ('admin') {
+      <div class="admin">
+        <div class="admin__tree">
+          @for (row of rows; track row) {
+            <span [style.margin-left.px]="(row % 3) * 14"></span>
+          }
+        </div>
+        <div class="admin__main">
+          <span class="search">Search centres…</span>
+          @for (row of rows; track row) {
+            <span class="check-row"><i></i><b></b></span>
+          }
+        </div>
+      </div>
+    }
+    @case ('grid') {
+      <div class="grid">
+        <div class="grid__filters"><span></span><span></span><span></span></div>
+        <div class="grid__head"><span></span><span></span><span></span><span></span></div>
+        @for (row of rows; track row) {
+          <div class="grid__row"><span></span><span></span><span></span><span></span></div>
+        }
+      </div>
+    }
+    @case ('form') {
+      <div class="form">
+        <div class="form__steps">
+          @for (step of [1, 2, 3, 4]; track step) {
+            <span [class.done]="step < 3">{{ step }}</span>
+          }
+        </div>
+        <span class="field"></span>
+        <span class="field field--short"></span>
+        <span class="field"></span>
+        <span class="form__button">Next</span>
+      </div>
+    }
+  }
+</div>
+@if (caption()) {
+  <span class="caption">{{ caption() }}</span>
+}

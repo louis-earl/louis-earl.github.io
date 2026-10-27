@@ -1,40 +1,42 @@
 <div class="contact">
-  <div class="image-container">
-    <img src="../../../assets/images/louis-profile-1.webp" alt="An illustration of a person holding a coffee cup, symbolizing connection and collaboration" />
+  <div class="contact__text">
+    <h2>Let's draw something up.</h2>
+    <p>Open to senior front-end roles in Melbourne.</p>
   </div>
-  <div class="contact__details">
-    <h2>Let's Connect Over a Coffee</h2>
-
-    <p>
-      I'm eager to collaborate on the next cool thing, whether that be design,
-      development, or a bit of both! Let's get in touch.
-    </p>
-
-    <div class="email-container">
-      <a href="mailto:louis.earl.14@gmail.com" class="tooltip">
-        <span class="email">louis.earl.14&#64;gmail.com</span>
-        <span class="tooltip-text">Open in mail</span>
+  <div class="contact__actions">
+    <div class="email">
+      <a class="button inverse" href="mailto:louis.earl.14@gmail.com">
+        louis.earl.14&#64;gmail.com
       </a>
-
-      <button class="button icon-button tooltip" (click)="copyEmail()">
-        @if (copySuccess) {
-          <span class="material-icons-round"> check </span>
-        } @else {
-          <span class="material-icons-round"> content_copy </span>
-        }
-        <span class="tooltip-text">Copy to clipboard</span>
+      <button
+        type="button"
+        class="button icon-button outline-inverse"
+        [attr.aria-label]="copySuccess() ? 'Email copied' : 'Copy email address'"
+        (click)="copyEmail()"
+      >
+        <span class="material-icons-round" aria-hidden="true">
+          {{ copySuccess() ? 'check' : 'content_copy' }}
+        </span>
       </button>
     </div>
-
-    <div class="social">
-      <a class="button social-button" href="https://www.linkedin.com/in/louis-earl/" target="_blank" rel="noopener noreferrer">
-        <img src="../../../assets/social-linkedin.png" />
-        <span class="social__title">LinkedIn</span>
-      </a>
-      <a class="button social-button" href="https://github.com/louis-earl" target="_blank" rel="noopener noreferrer">
-        <img src="../../../assets/social-github.png" />
-        <span class="social__title">GitHub</span>
-      </a>
+    <div class="button__group">
+      <a
+        class="button outline-inverse"
+        href="https://www.linkedin.com/in/louis-earl/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >LinkedIn</a
+      >
+      <a
+        class="button outline-inverse"
+        href="https://github.com/louis-earl"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
     </div>
   </div>
+  <span class="visually-hidden" aria-live="polite">
+    {{ copySuccess() ? 'Email address copied to clipboard' : '' }}
+  </span>
 </div>

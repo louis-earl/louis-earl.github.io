@@ -3,6 +3,8 @@ export interface Project {
   logline: string;
   route: string;
   heroImage: string;
+  /** Small 240×176 image for project lists, under assets/images/thumbs. */
+  thumbnail?: string;
   nextUp: ProjectNames;
   description: string;
   categories: ProjectCategories[];

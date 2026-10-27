@@ -19,7 +19,7 @@
   transition: background-color 0.3s ease-in-out;
   will-change: background-color, box-shadow;
   &.scrolled {
-    background-color: var(--surface);
+    background-color: var(--background);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
@@ -66,12 +66,9 @@ header {
 }
 
 .contact-container {
-  background-color: var(--surface-transparent-neutral);
-  padding: 8rem 4rem;
-  border-radius: 2rem 2rem 0 0;
-  width: calc(100% - 12rem);
-  max-width: 1104px;
-  margin: 2rem 0 0;
+  width: calc(100% - 4rem);
+  max-width: 1200px;
+  margin: 6rem 0 4rem;
 }
 
 @media (max-width: 1000px) {
@@ -81,12 +78,6 @@ header {
   .gallery-container {
     padding: 1rem;
     border-radius: 1rem;
-  }
-  .contact-container {
-    margin-inline-end: 1rem;
-    padding: 4rem 2rem;
-    border-radius: 1rem 1rem 0 0;
-    width: calc(100% - 9rem);
   }
 }
 
@@ -107,11 +98,6 @@ header {
     display: none;
   }
 
-  .contact-container {
-    width: calc(100% - 6rem);
-    margin-inline-end: 0;
-    background-color: transparent;
-  }
 }
 
 @media (max-width: 420px) {
@@ -121,7 +107,6 @@ header {
     width: calc(100% - 3rem);
   }
   .contact-container {
-    width: calc(100% - 3rem);
-    padding: 1.5rem 0.75rem;
+    width: calc(100% - 2rem);
   }
 }

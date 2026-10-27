@@ -1,3 +1,4 @@
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ValocityGlobalComponent } from './valocity-global.component';
@@ -8,7 +9,8 @@ describe('ValocityGlobalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [ValocityGlobalComponent]
+    imports: [ValocityGlobalComponent],
+      providers: [provideRouter([])]
 })
     .compileComponents();
   });
