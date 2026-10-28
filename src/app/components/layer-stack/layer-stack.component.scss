@@ -46,7 +46,10 @@
   flex-direction: column;
   gap: 10px;
   text-align: left;
-  transform: translateZ(calc(var(--z, 0px) + var(--lift, 0px)));
+  // --z-scale spreads the layers further apart on small screens.
+  transform: translateZ(
+    calc(var(--z, 0px) * var(--z-scale, 1) + var(--lift, 0px))
+  );
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &__label {
@@ -118,11 +121,24 @@
 
 @media (max-width: 600px) {
   .scene {
-    height: 380px;
+    height: 420px;
   }
   .stack {
     width: 220px;
     height: 220px;
+  }
+  .layer {
+    --z-scale: 1.15;
+    padding: 16px;
+
+    &__label {
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    // Only the layer names fit before the next layer up covers the label.
+    &__tech {
+      display: none;
+    }
   }
 }
 

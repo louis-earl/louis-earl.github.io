@@ -1,0 +1,62 @@
+.me {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  padding-block: 6rem;
+
+  &__text {
+    flex: 999 1 480px;
+    min-width: 0;
+
+    p {
+      color: var(--on-primary-muted);
+      margin: 0 0 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .kicker {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #cfe0fa;
+    }
+  }
+}
+
+h2 {
+  margin: 0 0 1rem;
+}
+
+.portrait {
+  flex: none;
+  position: relative;
+  width: 240px;
+  height: 300px;
+  margin: 0 22px 22px 0;
+
+  &__plate {
+    position: absolute;
+    inset: 0;
+    transform: translate(22px, 22px);
+    border-radius: 28px;
+    border: 2px dashed var(--on-primary);
+    background-color: var(--emphasis-hover);
+  }
+
+  &__photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 28px;
+    background: var(--background);
+  }
+}
