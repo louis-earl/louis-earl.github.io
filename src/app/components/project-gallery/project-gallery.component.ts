@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ContentImage } from 'src/app/models/project.model';
 import { ImageScrollerService } from 'src/app/services/image-scroller.service';
 
@@ -9,7 +9,8 @@ import { ImageScrollerService } from 'src/app/services/image-scroller.service';
 })
 export class ProjectGalleryComponent implements OnInit {
   activeImageChanges$ = this.imageScrollerService.activeImage$;
-  activeImage: ContentImage | null = null;
+  // A signal, so the image load callback (outside any template event) still refreshes the view.
+  activeImage = signal<ContentImage | null>(null);
 
   constructor(private imageScrollerService: ImageScrollerService) {}
 
@@ -18,10 +19,10 @@ export class ProjectGalleryComponent implements OnInit {
       const img = new Image();
       img.src = '../../assets/images/' + image.fileName;
       img.onload = () => {
-        this.activeImage = {
+        this.activeImage.set({
           fileName: image.fileName,
           objectFit: image.objectFit,
-        };
+        });
       };
     });
   }

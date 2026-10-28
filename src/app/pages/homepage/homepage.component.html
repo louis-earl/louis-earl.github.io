@@ -26,8 +26,7 @@
               <li class="chip">{{ tag }}</li>
             }
           </ul>
-          <h3>{{ work.title }}</h3>
-          <p class="case__years mono">{{ work.years }}</p>
+          <h3>{{ work.logline }}</h3>
           <p class="case__summary">{{ work.summary }}</p>
           @if (work.route) {
             <a class="case__link" [routerLink]="work.route">
@@ -53,10 +52,7 @@
             width="120"
             height="88"
           />
-          <span>
-            <strong>{{ project.title }}</strong>
-            <span>{{ project.logline }}</span>
-          </span>
+          <strong>{{ project.logline }}</strong>
         </a>
       </li>
     }

@@ -46,13 +46,8 @@
   }
 
   h3 {
-    margin: 0 0 0.25rem;
-  }
-
-  &__years {
     margin: 0 0 0.75rem;
-    font-size: 13px;
-    color: var(--muted);
+    text-wrap: balance;
   }
 
   &__summary {
@@ -88,7 +83,7 @@
     }
 
     h3 {
-      font-size: 32px;
+      font-size: clamp(24px, 2vw + 16px, 28px);
     }
   }
 }
@@ -139,13 +134,8 @@
 
     strong {
       display: block;
-    }
-
-    span span {
-      display: block;
-      color: var(--muted);
-      font-size: var(--body-small);
-      line-height: 1.4;
+      line-height: 1.35;
+      text-wrap: balance;
     }
   }
 }

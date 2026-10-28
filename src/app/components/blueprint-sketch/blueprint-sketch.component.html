@@ -2,6 +2,11 @@
   <div class="screen__bar"><span></span><span></span><span></span></div>
   @switch (variant()) {
     @case ('admin') {
+      <div class="tabs">
+        @for (tab of [1, 2, 3, 4]; track tab) {
+          <span [class.active]="tab === 3"></span>
+        }
+      </div>
       <div class="admin">
         <div class="admin__tree">
           @for (row of rows; track row) {
@@ -9,7 +14,7 @@
           }
         </div>
         <div class="admin__main">
-          <span class="search">Search centres…</span>
+          <span class="search">Search<span class="search__more"> centres</span>…</span>
           @for (row of rows; track row) {
             <span class="check-row"><i></i><b></b></span>
           }

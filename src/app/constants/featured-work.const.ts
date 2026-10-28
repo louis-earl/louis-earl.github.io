@@ -2,7 +2,8 @@ import { BlueprintSketchVariant } from '../components/blueprint-sketch/blueprint
 
 export interface FeaturedWork {
   title: string;
-  years: string;
+  /** What I did, in one catchy line. Leads the card so it reads without knowing the product. */
+  logline: string;
   summary: string;
   tags: string[];
   sketch: BlueprintSketchVariant;
@@ -14,19 +15,20 @@ export interface FeaturedWork {
 
 export const featuredWork: FeaturedWork[] = [
   {
-    title: 'Access management overhaul',
-    years: '2026',
+    title: 'User management overhaul',
+    logline: 'A user management rebuild that loads in seconds, not minutes.',
     summary:
-      'Owned end to end for enterprise banks, from requirements to API. I split a heavy endpoint into lazy-loaded APIs, optimised the queries behind it, and swapped nested dropdowns for typeahead search, infinite scroll and bulk selection.',
+      'Owned end to end for enterprise banks, from requirements to API. I broke a long, ever-growing form into four focused tabs, and rebuilt the slowest one, centre access, with lazy-loaded APIs, typeahead search across a parent/child hierarchy, and bulk selection.',
     tags: ['UX', 'Angular', '.NET'],
     sketch: 'admin',
     sketchLabel:
-      'Line drawing of an admin screen with an organisation tree, a search box and a selectable list',
+      'Line drawing of a user profile screen with four tabs, an organisation tree, a search box and a selectable list',
     sketchCaption: '~60s → under 3s',
+    route: '/projects/user-management',
   },
   {
     title: 'Valuation orders dashboard',
-    years: '2024–2025',
+    logline: 'A dashboard overhaul that delivers insights at a glance.',
     summary:
       'The workspace lenders use to track every valuation order. I set the front-end architecture my team adopted and built a configurable grid that stays fast across thousands of orders.',
     tags: ['Architecture', 'RxJS', 'Performance'],
@@ -37,7 +39,7 @@ export const featuredWork: FeaturedWork[] = [
   },
   {
     title: 'BuildIQ',
-    years: '2023–2024',
+    logline: 'A dynamic form builder that simplifies property inspections.',
     summary:
       'Award-winning construction lending, built on a modular Angular form framework that now runs valuations in India and the UAE.',
     tags: ['Design + build', 'Forms', 'Mobile'],
