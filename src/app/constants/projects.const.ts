@@ -5,6 +5,17 @@ import {
 } from '../models/project.model';
 
 export const projects: { [key in ProjectNames]: Project } = {
+  userManagement: {
+    title: 'User management overhaul',
+    logline: 'A user management rebuild that loads in seconds, not minutes.',
+    route: 'user-management',
+    thumbnail: 'user-management/placeholder.svg',
+    heroImage: 'user-management/placeholder.svg',
+    nextUp: ProjectNames.ValocityGlobal,
+    description:
+      'I redesigned and rebuilt the Create and Edit User pages that enterprise banks use to manage their users’ full profiles, from the first requirements through to the API. A project that pulled in all three layers: design, front end and back end.',
+    categories: [ProjectCategories.Development],
+  },
   valocityGlobal: {
     title: 'Valocity Connect',
     logline: 'A dynamic form builder that simplifies property inspections.',
@@ -65,7 +76,7 @@ export const projects: { [key in ProjectNames]: Project } = {
     route: 'one-way-wellington',
     thumbnail: 'thumbs/one-way-wellington.webp',
     heroImage: 'oww-poster.jpg',
-    nextUp: ProjectNames.ValocityGlobal,
+    nextUp: ProjectNames.UserManagement,
     description:
       'I created a spaceship building game about transporting creative talent across the Milky Way to Wellington, the ‘Coolest Little Capital’.',
     categories: [ProjectCategories.Development, ProjectCategories.Game],

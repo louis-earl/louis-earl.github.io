@@ -18,6 +18,7 @@ export interface ContentImage {
 export enum ProjectNames {
   MidnightMysteries = 'midnightMysteries',
   OneWayWellington = 'oneWayWellington',
+  UserManagement = 'userManagement',
   ValocityDashboard = 'valocityDashboard',
   ValocityExecutiveSummary = 'valocityExecutiveSummary',
   ValocityGlobal = 'valocityGlobal',

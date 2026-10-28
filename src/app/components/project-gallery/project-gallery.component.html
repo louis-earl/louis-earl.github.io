@@ -1,4 +1,4 @@
-@if (activeImage; as activeImage) {
+@if (activeImage(); as activeImage) {
 <img
   [src]="'../../assets/images/' + activeImage.fileName"
   [style.objectFit]="activeImage.objectFit"

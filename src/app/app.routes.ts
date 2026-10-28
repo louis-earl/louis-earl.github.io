@@ -18,6 +18,14 @@ export const routes: Routes = [
     data: { animation: 'ProjectsPage' },
     children: [
       {
+        path: 'user-management',
+        loadComponent: () =>
+          import(
+            './pages/projects/user-management/user-management.component'
+          ).then((m) => m.UserManagementComponent),
+        title: 'Louis Earl | User management overhaul',
+      },
+      {
         path: 'valocity-onsite',
         loadComponent: () =>
           import(
