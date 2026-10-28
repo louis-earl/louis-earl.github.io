@@ -1,52 +1,83 @@
 .about {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
   padding-block: 6rem;
 
-  &__text {
-    flex: 999 1 480px;
-    min-width: 0;
-    p {
-      color: var(--on-primary-muted);
-      margin: 0 0 1rem;
-      &:last-of-type {
-        margin-bottom: 1.5rem;
-      }
-    }
+  p {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .kicker {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--emphasis);
   }
 }
 
 h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
 }
 
-.portrait {
-  flex: none;
-  position: relative;
-  width: 240px;
-  height: 300px;
-  margin: 0 22px 22px 0;
+.layers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  &__plate {
-    position: absolute;
-    inset: 0;
-    transform: translate(22px, 22px);
-    border-radius: 28px;
-    border: 2px dashed var(--on-primary);
-    background-color: var(--emphasis-hover);
+.layer {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+
+  // Dashed dividers only between plain rows; the front-end card has its own outline.
+  &:not(&--primary) + &:not(&--primary) {
+    border-top: 1.5px dashed var(--border-strong);
   }
 
-  &__photo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 28px;
+  &__label {
+    margin: 0;
+    padding-top: 0.2em;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &.layer--primary {
+    margin-block: 0.5rem;
+    border: 1.5px solid var(--primary);
+    border-radius: 24px;
     background: var(--background);
+    box-shadow: 0 16px 40px rgba(31, 95, 209, 0.14);
+  }
+  &--primary {
+    .layer__label {
+      color: var(--emphasis);
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--on-background);
+    }
+
+    .skills li {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
   }
 }
 
@@ -60,10 +91,30 @@ h2 {
 
   li {
     margin: 0;
-    padding: 0.5rem 0.875rem;
+    padding: 0.375rem 0.875rem;
     border-radius: 999px;
-    background: var(--background);
+    background: #eef3fc;
     color: var(--on-background);
     font-size: var(--body-small);
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-block: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .layer {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+
+    &--primary {
+      padding: 1.25rem;
+    }
   }
 }

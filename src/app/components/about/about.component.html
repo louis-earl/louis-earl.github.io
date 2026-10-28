@@ -1,35 +1,26 @@
 <div class="container about">
-  <div class="portrait">
-    <span class="portrait__plate blueprint blueprint--fine" aria-hidden="true"></span>
-    <img
-      class="portrait__photo"
-      src="assets/portrait.png"
-      alt="Portrait of Louis Earl"
-      width="256"
-      height="384"
-    />
-  </div>
-  <div class="about__text">
+  <div class="about__intro">
+    <p class="kicker">How I work</p>
     <h2 id="about-title">One person, three layers.</h2>
-    <p>
-      I studied creative media production and made video games, then
-      retrained in web development.
+    <p class="about__closing">
+      AI runs through all three, but anyone can prompt. What I bring is the
+      curiosity to ask why, and the judgement to know when the result is
+      actually right.
     </p>
-    <p>
-      Front-end engineering has been my focus ever since, and it's where I go
-      deepest. Along the way I picked up product design, and more recently
-      back-end work, so I can follow a feature from first idea to the API
-      behind it.
-    </p>
-    <p>
-      I use AI across all of it, but anyone can prompt. What I bring is the
-      judgement to know when a result is actually right, from both a
-      designer's and an engineer's side.
-    </p>
-    <ul class="skills" aria-label="Skills">
-      @for (skill of skills; track skill) {
-        <li>{{ skill }}</li>
-      }
-    </ul>
   </div>
+  <ol class="layers" aria-label="Layers">
+    @for (layer of layers; track layer.label) {
+      <li class="layer" [class.layer--primary]="layer.primary">
+        <h3 class="layer__label">{{ layer.label }}</h3>
+        <div class="layer__body">
+          <p>{{ layer.text }}</p>
+          <ul class="skills" [attr.aria-label]="layer.label + ' skills'">
+            @for (skill of layer.skills; track skill) {
+              <li>{{ skill }}</li>
+            }
+          </ul>
+        </div>
+      </li>
+    }
+  </ol>
 </div>

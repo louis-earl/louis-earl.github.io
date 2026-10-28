@@ -17,8 +17,8 @@ export const featuredWork: FeaturedWork[] = [
     title: 'Access management overhaul',
     years: '2026',
     summary:
-      'Owned end to end for enterprise banks, from requirements to API. I split a heavy endpoint into lazy-loaded APIs, tuned the SQL behind it, and swapped nested dropdowns for typeahead search, infinite scroll and bulk selection.',
-    tags: ['UX', 'Angular', '.NET + SQL'],
+      'Owned end to end for enterprise banks, from requirements to API. I split a heavy endpoint into lazy-loaded APIs, optimised the queries behind it, and swapped nested dropdowns for typeahead search, infinite scroll and bulk selection.',
+    tags: ['UX', 'Angular', '.NET'],
     sketch: 'admin',
     sketchLabel:
       'Line drawing of an admin screen with an organisation tree, a search box and a selectable list',

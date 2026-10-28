@@ -7,15 +7,6 @@
   </main>
 </div>
 
-<section class="container highlights" aria-label="Highlights">
-  @for (highlight of highlights; track highlight.value) {
-    <div class="highlight">
-      <p class="highlight__value">{{ highlight.value }}</p>
-      <p class="highlight__label">{{ highlight.label }}</p>
-    </div>
-  }
-</section>
-
 <section id="work" class="container work" aria-labelledby="work-title">
   <h2 id="work-title">Selected work</h2>
   <p class="work__intro">A few projects I'm proud of, and the thinking behind them.</p>
@@ -72,15 +63,19 @@
   </ul>
 </section>
 
-<section id="about" class="blueprint" aria-labelledby="about-title">
+<section id="about" class="paper paper--fade-out" aria-labelledby="about-title">
   <app-about />
+</section>
+
+<section id="me" class="blueprint" aria-labelledby="me-title">
+  <app-off-the-clock />
 </section>
 
 <section id="contact" class="paper paper--fade-in" aria-label="Contact">
   <div class="container contact-wrap">
     <app-contact />
     <footer class="footer mono">
-      Drawn by L. Earl · Built with Angular 21 and signals · Rev 5.0 ·
+      Drawn by L. Earl · Built with Angular 21 · Rev 5.0 ·
       {{ currentYear }}
     </footer>
   </div>
