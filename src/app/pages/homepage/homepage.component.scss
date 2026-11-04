@@ -1,3 +1,8 @@
+// Shared hover for the "Selected work" cards and "More work" items.
+$hover-ease: 0.15s ease;
+$hover-lift: translateY(-2px);
+$hover-shadow: 0 8px 24px rgba(31, 95, 209, 0.1);
+
 .work {
   padding-block: 2rem 6rem;
 
@@ -27,6 +32,32 @@
 
   &__sketch {
     min-height: 280px;
+  }
+
+  &__media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    margin: 0;
+    border-radius: 22px;
+    overflow: hidden;
+
+    &--contain img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+    }
+
+    // Full-bleed images fill the area edge to edge, cropped from the centre.
+    &--cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__body {
@@ -59,6 +90,61 @@
     font-weight: 600;
   }
 
+  // The whole card opens the case study: the link stretches over it, so there's
+  // still only one link per card for keyboards and screen readers.
+  &--link {
+    position: relative;
+    // A transparent border to colour on hover; padding gives back its 1px.
+    padding: calc(1rem - 1px);
+    border: 1px solid transparent;
+    transition:
+      border-color $hover-ease,
+      background-color $hover-ease,
+      transform $hover-ease,
+      box-shadow $hover-ease;
+
+    .case__link::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 32px; // the card's, not the link's
+    }
+
+    // The card draws the focus ring instead, so there aren't two.
+    .case__link:focus-visible {
+      outline: none;
+    }
+
+    .case__arrow {
+      display: inline-block;
+      transition: transform $hover-ease;
+    }
+
+    // Same hover as the "More work" items.
+    &:hover {
+      border-color: var(--primary);
+      transform: $hover-lift;
+      box-shadow: $hover-shadow;
+
+      .case__arrow {
+        transform: translateX(3px);
+      }
+    }
+
+    &:has(.case__link:focus-visible) {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &,
+      &:hover,
+      &:hover .case__arrow {
+        transform: none;
+      }
+    }
+  }
+
   &__soon {
     font-size: 13px;
     color: var(--muted);
@@ -70,7 +156,8 @@
     flex-wrap: wrap;
     gap: 2rem;
 
-    .case__sketch {
+    .case__sketch,
+    .case__media {
       flex: 1 1 460px;
       min-width: 0;
       min-height: 320px;
@@ -115,12 +202,29 @@
     border: 1px solid var(--border);
     color: var(--on-background);
     text-decoration: none;
-    transition: border-color 0.15s ease, background-color 0.15s ease;
+    transition:
+      border-color $hover-ease,
+      background-color $hover-ease,
+      transform $hover-ease,
+      box-shadow $hover-ease;
 
     &:hover {
       color: var(--on-background);
       border-color: var(--primary);
       background: var(--surface);
+      transform: $hover-lift;
+      box-shadow: $hover-shadow;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &:hover {
+        transform: none;
+      }
     }
 
     img {

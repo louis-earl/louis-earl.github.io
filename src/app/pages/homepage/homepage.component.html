@@ -13,13 +13,19 @@
 
   <div class="work__grid">
     @for (work of featuredWork; track work.title; let first = $first) {
-      <article class="case" [class.case--wide]="first">
-        <app-blueprint-sketch
-          class="case__sketch"
-          [variant]="work.sketch"
-          [label]="work.sketchLabel"
-          [caption]="work.sketchCaption"
-        />
+      <article class="case" [class.case--wide]="first" [class.case--link]="work.route">
+        @if (work.image; as image) {
+          <figure class="case__media case__media--{{ image.fit }}">
+            <img [src]="'assets/images/' + image.src" [alt]="image.alt" loading="lazy" />
+          </figure>
+        } @else {
+          <app-blueprint-sketch
+            class="case__sketch"
+            [variant]="work.sketch"
+            [label]="work.sketchLabel"
+            [caption]="work.sketchCaption"
+          />
+        }
         <div class="case__body">
           <ul class="case__tags" aria-label="Focus areas">
             @for (tag of work.tags; track tag) {
@@ -30,7 +36,7 @@
           <p class="case__summary">{{ work.summary }}</p>
           @if (work.route) {
             <a class="case__link" [routerLink]="work.route">
-              Read the case study <span aria-hidden="true">→</span>
+              Read the case study <span class="case__arrow" aria-hidden="true">→</span>
             </a>
           } @else {
             <span class="case__soon mono">Full case study coming soon</span>

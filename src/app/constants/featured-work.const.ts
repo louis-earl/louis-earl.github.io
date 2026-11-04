@@ -9,6 +9,12 @@ export interface FeaturedWork {
   sketch: BlueprintSketchVariant;
   sketchLabel: string;
   sketchCaption?: string;
+  /**
+   * A real image of the product, shown instead of the sketch. Full-bleed images
+   * `cover` the card's image area; cut-out renders on a transparent background
+   * are `contain`ed so nothing is cropped.
+   */
+  image?: { src: string; alt: string; fit: 'cover' | 'contain' };
   /** Route to the full case study, when one exists. */
   route?: string;
 }
@@ -23,6 +29,11 @@ export const featuredWork: FeaturedWork[] = [
     sketch: 'admin',
     sketchLabel:
       'Line drawing of a user profile screen with four tabs, an organisation tree, a search box and a selectable list',
+    image: {
+      src: 'user-management/um-hero.webp',
+      alt: 'Screens from the user management rebuild, tiled at an angle: user details, access centres, the subcentre picker, and groups and roles',
+      fit: 'cover',
+    },
     sketchCaption: '~60s → under 3s',
     route: '/projects/user-management',
   },
@@ -46,6 +57,11 @@ export const featuredWork: FeaturedWork[] = [
     sketch: 'form',
     sketchLabel:
       'Line drawing of a multi-step form with a progress stepper and input fields',
+    image: {
+      src: 'global-hero.webp',
+      alt: 'Two desktop screens showing a BuildIQ order and the multi-step site inspection form',
+      fit: 'contain',
+    },
     route: '/projects/valocity-connect',
   },
 ];
