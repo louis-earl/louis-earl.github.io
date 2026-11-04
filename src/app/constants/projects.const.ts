@@ -9,8 +9,8 @@ export const projects: { [key in ProjectNames]: Project } = {
     title: 'User management overhaul',
     logline: 'A user management rebuild that loads in seconds, not minutes.',
     route: 'user-management',
-    thumbnail: 'user-management/placeholder.svg',
-    heroImage: 'user-management/placeholder.svg',
+    thumbnail: 'thumbs/user-management.webp',
+    heroImage: 'user-management/um-03-centres-tab.webp',
     nextUp: ProjectNames.ValocityGlobal,
     description:
       'I redesigned and rebuilt the Create and Edit User pages that enterprise banks use to manage their users’ full profiles, from the first requirements through to the API. A project that pulled in all three layers: design, front end and back end.',
