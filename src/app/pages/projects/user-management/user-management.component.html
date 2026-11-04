@@ -1,7 +1,6 @@
-<!-- Every screenshot uses the shared placeholder for now. Each section notes its planned file, to drop into assets/images/user-management. -->
 <app-image-scroller-container>
-  <!-- Screenshot: um-01-old-form -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
+  <!-- Screenshot: um-03-centres-tab -->
+  <div appImageScrollerTarget="user-management/um-03-centres-tab.webp" objectFit="contain">
     <h2>Overview</h2>
     <p>
       I redesigned and rebuilt the Create and Edit User pages that enterprise
@@ -28,8 +27,8 @@
     </p>
   </div>
 
-  <!-- Screenshot: um-01-old-form -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
+  <!-- Screenshot: um-01-before -->
+  <div appImageScrollerTarget="user-management/um-01-before.webp" objectFit="contain">
     <h2>The challenge</h2>
     <p>
       For a user with 1,000+ centres, the page took around 60 seconds to load.
@@ -59,8 +58,8 @@
     </p>
   </div>
 
-  <!-- Screenshot: um-02-tabbed-layout -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
+  <!-- Screenshot: um-02-user-details -->
+  <div appImageScrollerTarget="user-management/um-02-user-details.webp" objectFit="contain">
     <h2>My role</h2>
     <p>
       I owned it end to end, across all three layers. I worked in a small pod
@@ -90,49 +89,47 @@
     </ul>
   </div>
 
-  <!-- Screenshot: um-03-business-units -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
+  <!-- Screenshot: um-03-centres-tab -->
+  <div appImageScrollerTarget="user-management/um-03-centres-tab.webp" objectFit="contain">
     <h2>Design</h2>
+    <h3>From one long form to four focused tabs</h3>
     <p>
-      I split the long form into four focused tabs. The user’s name and account
-      status sit in the header above them, and managers can activate or
-      deactivate the account from there.
+      I split the long form into four focused tabs in a side nav. The user’s
+      name and account status sit at the top of it, and managers can activate
+      or deactivate the account from there.
     </p>
     <div class="image-slot"></div>
     <ol>
       <li>
         <strong>User details:</strong>
-        name, email and user level. Some lenders use the level for seniority,
-        for example when a workflow needs escalating to a more senior manager.
+        name, email and user level.
       </li>
       <li>
         <strong>Business units:</strong>
-        the divisions of the bank a user can work in and create valuation orders
-        for. Users often belong to several, so they’re added and removed with a
-        typeahead and listed below it.
+        users often belong to several, so they’re added with a typeahead and
+        listed below it.
       </li>
       <li>
-        <strong>Centres:</strong>
-        where valuation and BuildIQ orders are managed from. Every user needs a
-        home centre, plus any extra access centres. For clients with subcentres,
-        the typeahead shows the parent and child centres together, so they’re
-        still quick to find. Select all and deselect all handle bulk changes.
+        <strong>Access centres:</strong>
+        the heaviest tab: a home centre plus any extra access, with bulk select
+        and deselect. The search here gets its own section below.
       </li>
       <li>
-        <strong>Roles and groups:</strong>
-        roles control what a user can do. For clients with groups switched on,
-        users also inherit the roles of any group they belong to.
+        <strong>Groups &amp; roles:</strong>
+        what a user can do, including roles inherited from any groups they
+        belong to.
       </li>
     </ol>
     <p>
-      Each tab is self-contained, so a new client-specific feature can become a
-      tab instead of making the form longer again.
+      Each tab is self-contained and has its own Save button, so a new
+      client-specific feature can become a tab instead of making the form longer
+      again.
     </p>
   </div>
 
-  <!-- Screenshot: um-04-centre-search -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
-    <h2>One search for centres and subcentres</h2>
+  <!-- Screenshot: um-04a-claude-design -->
+  <div appImageScrollerTarget="user-management/um-04a-claude-design.webp" objectFit="contain">
+    <h3>One search for centres and subcentres</h3>
     <p>
       The design work I’m proudest of is the centre search. Merging two
       dropdowns into one search meant supporting two different ways of looking:
@@ -147,6 +144,18 @@
         search for the centre, then browse its subcentres and pick one or many.
       </li>
     </ol>
+    <p>
+      I explored it in Claude Design, starting broad. Early prototypes like
+      these put very different layouts side by side, and because they were live,
+      I could type into each one and feel the trade-offs. From there I honed in
+      on the strongest direction and refined it over many more rounds of mockups
+      until it felt right.
+    </p>
+    <div class="image-slot"></div>
+  </div>
+
+  <!-- Screenshot: um-04-centre-search -->
+  <div appImageScrollerTarget="user-management/um-04-centre-search.webp" objectFit="contain">
     <div class="image-slot"></div>
     <p>
       Results show as a nested list, with subcentres grouped under their parent.
@@ -154,52 +163,55 @@
       adds the parent centre into the results whenever one of its subcentres
       matches. That keeps every result in context.
     </p>
+  </div>
+
+  <!-- Screenshot: um-05-subcentre-popup -->
+  <div appImageScrollerTarget="user-management/um-05-subcentre-popup.webp" objectFit="contain">
+    <div class="image-slot"></div>
     <p>
       Each parent centre in the results also has a button that opens all of its
-      subcentres in a popup. From there, admins can select or deselect them all
-      at once, or make individual tweaks. Results load as you type, and more
-      load in automatically as you scroll.
+      subcentres in a popup, and so does the Manage subcentres link on each
+      centre the user already has. From there, admins can search within that
+      centre, select all of its subcentres at once, or make individual tweaks.
+      Results load as you type, and more load in automatically as you scroll.
     </p>
 
     <app-expansion-content title="The nerdy bits">
-      <!-- Screenshot: um-05-subcentre-popup -->
-      <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
-        <p>
-          The speed-up came from the back end as much as the front end.
-        </p>
-        <div class="image-slot"></div>
-        <ul>
-          <li>
-            <strong>Split the endpoint:</strong>
-            I broke the single heavy endpoint into focused APIs, one per tab.
-            Each tab loads its own data separately, so the first load only
-            fetches what’s on screen. The biggest gain was on the Centres tab.
-          </li>
-          <li>
-            <strong>Search that keeps context:</strong>
-            the centre search API returns matching subcentres together with
-            their parent centre, even when the parent itself doesn’t match.
-          </li>
-          <li>
-            <strong>Optimised queries</strong>
-            behind those APIs, so each call returns just what the screen needs.
-          </li>
-          <li>
-            <strong>Caching where it helps,</strong>
-            so switching back to a tab you’ve already opened is faster.
-          </li>
-          <li>
-            <strong>A lean front end:</strong>
-            the Angular side requests data as the admin types and scrolls, and
-            keeps unsaved selections in local state until the admin saves.
-          </li>
-        </ul>
-      </div>
+      <p>
+        The speed-up came from the back end as much as the front end.
+      </p>
+      <ul>
+        <li>
+          <strong>Split the endpoint:</strong>
+          I broke the single heavy endpoint into focused APIs, one per tab.
+          Each tab loads its own data separately, so the first load only
+          fetches what’s on screen. The biggest gain was on the Access centres
+          tab.
+        </li>
+        <li>
+          <strong>Search that keeps context:</strong>
+          the centre search API returns matching subcentres together with
+          their parent centre, even when the parent itself doesn’t match.
+        </li>
+        <li>
+          <strong>Optimised queries</strong>
+          behind those APIs, so each call returns just what the screen needs.
+        </li>
+        <li>
+          <strong>Caching where it helps,</strong>
+          so switching back to a tab you’ve already opened is faster.
+        </li>
+        <li>
+          <strong>A lean front end:</strong>
+          the Angular side requests data as the admin types and scrolls, and
+          keeps unsaved selections in local state until the admin saves.
+        </li>
+      </ul>
     </app-expansion-content>
   </div>
 
   <!-- Screenshot: um-06-roles-groups -->
-  <div appImageScrollerTarget="user-management/placeholder.svg" objectFit="contain">
+  <div appImageScrollerTarget="user-management/um-06-roles-groups.webp" objectFit="contain">
     <h2>Impact</h2>
     <p>
       For a user with 1,000+ centres, the page now loads in under 3 seconds
