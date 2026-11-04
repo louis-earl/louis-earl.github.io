@@ -181,7 +181,13 @@ $hover-shadow: 0 8px 24px rgba(31, 95, 209, 0.1);
 
 .more {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  // One column, then all three side by side, so none is left alone on a row.
+  grid-template-columns: 1fr;
+
+  // Below this the items get too narrow for the thumbnail and logline side by side.
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   gap: 1rem;
   margin: 0;
   padding: 0;

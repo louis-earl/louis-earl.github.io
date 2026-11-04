@@ -31,7 +31,6 @@ export class HomepageComponent {
   readonly moreWork = [
     ProjectNames.ValocityOnsite,
     ProjectNames.ValocityExecutiveSummary,
-    ProjectNames.MidnightMysteries,
     ProjectNames.OneWayWellington,
   ].map((name) => projects[name]);
 
