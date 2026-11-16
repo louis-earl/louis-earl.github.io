@@ -1,26 +1,35 @@
 <div class="container about">
   <div class="about__intro">
     <p class="kicker">How I work</p>
-    <h2 id="about-title">One person, three layers.</h2>
-    <p class="about__closing">
-      AI runs through all three, but anyone can prompt. What I bring is the
-      curiosity to ask why, and the judgement to know when the result is
-      actually right.
+    <h2 id="about-title">One person, many layers.</h2>
+    <p class="about__lede">
+      From the first design to the API behind it, I can take a feature the whole
+      way.
     </p>
   </div>
-  <ol class="layers" aria-label="Layers">
-    @for (layer of layers; track layer.label) {
-      <li class="layer" [class.layer--primary]="layer.primary">
-        <h3 class="layer__label">{{ layer.label }}</h3>
-        <div class="layer__body">
+  <div class="about__rows">
+    <ol class="layers" aria-label="Layers">
+      @for (layer of layers; track layer.label) {
+        <li class="row" [class.row--primary]="layer.primary">
+          <h3>{{ layer.label }}</h3>
           <p>{{ layer.text }}</p>
           <ul class="skills" [attr.aria-label]="layer.label + ' skills'">
             @for (skill of layer.skills; track skill) {
               <li>{{ skill }}</li>
             }
           </ul>
-        </div>
-      </li>
-    }
-  </ol>
+        </li>
+      }
+    </ol>
+    <section class="row row--note" aria-labelledby="hitl-title">
+      <h3 id="hitl-title">Human in the loop</h3>
+      <p>
+        AI is part of everything I do, but anyone can prompt. What I bring is
+        the curiosity to ask why, and the judgement to know when the result is
+        actually right. I treat AI output as a first draft: I question it, test
+        it against real use, and refine it until it feels considered, not
+        generated.
+      </p>
+    </section>
+  </div>
 </div>

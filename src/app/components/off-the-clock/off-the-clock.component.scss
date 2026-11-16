@@ -18,6 +18,18 @@
       }
     }
 
+    .me__link {
+      color: var(--on-primary);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+
+      &:hover {
+        color: var(--on-primary);
+        text-decoration-thickness: 2px;
+      }
+    }
+
     .kicker {
       margin: 0 0 0.75rem;
       font-family: var(--font-mono);
