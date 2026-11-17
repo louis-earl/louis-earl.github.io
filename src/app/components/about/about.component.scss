@@ -1,7 +1,7 @@
 .about {
   display: grid;
   grid-template-columns: 4fr 8fr;
-  gap: 3rem;
+  gap: 104px;
   align-items: start;
   padding-block: 6rem;
 
@@ -24,59 +24,74 @@ h2 {
   margin: 0 0 1.25rem;
 }
 
+.about__rows {
+  min-width: 0;
+  // Start the rows level with the H2, not the kicker: the kicker's line box
+  // (13px × 1.6) plus its 0.75rem bottom margin, plus 0.25rem so the 26px h3's
+  // cap height lines up with the 48px H2's (they have different leading).
+  padding-top: calc(13px * 1.6 + 0.75rem + 0.25rem);
+}
+
 .layers {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.layer {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1.5rem;
-  padding: 1.5rem;
+// Open rows; only the front-end row is a card.
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-block: 2rem;
 
-  // Dashed dividers only between plain rows; the front-end card has its own outline.
-  &:not(&--primary) + &:not(&--primary) {
-    border-top: 1.5px dashed var(--border-strong);
-  }
-
-  &__label {
+  h3 {
     margin: 0;
-    padding-top: 0.2em;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--muted);
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  p {
+    font-size: var(--body-medium);
   }
 
-  &.layer--primary {
-    margin-block: 0.5rem;
-    border: 1.5px solid var(--primary);
-    border-radius: 24px;
-    background: var(--background);
-    box-shadow: 0 16px 40px rgba(31, 95, 209, 0.14);
+  // Divider between the last layer and Human in the loop.
+  .layers > &:last-child {
+    border-bottom: 1px solid var(--border);
   }
+
+  .layers > &:first-child {
+    padding-top: 0;
+  }
+
+  &--note {
+    padding-bottom: 0;
+  }
+
   &--primary {
-    .layer__label {
-      color: var(--emphasis);
-      font-weight: 500;
-    }
+    // Negative inline margins match the padding, so the card's text lines up
+    // with the open rows above and below it.
+    margin: 0.5rem -40px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    background-color: var(--primary);
+    background-image:
+      linear-gradient(var(--grid-line-on-primary) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line-on-primary) 1px, transparent 1px);
+    background-size: 24px 24px;
+    box-shadow: 0 20px 48px rgba(31, 95, 209, 0.22);
+    color: var(--on-primary);
 
     p {
       font-size: 18px;
-      color: var(--on-background);
+      color: var(--on-primary);
     }
 
     .skills li {
-      background: var(--primary);
-      color: var(--on-primary);
+      background: var(--on-primary);
+      color: var(--primary);
     }
   }
 }
@@ -105,16 +120,24 @@ h2 {
     gap: 2rem;
     padding-block: 4rem;
   }
+
+  .about__rows {
+    padding-top: 0;
+  }
 }
 
-@media (max-width: 600px) {
-  .layer {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 1.25rem 0;
+// Below this the container's outer margin is under 40px, so bleed only left
+// into the column gap and the card never touches or overflows the page edge.
+@media (max-width: 1344px) {
+  .row--primary {
+    margin-right: 0;
+  }
+}
 
-    &--primary {
-      padding: 1.25rem;
-    }
+// Single column: no column gap to bleed into either.
+@media (max-width: 900px) {
+  .row--primary {
+    margin-inline: 0;
+    padding: 28px 24px;
   }
 }

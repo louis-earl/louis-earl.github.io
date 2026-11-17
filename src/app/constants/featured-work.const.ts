@@ -24,7 +24,7 @@ export const featuredWork: FeaturedWork[] = [
     title: 'User management overhaul',
     logline: 'A user management rebuild that loads in seconds, not minutes.',
     summary:
-      'Owned end to end for enterprise banks, from requirements to API. I broke a long, ever-growing form into four focused tabs, and rebuilt the slowest one, centre access, with lazy-loaded APIs, typeahead search across a parent/child hierarchy, and bulk selection.',
+      'The old screen was one long, confusing form that kept on growing. I rebuilt it from requirements to API as four focused tabs. Now lender admins can manage their users without getting lost.',
     tags: ['UX', 'Angular', '.NET'],
     sketch: 'admin',
     sketchLabel:
